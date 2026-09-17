@@ -1,26 +1,68 @@
 @import "tailwindcss";
 
+/* ------------------------------------------------------------------
+   NIME 2027 — Paris, after dark.
+
+   The palette is sampled from the conference logo rather than chosen:
+   `nuit` is the logo's own ground (#000002), so the artwork dissolves
+   into the page with no visible tile, and the three accents are the
+   neon hues measured off its strokes.
+   ------------------------------------------------------------------ */
+@theme {
+  --color-nuit: #000002;
+  --color-nuit-2: #05080f;
+  --color-nuit-3: #0a1120;
+
+  --color-toit: #16202f;
+  --color-craie: #edeae4;
+  --color-brume: #8d96a6;
+
+  --color-neon-teal: #20d0d4;
+  --color-neon-or: #fda01f;
+  --color-neon-rose: #f34f7b;
+
+  --font-display: var(--font-playfair), "Playfair Display", Georgia, serif;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  color-scheme: dark;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-nuit);
+  color: var(--color-craie);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--color-neon-teal);
+  color: var(--color-nuit);
+}
+
+/* Wrought-iron balcony railing, lit like the rest of the page */
+.rule-ferronnerie {
+  height: 18px;
+  background-repeat: repeat-x;
+  background-size: 30px 18px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='18' viewBox='0 0 30 18'%3E%3Cg fill='none' stroke='%2320d0d4' stroke-width='1.15' opacity='0.55'%3E%3Cpath d='M0 3h30M0 15h30'/%3E%3Cpath d='M0 3v12M30 3v12M15 3v12'/%3E%3Cpath d='M15 4C8 6.5 8 11.5 15 14'/%3E%3Cpath d='M15 4c7 2.5 7 7.5 0 10'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* Neon bloom. Kept low — the logo already carries the effect. */
+.glow-teal {
+  text-shadow: 0 0 22px rgba(32, 208, 212, 0.35);
+}
+.glow-or {
+  text-shadow: 0 0 22px rgba(253, 160, 31, 0.3);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
 }

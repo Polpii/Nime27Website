@@ -1,69 +1,84 @@
 import Image from "next/image";
+import { conference } from "@/content/site";
+import { ParisSkyline } from "@/components/paris";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
+    // The hero stays exactly the logo's own black (#000002). The logo PNG is
+    // opaque with no alpha, so any glow or tint behind it would cut its square
+    // out of the page as a visible tile.
+    <main className="relative flex min-h-dvh flex-col overflow-hidden bg-nuit">
+      <div className="relative z-20 flex flex-1 flex-col items-center px-5 pb-28 pt-12 text-center sm:pt-16">
+        <p className="text-[11px] font-semibold uppercase tracking-[0.34em] text-neon-teal glow-teal">
+          Save the date
+        </p>
+
         <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
+          src="/logoNime27.png"
+          alt={`${conference.name} — ${conference.city}`}
+          width={1254}
+          height={1254}
           priority
+          sizes="(max-width: 640px) 92vw, 470px"
+          className="mt-4 h-auto w-[92vw] max-w-[470px]"
         />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
+
+        <p className="-mt-2 text-[11px] font-medium uppercase tracking-[0.28em] text-brume">
+          {conference.seriesName}
+        </p>
+
+        <h1 className="mt-4 max-w-3xl font-display text-[1.9rem] leading-[1.15] font-bold sm:text-5xl lg:text-[3.4rem]">
+          New Interfaces for
+          <br />
+          Musical Expression
+        </h1>
+
+        <p className="mt-11 font-display text-4xl leading-none font-bold text-neon-or glow-or sm:text-6xl lg:text-7xl">
+          {conference.dates}
+        </p>
+
+        <p className="mt-5 text-[13px] font-semibold uppercase tracking-[0.3em] text-neon-rose sm:text-sm">
+          {conference.location}
+        </p>
+
+        <p className="mt-14 max-w-xl text-[15px] leading-[1.8] text-brume sm:text-base">
+          NIME gathers researchers and musicians from all over the world to share their
+          knowledge and late-breaking work on new musical interface design. The conference
+          began as a workshop at the Conference on Human Factors in Computing Systems
+          (CHI) in 2001, and has been held annually around the world ever since.
+        </p>
+
+        <p className="mt-10 max-w-md text-[13px] leading-relaxed text-brume/65">
+          Further details, including the call for contributions, will be announced in due
+          course.
+        </p>
+      </div>
+
+      {/* Paris rooftops, kept to a silhouette so they frame the page rather than
+          compete with it. Tuned here rather than in the component so the skyline
+          stays reusable. */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-x-0 bottom-0 z-0 h-44 text-[#0a1220] lg:h-56"
+        style={{ ["--window-glow" as string]: "#6d4a14" }}
+      >
+        <ParisSkyline className="h-full w-full" />
+      </div>
+
+      <footer className="relative z-20 bg-gradient-to-t from-nuit via-nuit/85 to-transparent pb-7 pt-14 text-center">
+        <p className="text-[11px] uppercase tracking-[0.22em] text-brume/70">
+          {conference.domain}
+          <span className="mx-3 text-brume/30">·</span>
           <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+            href="https://nime.org"
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noreferrer"
+            className="transition-colors hover:text-neon-teal"
           >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
+            nime.org
           </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+        </p>
+      </footer>
+    </main>
   );
 }

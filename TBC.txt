@@ -1,0 +1,619 @@
+================================================================================
+NIME 2027 — nime2027.org
+LISTE EXHAUSTIVE DES INFORMATIONS MANQUANTES (TBC)
+Établie le 10 septembre 2026, à partir du code du site.
+================================================================================
+
+COMMENT LIRE CE DOCUMENT
+------------------------
+  [ ]   à fournir / à décider
+  (!)   bloquant : le site affiche aujourd'hui une information INVENTÉE ou
+        EXTRAPOLÉE qui pourrait induire la communauté en erreur si elle est
+        publiée telle quelle
+  ->    fichier et ligne où faire la modification
+
+Trois fichiers concentrent 95 % du contenu :
+  src/content/site.ts    dates, ville, thème, navigation, échéances, lieux
+  src/content/pages.ts   le texte de toutes les pages intérieures
+  src/app/page.tsx       la page d'accueil (mise en page sur mesure)
+
+Tout ce qui est listé ci-dessous est actuellement soit vide, soit rempli avec un
+texte repris de nime2026.org, soit extrapolé par déduction. Rien n'a été
+confirmé par le comité NIME 2027.
+
+
+================================================================================
+1. IDENTITÉ ET FAITS DE BASE
+================================================================================
+
+[ ] (!) Numéro d'édition
+    Le site affiche « 27th International Conference on ».
+    C'est une déduction de ma part (2001 = 1re édition). La numérotation des
+    éditions NIME est ambiguë (atelier CHI 2001 vs. première conférence
+    autonome 2002) et nime2026.org n'affiche AUCUN numéro.
+    -> Vérifier auprès du steering committee, ou supprimer le numéro.
+    -> src/content/site.ts, champ `number`
+
+[ ] (!) Thème de la conférence
+    « Résonances » est une proposition de ma part, pas une décision.
+    -> src/content/site.ts, champ `theme`
+
+[ ] (!) Formulation longue du thème
+    « How do the instruments we build resonate beyond the lab — through a city,
+    a scene, a public? »
+    -> src/content/site.ts, champ `themeTagline`
+
+[ ] (!) Texte d'appel du thème (2 paragraphes)
+    « A resonance is what a body does... » et « We particularly welcome
+    contributions that trace those effects outward... »
+    Écrits par moi. Le second paragraphe reprend la formulation d'inclusion de
+    NIME 2026 (« regardless of geography, institutional affiliation or
+    relationship to scholarly research »).
+    -> src/app/page.tsx lignes 173 et 179
+
+[ ] (!) Citation en exergue de la section thème
+    « An instrument is finished the day someone else plays it differently than
+    you intended. »
+    CITATION INVENTÉE, attribuée à personne. À remplacer par une vraie citation
+    sourcée, ou à supprimer entièrement.
+    -> src/app/page.tsx ligne 187
+
+[ ] Dates de la conférence — à confirmer formellement
+    22-25 juin 2027 (fourni par toi). Répartition proposée par moi :
+      22 juin       workshops + Student Consortium
+      23-25 juin    conférence principale
+      26 juin       NIME Open Day
+    Cette répartition est calquée sur NIME 2026 et n'est pas validée.
+    -> src/content/site.ts, tableau `importantDates`
+    -> src/app/page.tsx, encadré « At a glance »
+    -> src/content/pages.ts, entrée `programme`
+
+[ ] Format hybride — confirmer
+    Le site affirme « all authors will have the option to attend in person or
+    online » (repris de 2026). Si NIME 2027 n'est PAS hybride, ce texte est
+    faux et doit disparaître.
+    -> src/app/page.tsx ligne 128 ; src/content/pages.ts entrée `programme`
+
+[ ] NIME Open Day — confirmer son existence et sa date
+    Repris de NIME 2026 (journée portes ouvertes publique). À confirmer.
+    -> src/content/site.ts ; src/content/pages.ts entrée `satellite-events`
+
+[ ] Langue(s) du site et de la conférence
+    Le site est actuellement 100 % en anglais. Décision à prendre : version
+    française ? bilingue ? Cela change l'architecture (routing i18n) — mieux
+    vaut trancher tôt que tard.
+
+[ ] Vérifier les affirmations factuelles sur l'histoire de NIME
+    « Since 2001 » et « hosted in more than twenty cities across four
+    continents » — écrits par moi, à vérifier.
+    -> src/app/page.tsx ligne 114
+
+
+================================================================================
+2. LIEUX
+================================================================================
+
+Les trois lieux sont des coquilles vides (« TBC », quartier = « Paris »).
+-> src/content/site.ts, tableau `venues`
+
+[ ] (!) Lieu principal de la conférence
+      - nom officiel
+      - adresse complète
+      - quartier / arrondissement
+      - capacité (grande salle, salles parallèles, espace posters/démos)
+      - station de métro / RER la plus proche
+      - accès PMR (voir section 10)
+
+[ ] (!) Lieu des concerts
+      - nom, adresse, quartier
+      - jauge
+      - équipement son/lumière disponible, régie
+      - horaires possibles (couvre-feu ?)
+      - distance / trajet depuis le lieu principal
+
+[ ] (!) Lieu(x) des installations et des événements satellites
+      - nom(s), adresse(s)
+      - horaires d'ouverture
+      - conditions de gardiennage des œuvres
+
+[ ] Lieu des workshops et du Student Consortium (22 juin)
+    Même site que la conférence ou site distinct ?
+
+[ ] Lieu du NIME Open Day (26 juin)
+
+[ ] Plan / carte des lieux (à intégrer sur la page Visit)
+
+[ ] Photos des lieux (droits d'utilisation compris)
+
+
+================================================================================
+3. INSTITUTIONS HÔTES ET ORGANISATION
+================================================================================
+
+[ ] (!) Institutions organisatrices
+    Le site dit « organised by a consortium of Paris research groups and music
+    institutions » — formulation vague écrite par moi faute d'information.
+    Il faut la liste exacte et les intitulés officiels.
+    -> src/app/page.tsx ligne 121
+
+[ ] Laboratoires / équipes de recherche impliqués (noms complets + acronymes)
+
+[ ] Tutelles à mentionner (universités, CNRS, ministère, etc.)
+
+[ ] Structure juridique porteuse (association ? laboratoire ? université ?)
+    Nécessaire pour : encaissement des inscriptions, factures, TVA, mentions
+    légales du site.
+
+[ ] Numéro SIRET / TVA intracommunautaire (pour les factures d'inscription)
+
+[ ] Partenaires et sponsors
+    NIME 2026 affichait Bela, Ableton + les deux laboratoires hôtes.
+    Il n'existe AUCUNE page ni section sponsors sur le site actuellement.
+    -> à créer (voir section 14)
+      - liste des sponsors par niveau (or / argent / bronze ?)
+      - logos vectoriels (SVG ou PDF) + autorisation d'usage
+      - liens vers leurs sites
+      - contreparties promises (mention, stand, logo sur badges...)
+
+[ ] Financements institutionnels à créditer (ANR, Europe, région, ville de
+    Paris...) et logos obligatoires associés
+
+
+================================================================================
+4. COMITÉ
+================================================================================
+
+La page Committee est une liste de rôles vides. Pour CHAQUE ligne il faut :
+nom, prénom, affiliation, (optionnel) photo, (optionnel) lien.
+-> src/content/pages.ts, entrée `committee`
+
+Comité d'organisation local :
+[ ] General chair(s)
+[ ] Local arrangements chair(s)
+[ ] Finance chair(s)
+[ ] Communications and web chair(s)
+
+Comité de programme :
+[ ] Paper chairs
+[ ] Music chairs
+[ ] Workshop chairs
+[ ] alt.nime chairs
+[ ] Student Consortium chairs
+[ ] Proceedings chairs
+[ ] Diversity, equity and inclusion chairs
+[ ] Accessibility chairs
+
+Non listés aujourd'hui mais à prévoir si ces rôles existent :
+[ ] Registration chair
+[ ] Installations chair
+[ ] Student Volunteers chair
+[ ] Technical / AV chair
+[ ] Satellite events chair
+[ ] Sponsorship chair
+[ ] Open Day chair
+[ ] Streaming / hybrid chair
+
+[ ] Liste des relecteurs (à publier après la période de review — le site
+    annonce déjà cette publication, il faudra tenir cet engagement)
+
+[ ] Composition du steering committee NIME à la date de publication
+    (ou simple renvoi à nime.org — c'est ce que fait le site aujourd'hui)
+
+
+================================================================================
+5. DATES ET ÉCHÉANCES
+================================================================================
+
+(!) TOUTES les dates ci-dessous sauf les dates de conférence sont
+EXTRAPOLÉES : j'ai décalé d'un an le calendrier de NIME 2026. Aucune n'est
+confirmée. Elles s'affichent en page d'accueil et sur la page Submissions.
+-> src/content/site.ts, tableau `importantDates`
+
+[ ] (!) Ouverture du site de soumission ...................... 3 décembre 2026
+[ ] (!) Papers & Music — titres, résumés, auteurs ............. 4 février 2027
+[ ] (!) Papers & Music — soumission finale ................... 11 février 2027
+[ ] (!) Workshops, alt.nime, Student Consortium ................. 4 mars 2027
+[ ] (!) Notification d'acceptation + reviews .................... 2 avril 2027
+[ ] (!) Camera-ready + inscription des présentateurs ........... 29 avril 2027
+[ ] (!) Workshops et Student Consortium ......................... 22 juin 2027
+[ ] (!) Conférence principale ................................ 23-25 juin 2027
+[ ] (!) NIME Open Day ........................................... 26 juin 2027
+
+Dates absentes du site et à ajouter si elles existent :
+[ ] Ouverture des inscriptions (early bird)
+[ ] Fin du tarif early bird
+[ ] Date limite d'inscription en ligne
+[ ] Ouverture / clôture des candidatures Student Volunteers
+[ ] Ouverture / clôture des demandes de bourses de voyage
+[ ] Date limite de demande de lettre d'invitation pour visa
+[ ] Période de rebuttal / réponse aux relecteurs (s'il y en a une)
+[ ] Date limite d'inscription des relecteurs
+[ ] Date limite des demandes d'accessibilité (interprétation LSF, etc.)
+[ ] Publication du programme détaillé
+[ ] Date limite de réservation du bloc hôtelier
+
+[ ] Confirmer la mention « 23:59 AoE » pour toutes les deadlines
+
+[ ] Bandeau d'annonce en page d'accueil : « The call for contributions opens
+    December 2026 ». Texte à mettre à jour à chaque étape du calendrier.
+    -> src/app/page.tsx ligne 56
+
+
+================================================================================
+6. SOUMISSIONS
+================================================================================
+
+Commun à toutes les pistes
+[ ] (!) URL de la plateforme de soumission (CMT ? OpenReview ? autre ?)
+        Aucun lien de soumission n'existe sur le site aujourd'hui.
+[ ] (!) Modèles de document (Word, LaTeX, Overleaf) + URL de téléchargement
+        Rien n'est fourni actuellement.
+[ ] Politique d'éthique : NIME 2026 renvoie vers nime.org/ethics/ (« NIME
+    Principles & Code of Practice on Ethical Research »). Ce lien N'EXISTE PAS
+    sur notre site, il faut l'ajouter aux pages Papers, Music et Workshops.
+[ ] Politique sur l'usage de l'IA générative dans les soumissions
+[ ] Politique de conflit d'intérêts
+[ ] Politique en cas de plagiat / double soumission
+[ ] Licence et cession de droits pour les actes (CC-BY ? version ?)
+[ ] Nombre maximal de soumissions par auteur (s'il y a une limite)
+
+Papers   -> src/content/pages.ts, entrée `papers`
+[ ] Confirmer les trois classes de longueur et les limites de mots
+    (6000 / 4000 / 2000, hors références — repris de 2026)
+[ ] Confirmer le double aveugle et le minimum de 3 relecteurs
+[ ] Confirmer l'existence des meta-reviewers
+[ ] Format de présentation (oral / poster) et durée des créneaux
+[ ] Y a-t-il une piste « demos » distincte ? (en 2026 elle a fusionné avec
+    « short »)
+
+Music   -> src/content/pages.ts, entrée `music`
+[ ] Catégories réellement ouvertes (concert / installation / œuvre d'écoute)
+    — la liste actuelle est une proposition
+[ ] Format et durée maximale des pièces
+[ ] Matériel technique fourni par l'organisation (diffusion, régie, backline)
+[ ] Nombre de concerts et jauge
+[ ] Défraiement / rémunération des artistes ? (question sensible, à trancher)
+[ ] Modalités de la fiche technique (formulaire ? PDF libre ?)
+[ ] Critères d'évaluation
+[ ] Droits SACEM / déclaration des œuvres
+
+Workshops   -> src/content/pages.ts, entrée `workshops`
+[ ] Durées proposées (demi-journée / journée) — à confirmer
+[ ] Nombre de workshops retenus
+[ ] Salles et équipement disponibles
+[ ] Tarif d'inscription spécifique aux workshops
+[ ] Les organisateurs de workshop doivent-ils s'inscrire à la conférence ?
+
+alt.nime   -> src/content/pages.ts, entrée `alt-nime`
+[ ] Confirmer que cette piste existe bien en 2027
+[ ] Formats acceptés et critères
+[ ] Créneaux et espaces alloués
+
+Student Consortium   -> src/content/pages.ts, entrée `student-consortium`
+[ ] Nombre de places
+[ ] Liste des mentors
+[ ] Format exact de la journée
+[ ] Frais d'inscription spécifiques / gratuité ?
+[ ] La lettre du directeur de thèse est-elle vraiment exigée ? (repris de 2026)
+
+Student Volunteers   -> src/content/pages.ts, entrée `student-volunteers`
+[ ] Nombre de places
+[ ] Nombre et durée des créneaux exigés
+[ ] Montant exact de la réduction (ou gratuité)
+[ ] Critères de sélection
+[ ] Date d'ouverture des candidatures
+[ ] Repas / défraiement fournis ?
+
+Reviewing   -> src/content/pages.ts, entrée `reviewing`
+[ ] Nombre de soumissions par relecteur (le site annonce « two to four »)
+[ ] Formulaire de review et critères exacts
+[ ] Existence d'une phase de discussion
+[ ] Lien d'inscription des relecteurs
+[ ] Y a-t-il un guide du relecteur à publier ?
+
+Camera-ready   -> src/content/pages.ts, entrée `camera-ready`
+[ ] Modèle final et consignes de mise en forme
+[ ] Plateforme de dépôt de la version finale
+[ ] Consignes exactes pour les médias associés (audio, vidéo, code)
+[ ] Politique d'accessibilité des PDF (texte alternatif, contraste)
+[ ] Éditeur des actes, ISSN / ISBN, DOI, archivage (PubPub ? Zenodo ?)
+[ ] Licence des actes
+
+
+================================================================================
+7. INSCRIPTION ET TARIFS
+================================================================================
+
+-> src/content/pages.ts, entrée `registration`
+
+[ ] (!) Grille tarifaire complète. Le site annonce des catégories
+        (standard / étudiant / tarif réduit / pass journée / journée workshop)
+        et des tarifs présentiel + en ligne pour chacune — c'est une PROPOSITION
+        de ma part, aucun montant n'existe.
+[ ] Tarif early bird et sa date de bascule
+[ ] TVA applicable et mention TTC/HT
+[ ] Plateforme d'inscription et de paiement
+[ ] Moyens de paiement acceptés (CB, virement, bon de commande public)
+[ ] Procédure de facturation pour les laboratoires
+[ ] Politique d'annulation et de remboursement
+[ ] Ce que l'inscription inclut réellement (le site liste : sessions, concerts,
+    pauses café, accès en ligne — à confirmer ; déjeuners inclus ou non ?)
+[ ] Dîner de gala / soirée sociale : inclus ? en supplément ? tarif ?
+[ ] Accompagnants : tarif ?
+[ ] Exonérations et bourses de voyage : nombre, montant, critères,
+    financement, procédure et calendrier de candidature
+[ ] Tarif réduit « pays où le tarif standard est un obstacle » : liste des
+    pays éligibles ou critère retenu
+[ ] Adhésion NIME incluse dans l'inscription ?
+[ ] Confirmer l'obligation d'inscription d'un auteur par contribution avant le
+    29 avril 2027
+
+
+================================================================================
+8. PROGRAMME ET KEYNOTES
+================================================================================
+
+-> src/content/pages.ts, entrées `programme` et `keynotes`
+
+[ ] (!) Déroulé de la semaine
+    Le site publie déjà un déroulé jour par jour (lundi arrivées, mardi
+    workshops, mercredi ouverture + keynote, etc.). Il est INVENTÉ, calqué sur
+    le format habituel de NIME.
+[ ] Keynote speakers : noms, affiliations, biographies, photos, titres et
+    résumés des interventions, autorisation de publication
+[ ] Nombre de keynotes
+[ ] Y a-t-il une keynote-performance ? (le site le suggère)
+[ ] Programme détaillé des sessions (après notifications d'avril 2027)
+[ ] Assemblée générale de la communauté NIME : jour et heure
+[ ] Cérémonies d'ouverture et de clôture
+[ ] Prix / awards remis (best paper, best music, etc.) et jurys
+[ ] Soirée sociale / dîner : date, lieu, modalités
+[ ] Plateforme de diffusion en ligne pour le format hybride
+[ ] Politique d'enregistrement et de captation (consentement des auteurs)
+[ ] Gestion des fuseaux horaires pour les sessions en ligne
+[ ] Application ou programme PDF téléchargeable ?
+[ ] Export calendrier (le site promet un « personal schedule you can export »)
+
+
+================================================================================
+9. VENIR À PARIS ET SE DÉPLACER
+================================================================================
+
+-> src/content/pages.ts, entrées `visit` et `get-around`
+
+[ ] Hébergement : résidences étudiantes, options économiques, bloc hôtelier
+    négocié, codes de réservation, fourchettes de prix
+    (le site promet cette liste, elle n'existe pas)
+[ ] Recommandations de quartiers
+[ ] Procédure de lettre d'invitation pour visa : qui la délivre, sous quel
+    délai, à partir de quand
+[ ] Confirmer les informations pratiques rédigées par moi :
+      - aéroports CDG / ORY / BVA et liaisons ferroviaires
+      - liste des villes reliées en train direct
+      - gares routières Bercy-Seine et Porte Maillot
+      - températures de fin juin (17-26 °C)
+      - eau du robinet potable, fontaines
+[ ] Titre de transport recommandé pour la semaine (Navigo Découverte ?
+    forfait jour ? paiement sans contact ?) et tarifs 2027
+[ ] Lignes de métro / RER / bus desservant chaque lieu de la conférence
+[ ] Trajet précis entre lieu principal et lieu des concerts
+[ ] Trajets depuis les aéroports vers les lieux
+[ ] Vélib' : confirmer stations proches des lieux
+[ ] Assurance voyage / santé : y a-t-il une recommandation officielle ?
+[ ] Politique environnementale / incitation au train (le site en fait déjà
+    la promotion — à assumer ou à retirer)
+[ ] Numéros d'urgence et informations de sécurité
+[ ] Garde d'enfants pendant la conférence : proposée ou non ?
+
+
+================================================================================
+10. ACCESSIBILITÉ
+================================================================================
+
+-> src/content/pages.ts, entrée `accessibility`
+
+(!) Cette page prend aujourd'hui des ENGAGEMENTS au nom du comité. Chacun doit
+être validé, ou retiré. Ne rien promettre qu'on ne tiendra pas.
+
+[ ] Accès de plain-pied à tous les espaces : engagement confirmé ?
+[ ] Fiche d'accessibilité détaillée par lieu (entrées, ascenseurs, toilettes
+    accessibles, itinéraire depuis les transports accessibles)
+[ ] Sous-titrage en direct des keynotes et sessions principales : confirmé ?
+    prestataire ? budget ?
+[ ] Interprétation en langue des signes : proposée ? LSF ou ASL/IS ?
+    délai de demande ?
+[ ] Salle calme / espace à faible stimulation : confirmée ? où ?
+[ ] Avertissements sur les concerts (volume, stroboscopes, intensité
+    haptique) : qui les rédige, comment ils sont diffusés
+[ ] Protections auditives fournies : confirmé ?
+[ ] Places réservées aux concerts : confirmé ?
+[ ] Accessibilité des supports (PDF accessibles, textes alternatifs)
+[ ] Accessibilité du site web lui-même : audit RGAA/WCAG à prévoir
+[ ] Boucle magnétique dans les salles ?
+[ ] Régime alimentaire et allergies : procédure de recueil
+[ ] Toilettes non genrées : disponibles ?
+[ ] Accueil des chiens guides
+[ ] Personne / adresse de contact accessibilité (access@nime2027.org, à créer)
+
+
+================================================================================
+11. ÉVÉNEMENTS SATELLITES ET OPEN DAY
+================================================================================
+
+-> src/content/pages.ts, entrée `satellite-events`
+
+[ ] Liste des événements satellites
+[ ] Institutions partenaires accueillant ces événements
+[ ] Procédure et date limite pour proposer un événement satellite
+[ ] Programme du NIME Open Day (26 juin)
+[ ] L'Open Day est-il gratuit ? sur inscription ?
+[ ] Public visé et communication grand public associée
+
+
+================================================================================
+12. ADRESSES E-MAIL
+================================================================================
+
+Le site affiche 14 adresses @nime2027.org. AUCUNE n'existe à ma connaissance.
+Il faut soit les créer, soit les retirer du site.
+-> src/app/contact/page.tsx (tableau `addresses`)
+-> src/content/pages.ts (une adresse en bas de chaque page)
+-> src/content/site.ts (champ `email`)
+
+[ ] contact@nime2027.org ......... enquêtes générales
+[ ] papers@nime2027.org .......... piste Papers
+[ ] music@nime2027.org ........... piste Music
+[ ] workshops@nime2027.org ....... piste Workshops
+[ ] altnime@nime2027.org ......... piste alt.nime
+[ ] consortium@nime2027.org ...... Student Consortium
+[ ] volunteers@nime2027.org ...... Student Volunteers
+[ ] reviewing@nime2027.org ....... relecture
+[ ] proceedings@nime2027.org ..... actes / camera-ready
+[ ] registration@nime2027.org .... inscriptions
+[ ] programme@nime2027.org ....... programme et keynotes
+[ ] satellite@nime2027.org ....... événements satellites
+[ ] access@nime2027.org .......... accessibilité
+[ ] press@nime2027.org ........... presse
+
+[ ] Décider de l'hébergeur mail (Porkbun propose un forwarding ; sinon
+    Google Workspace, Fastmail, ou les serveurs de l'institution hôte)
+[ ] Redirections vers les vraies boîtes des chairs
+[ ] Comptes réseaux sociaux : Mastodon ? Bluesky ? Instagram ? LinkedIn ?
+    Aucun n'est référencé sur le site aujourd'hui.
+[ ] Liste de diffusion / formulaire d'inscription à la newsletter
+    Le site invite deux fois à « keep me posted » et « sign up to hear »
+    mais renvoie seulement vers la page Contact. Il n'y a pas de formulaire.
+    -> src/app/page.tsx lignes 56 et 287
+[ ] Fil d'annonce sur forum.nime.org
+
+
+================================================================================
+13. IDENTITÉ VISUELLE ET FICHIERS
+================================================================================
+
+[ ] (!) Logo NIME 2027
+        Il n'y en a pas. Le site utilise un logotype typographique que j'ai
+        composé (NIME 2027 + plaque « PARIS »).
+        -> src/components/site-header.tsx, composant `Wordmark`
+[ ] (!) Favicon
+        C'est encore le favicon par défaut de Next.js.
+        -> remplacer src/app/favicon.ico
+[ ] (!) Image Open Graph / partage réseaux sociaux
+        Aucune. Les partages Slack/Bluesky/LinkedIn n'afficheront aucune image.
+        -> src/app/layout.tsx, bloc `openGraph`
+[ ] Charte graphique officielle si le comité en veut une (couleurs, typo)
+    La palette actuelle est ma proposition « Paris » : pierre de taille,
+    bleu des plaques de rue, zinc des toits, rouge des armoiries, dorure,
+    vert Guimard. -> src/app/globals.css, bloc @theme
+[ ] Photos : lieux, ville, éditions précédentes (avec droits et crédits)
+[ ] Logos des partenaires, sponsors et tutelles (SVG de préférence)
+[ ] Visuels pour la communication (bannières, affiche, badges)
+[ ] Fichiers à supprimer : public/next.svg, public/vercel.svg, public/file.svg,
+    public/globe.svg, public/window.svg (restes du gabarit Next.js)
+
+
+================================================================================
+14. PAGES QUI N'EXISTENT PAS ENCORE
+================================================================================
+
+Présentes sur nime2026.org, absentes chez nous :
+[ ] Programme > Calendar View (vue calendrier)
+[ ] Programme > Programme By Track (vue par piste)
+[ ] Programme > Programme By Session (vue par session)
+[ ] Programme > Student Consortium (programme de la journée)
+    -> ces quatre vues ne peuvent être construites qu'une fois le programme
+       connu ; à prévoir pour avril-mai 2027
+
+Attendues sur un site de conférence et absentes :
+[ ] Code of Conduct / politique anti-harcèlement + procédure de signalement
+    et personnes référentes  (page importante, à ne pas oublier)
+[ ] Lien vers la politique d'éthique NIME (nime.org/ethics/)
+[ ] Page Sponsors / Partenaires
+[ ] Page Proceedings / Actes (une fois publiés)
+[ ] Mentions légales — obligatoires en France (éditeur, directeur de
+    publication, hébergeur, contact)
+[ ] Politique de confidentialité / RGPD (obligatoire dès qu'on collecte des
+    inscriptions ou une newsletter)
+[ ] Bandeau cookies (uniquement si vous ajoutez de la mesure d'audience)
+[ ] FAQ générale
+[ ] Page « Previous editions » / archives
+[ ] Page presse / kit média
+
+
+================================================================================
+15. TEXTES DE LA PAGE D'ACCUEIL À VALIDER OU RÉÉCRIRE
+================================================================================
+
+Tous ces textes ont été écrits par moi ou adaptés de NIME 2026. Aucun n'a été
+relu par le comité.
+-> src/app/page.tsx
+
+[ ] ligne 30   Accroche : « NIME comes to Paris. Four days of new musical
+               interfaces... in the halls, studios and concert rooms of the
+               city. »
+[ ] ligne 56   Bandeau : « The call for contributions opens December 2026 »
+[ ] ligne 114  Paragraphe historique : « Since 2001, NIME has brought
+               together... more than twenty cities across four continents. »
+[ ] ligne 121  Paragraphe organisation : « organised by a consortium of Paris
+               research groups and music institutions »
+[ ] ligne 128  Paragraphe hybride + NIME Open Day
+[ ] ligne 173  Thème, paragraphe 1
+[ ] ligne 179  Thème, paragraphe 2
+[ ] ligne 187  Citation en exergue (INVENTÉE)
+[ ] ligne 235  Introduction de la section Lieux
+[ ] ligne 258  Paragraphe inclusion et accessibilité (repris de NIME 2026 —
+               vérifier qu'on peut le reprendre tel quel)
+[ ] ligne 282  Conclusion : « See you in Paris, 22-25 June 2027 »
+[ ] ligne 287  Appel newsletter : « Sign up to hear when... »
+[ ] Descriptions des six pistes de soumission
+               -> src/content/site.ts, tableau `tracks`
+[ ] Encadré « At a glance » (dates, lieu, langue)
+[ ] Mention de copyright du pied de page : « © 2026-2027 NIME 2027. All
+    content on this site is provisional. » — à faire évoluer à la mise en
+    ligne définitive.  -> src/components/site-footer.tsx ligne 98
+[ ] Métadonnées SEO : titre et description du site
+    -> src/app/layout.tsx, bloc `metadata`
+
+
+================================================================================
+16. TECHNIQUE ET MISE EN LIGNE
+================================================================================
+
+[ ] Hébergement retenu (Vercel, Cloudflare Pages, Netlify, ou serveur de
+    l'institution — le site est entièrement statique, tout convient)
+[ ] Dépôt Git : où ? public ou privé ? qui a les droits ?
+[ ] Configuration DNS chez Porkbun (enregistrements A / CNAME fournis par
+    l'hébergeur) + certificat HTTPS
+[ ] Redirection www -> apex (ou l'inverse)
+[ ] Mesure d'audience souhaitée ? (si oui, privilégier une solution sans
+    cookies type Plausible/Matomo pour éviter le bandeau cookies)
+[ ] Sauvegardes et archivage du site après la conférence
+[ ] Qui maintient le site pendant l'année ? (accès, mots de passe, relais)
+[ ] Sécurité du compte Porkbun : le mot de passe a circulé en clair dans notre
+    conversation — à changer, et activer la double authentification.
+
+
+================================================================================
+17. RÉCAPITULATIF — LES 10 BLOCAGES RÉELS
+================================================================================
+
+Si tu ne dois obtenir que dix choses avant la prochaine étape :
+
+  1. Les lieux (principal + concerts) — tout le reste en dépend
+  2. Les institutions hôtes et la structure juridique porteuse
+  3. Le thème de la conférence et son texte d'appel
+  4. Le calendrier réel des soumissions
+  5. Les noms des chairs (au moins general chairs et paper/music chairs)
+  6. La plateforme de soumission et les modèles de document
+  7. La grille tarifaire
+  8. Les adresses e-mail @nime2027.org
+  9. Logo + favicon + image de partage
+ 10. Le Code of Conduct et les mentions légales
+
+Tout le reste peut attendre le premier appel à contributions.
+
+================================================================================
+Fin du document.
+En attendant, chaque information non confirmée est signalée sur le site par un
+encadré doré « TBC », afin que rien ne soit lu comme définitif.
+================================================================================
