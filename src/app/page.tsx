@@ -23,7 +23,7 @@ export default function Home() {
           className="mt-4 h-auto w-[92vw] max-w-[470px]"
         />
 
-        <p className="-mt-2 text-[11px] font-medium uppercase tracking-[0.28em] text-brume">
+        <p className="-mt-2 text-[10px] font-medium uppercase tracking-[0.18em] text-brume sm:text-[11px] sm:tracking-[0.28em]">
           {conference.seriesName}
         </p>
 
