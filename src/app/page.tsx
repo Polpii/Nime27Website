@@ -23,17 +23,17 @@ export default function Home() {
           className="mt-4 h-auto w-[92vw] max-w-[470px]"
         />
 
-        <p className="-mt-2 text-[10px] font-medium uppercase tracking-[0.18em] text-brume sm:text-[11px] sm:tracking-[0.28em]">
+        <p className="-mt-2 text-balance text-[10px] font-medium uppercase tracking-[0.12em] text-brume min-[360px]:tracking-[0.18em] sm:text-[11px] sm:tracking-[0.28em]">
           {conference.seriesName}
         </p>
 
-        <h1 className="mt-4 max-w-3xl font-display text-[1.9rem] leading-[1.15] font-bold sm:text-5xl lg:text-[3.4rem]">
+        <h1 className="mt-4 max-w-3xl font-display text-[1.5rem] leading-[1.15] font-bold min-[360px]:text-[1.9rem] sm:text-5xl lg:text-[3.4rem]">
           New Interfaces for
           <br />
           Musical Expression
         </h1>
 
-        <p className="mt-11 font-display text-4xl leading-none font-bold text-neon-or glow-or sm:text-6xl lg:text-7xl">
+        <p className="mt-11 font-display text-[1.75rem] leading-none font-bold text-neon-or glow-or min-[360px]:text-4xl sm:text-6xl lg:text-7xl">
           {conference.dates}
         </p>
 
