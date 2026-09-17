@@ -49,8 +49,8 @@ export default function Home() {
         </p>
 
         <p className="mt-10 max-w-md text-[13px] leading-relaxed text-brume/65">
-          Further details, including the call for contributions, will be announced in due
-          course.
+          The call for papers and participation will be published in{" "}
+          <span className="font-semibold text-neon-teal">{conference.callOpens}</span>.
         </p>
       </div>
 
