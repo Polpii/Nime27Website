@@ -1,94 +1,85 @@
 # NIME 2027 — nime2027.org
 
-Website for the 27th International Conference on New Interfaces for Musical
-Expression, Paris, 22–25 June 2027.
+Save-the-date page for the International Conference on New Interfaces for
+Musical Expression, Paris, 22–25 June 2027.
 
-Next.js 16 (App Router) · TypeScript · Tailwind CSS v4 · fully static.
-
-## Running it
+Next.js 16 (App Router) · TypeScript · Tailwind CSS v4 · fully static, one route.
 
 ```bash
 npm install
 npm run dev      # http://localhost:3000
-npm run build    # production build — all 22 routes prerender as static HTML
-npm run start    # serve the production build
+npm run build
+npm run start
 ```
 
-## Where the content lives
+## What this site is allowed to say
 
-You should almost never need to touch a page component to change wording.
+The page carries **confirmed facts only**: the conference name, the dates, and
+Paris. Everything else a NIME site normally announces — theme, venues, host
+institutions, deadlines, committee, registration, the edition number, whether
+the conference is hybrid — is still unconfirmed by the 2027 committee and is
+therefore *absent*, not guessed.
 
-| File | What it holds |
+`TBC.txt` is the full audit of what is still missing, with file and line
+references. Read it before adding anything to this page.
+
+`src/content/site.ts` holds every fact the page displays. If a value isn't in
+that file, the page doesn't claim it.
+
+## drafts/
+
+`drafts/` holds a complete multi-page conference site — submissions, registration,
+programme, committee, visit, contact — written earlier against text adapted from
+nime2026.org. It is **not built**: it sits outside `src/app/`, and `drafts` is in
+the `tsconfig.json` exclude list so it is not type-checked either.
+
+It is kept because the structure is worth reusing once the facts exist. Restoring
+a page means moving its folder back under `src/app/`, moving `drafts/pages.ts`
+back to `src/content/`, and `drafts/simple-page.tsx`, `ui.tsx`, `site-header.tsx`,
+`site-footer.tsx` back to `src/components/`. Those components still assume the
+old light palette and will need reworking for the dark one.
+
+## Design
+
+The palette is **sampled from the conference logo**, not chosen:
+
+| Token | Value | Where it comes from |
+| --- | --- | --- |
+| `nuit` | `#000002` | the logo's own ground |
+| `neon-teal` | `#20d0d4` | measured off the logo's strokes |
+| `neon-or` | `#fda01f` | " |
+| `neon-rose` | `#f34f7b` | " |
+| `craie` / `brume` | `#edeae4` / `#8d96a6` | body text, muted text |
+| `toit` | tuned inline in `page.tsx` | rooftop silhouette |
+
+**The hero background must stay exactly `#000002`.** `public/logoNime27.png` is
+opaque RGB with no alpha channel, so any glow, tint or gradient painted behind it
+cuts its square out of the page as a visible tile. An earlier version had a
+radial bloom there and the logo read as a pasted grey rectangle. If you want a
+glow, either get a transparent PNG of the logo or composite the glow on top.
+
+`src/components/paris.tsx` draws the Paris rooftops from the `BUILDINGS` array —
+mansard roofs, chimney pots and a set-back Eiffel tower — so the roofline is
+recomposed by editing numbers, not SVG paths. Its window colour comes from
+`--window-glow`, set by the consuming page, so the skyline works on light or dark.
+
+Type: Playfair Display for display, Inter for text, via `next/font`. The font CSS
+variables are set on `<html>`, not `<body>` — the `@theme` tokens that reference
+them resolve at `:root`, so moving them to `<body>` silently breaks every font.
+
+## Generated assets
+
+| File | How it was made |
 | --- | --- |
-| `src/content/site.ts` | Dates, city, theme, navigation menu, important dates, submission tracks, venues |
-| `src/content/pages.ts` | The body text of every interior page |
-| `src/app/page.tsx` | The homepage (the one page whose text is inline, because its layout is bespoke) |
+| `src/app/icon.svg` | Drawn by hand. The logo's neon hairlines disappear below ~64px, so a crop of it makes an illegible favicon; this is a bold reduction of the same tower-and-beacon motif. |
+| `src/app/apple-icon.png` | Same glyph, rendered to 180px. |
+| `src/app/opengraph-image.png` | 1200×630 share card: logo plus dates. |
 
-`src/content/pages.ts` uses a deliberately tiny markup dialect so it can be
-edited without knowing React:
-
-```
-## Heading            -> sub-heading
-- item                -> bullet
-> note                -> gold "TBC" callout
-anything else         -> paragraph
-**bold** and [label](https://url) work inline
-```
-
-Adding a page: add an entry to `pages.ts`, create
-`src/app/<path>/page.tsx` copying any existing one-liner route file, and add the
-link to `nav` in `site.ts`.
-
-## The Paris design system
-
-Tokens are defined once in the `@theme` block of `src/app/globals.css`:
-
-| Token | Reference |
-| --- | --- |
-| `craie` / `craie-2` / `pierre` | Haussmann limestone facades |
-| `plaque` | the blue of Paris street-name plaques |
-| `encre` | near-black ink, used for dark sections |
-| `zinc-toit` | the grey of Paris rooftops |
-| `rouge` | the red of the city coat of arms |
-| `or` | gilding — Opéra, Pont Alexandre III |
-| `vert` | Guimard métro / Wallace fountain green |
-
-Use them as normal Tailwind utilities: `bg-craie`, `text-plaque`, `border-pierre`.
-
-Ornaments live in `src/components/paris.tsx`:
-
-- `ParisSkyline` — mansard rooftops, chimney pots and a set-back Eiffel tower,
-  drawn from the `BUILDINGS` array so the roofline can be re-composed by editing
-  numbers rather than SVG paths
-- `EiffelTower`, `MetroArch`, `Plaque`, `Ferronnerie` (a wrought-iron balcony
-  railing used as a rule)
-
-Type: Playfair Display for display, Inter for text, both self-hosted through
-`next/font`. The font CSS variables are set on `<html>`, not `<body>` — the
-`@theme` tokens that reference them resolve at `:root`, so moving them to
-`<body>` silently breaks every font on the site.
-
-## Content status
-
-Everything currently on the site is **provisional**. Text is adapted from
-[nime2026.org](https://nime2026.org) as a placeholder, and dates are
-extrapolated one year forward from the 2026 edition. Placeholders are marked
-in the UI with the gold `TBC` callout (`<Provisional>`), so nothing reads as
-confirmed when it is not.
-
-Still to be supplied by the committee: venues, host institutions, the 2027
-theme, keynote speakers, committee names, registration rates, and the real
-deadline dates.
+The script that produced the two PNGs is kept out of the repo; regenerate them by
+editing the glyph in `icon.svg` and matching it, or ask for the script again.
 
 ## Deployment
 
-The site is fully static and has no server dependencies. To put it on Vercel:
-
-1. Push this directory to a Git repository
-2. Import it at [vercel.com/new](https://vercel.com/new) — the framework is
-   detected, no configuration needed
-3. Add `nime2027.org` in the project's Domains settings, then in Porkbun's DNS
-   set the `A` and `CNAME` records Vercel gives you
-
-Cloudflare Pages, Netlify and GitHub Pages all work too — `next build` output is
-static.
+Static, no server dependencies. On Vercel: import the repo, no configuration
+needed, then add `nime2027.org` under Domains and copy the records Vercel gives
+you into Porkbun's DNS.
