@@ -18,13 +18,14 @@ const inter = Inter({
 const description = `${conference.seriesName} ${conference.fullName}. ${conference.dates}, ${conference.location}.`;
 
 export const metadata: Metadata = {
-  metadataBase: new URL(`https://${conference.domain}`),
+  metadataBase: new URL(conference.origin),
+  alternates: { canonical: "/" },
   title: `${conference.name} — ${conference.fullName} — ${conference.city}`,
   description,
   openGraph: {
     title: `${conference.name} — ${conference.city}`,
     description,
-    url: `https://${conference.domain}`,
+    url: conference.origin,
     siteName: conference.name,
     locale: "en_GB",
     type: "website",

@@ -19,5 +19,12 @@ export const conference = {
   location: "Paris, France",
   /** When the call for papers and participation is published. */
   callOpens: "October 2026",
+  /** Shown to readers. */
   domain: "nime2027.org",
+  /**
+   * The host actually served. The apex 308-redirects to www, so every
+   * canonical signal (sitemap, robots, og:url) must name www or they all
+   * point at a redirect and the signals get split.
+   */
+  origin: "https://www.nime2027.org",
 } as const;

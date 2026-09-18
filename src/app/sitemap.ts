@@ -4,7 +4,7 @@ import { conference } from "@/content/site";
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
-      url: `https://${conference.domain}`,
+      url: conference.origin,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 1,
