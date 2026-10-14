@@ -23,9 +23,9 @@ const provisional =
 
 export const pages: Record<string, PageContent> = {
   papers: {
-    slug: "submissions/papers",
+    slug: "call/papers",
     title: "Call for Papers",
-    eyebrow: "Submissions",
+    eyebrow: "Call",
     intro:
       "We welcome submissions of original research on the scientific and artistic use of new interfaces for musical expression.",
     body: [
@@ -49,9 +49,9 @@ export const pages: Record<string, PageContent> = {
   },
 
   music: {
-    slug: "submissions/music",
+    slug: "call/music",
     title: "Call for Music",
-    eyebrow: "Submissions",
+    eyebrow: "Call",
     intro:
       "Performances, installations and sound works that put new instruments in front of an audience.",
     body: [
@@ -73,9 +73,9 @@ export const pages: Record<string, PageContent> = {
   },
 
   workshops: {
-    slug: "submissions/workshops",
+    slug: "call/workshops",
     title: "Call for Workshops",
-    eyebrow: "Submissions",
+    eyebrow: "Call",
     intro:
       "Half- and full-day hands-on sessions, held on 22 June 2027, the day before the main programme opens.",
     body: [
@@ -96,9 +96,9 @@ export const pages: Record<string, PageContent> = {
   },
 
   "alt-nime": {
-    slug: "submissions/alt-nime",
+    slug: "call/alt-nime",
     title: "alt.nime",
-    eyebrow: "Submissions",
+    eyebrow: "Call",
     intro:
       "For contributions that do not fit anywhere else — and are more interesting for it.",
     body: [
@@ -116,9 +116,9 @@ export const pages: Record<string, PageContent> = {
   },
 
   "student-consortium": {
-    slug: "submissions/student-consortium",
+    slug: "call/student-consortium",
     title: "Student Consortium",
-    eyebrow: "Submissions",
+    eyebrow: "Call",
     intro:
       "A dedicated day for doctoral researchers to present work in progress and get feedback from senior mentors.",
     body: [
@@ -136,9 +136,9 @@ export const pages: Record<string, PageContent> = {
   },
 
   "student-volunteers": {
-    slug: "submissions/student-volunteers",
+    slug: "call/student-volunteers",
     title: "Student Volunteers",
-    eyebrow: "Submissions",
+    eyebrow: "Call",
     intro:
       "Help run the conference, meet the community, and attend for a reduced registration fee.",
     body: [
@@ -159,9 +159,9 @@ export const pages: Record<string, PageContent> = {
   },
 
   reviewing: {
-    slug: "submissions/reviewing",
+    slug: "call/reviewing",
     title: "Reviewing",
-    eyebrow: "Submissions",
+    eyebrow: "Call",
     intro:
       "NIME depends on its reviewers. If you submit to the conference, please consider reviewing for it.",
     body: [
@@ -181,9 +181,9 @@ export const pages: Record<string, PageContent> = {
   },
 
   "camera-ready": {
-    slug: "submissions/camera-ready",
+    slug: "call/camera-ready",
     title: "Camera-Ready",
-    eyebrow: "Submissions",
+    eyebrow: "Call",
     intro:
       "Instructions for preparing the final version of an accepted contribution.",
     body: [

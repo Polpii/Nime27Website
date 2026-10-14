@@ -11,45 +11,46 @@ const externalLinks = [
 
 export function SiteFooter() {
   const columns = nav.filter((n) => n.href !== "/");
+  const callChildren = nav.find((n) => n.label === "Call")?.children ?? [];
 
   return (
-    <footer className="relative mt-24 overflow-hidden bg-encre text-craie">
-      <div className="pointer-events-none absolute inset-x-0 top-0 h-40 text-craie/[0.05]">
+    <footer className="relative mt-24 overflow-hidden border-t border-white/10 bg-nuit">
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-x-0 top-0 h-40 text-white/[0.03]"
+      >
         <ParisSkyline className="h-full w-full" />
       </div>
 
-      <div className="relative mx-auto max-w-6xl px-5 pb-12 pt-20 lg:px-8">
+      <div className="relative mx-auto max-w-5xl px-5 pb-12 pt-20 lg:px-8">
         <div className="grid gap-12 lg:grid-cols-[1.2fr_2fr]">
           <div>
-            <p className="font-display text-3xl font-bold leading-none">
-              NIME <span className="italic text-rouge">2027</span>
+            <p className="font-display text-3xl font-bold leading-none text-craie">
+              NIME <span className="italic text-neon-or">2027</span>
             </p>
-            <p className="mt-3 max-w-xs text-sm leading-relaxed text-craie/65">
-              {conference.number} {conference.fullName}.
+            <p className="mt-3 max-w-xs text-sm leading-relaxed text-brume">
+              {conference.seriesName} {conference.fullName}.
             </p>
-            <p className="mt-6 text-[11px] uppercase tracking-[0.18em] text-craie/50">
+            <p className="mt-6 text-[11px] uppercase tracking-[0.18em] text-brume/70">
               {conference.dates}
             </p>
-            <p className="text-[11px] uppercase tracking-[0.18em] text-craie/50">
+            <p className="text-[11px] uppercase tracking-[0.18em] text-brume/70">
               {conference.location}
             </p>
-            <a
-              href={`mailto:${conference.email}`}
-              className="link-underline mt-6 inline-block text-sm text-or"
-            >
-              {conference.email}
-            </a>
           </div>
 
           <div className="grid gap-10 sm:grid-cols-3">
             <div>
-              <h2 className="text-[11px] font-semibold uppercase tracking-[0.18em] text-craie/45">
+              <h2 className="text-[11px] font-semibold uppercase tracking-[0.18em] text-brume/60">
                 Conference
               </h2>
               <ul className="mt-4 space-y-2.5">
                 {columns.map((item) => (
                   <li key={item.href}>
-                    <Link href={item.href} className="link-underline text-sm text-craie/80">
+                    <Link
+                      href={item.href}
+                      className="text-sm text-brume transition-colors hover:text-neon-teal"
+                    >
                       {item.label}
                     </Link>
                   </li>
@@ -58,13 +59,16 @@ export function SiteFooter() {
             </div>
 
             <div>
-              <h2 className="text-[11px] font-semibold uppercase tracking-[0.18em] text-craie/45">
-                Submit
+              <h2 className="text-[11px] font-semibold uppercase tracking-[0.18em] text-brume/60">
+                Call
               </h2>
               <ul className="mt-4 space-y-2.5">
-                {(nav.find((n) => n.label === "Submissions")?.children ?? []).map((c) => (
+                {callChildren.map((c) => (
                   <li key={c.href}>
-                    <Link href={c.href} className="link-underline text-sm text-craie/80">
+                    <Link
+                      href={c.href}
+                      className="text-sm text-brume transition-colors hover:text-neon-teal"
+                    >
                       {c.label}
                     </Link>
                   </li>
@@ -73,7 +77,7 @@ export function SiteFooter() {
             </div>
 
             <div>
-              <h2 className="text-[11px] font-semibold uppercase tracking-[0.18em] text-craie/45">
+              <h2 className="text-[11px] font-semibold uppercase tracking-[0.18em] text-brume/60">
                 Community
               </h2>
               <ul className="mt-4 space-y-2.5">
@@ -83,7 +87,7 @@ export function SiteFooter() {
                       href={l.href}
                       target="_blank"
                       rel="noreferrer"
-                      className="link-underline text-sm text-craie/80"
+                      className="text-sm text-brume transition-colors hover:text-neon-teal"
                     >
                       {l.label}
                     </a>
@@ -94,8 +98,8 @@ export function SiteFooter() {
           </div>
         </div>
 
-        <div className="mt-16 flex flex-col gap-3 border-t border-craie/15 pt-6 text-[11px] text-craie/45 sm:flex-row sm:items-center sm:justify-between">
-          <p>© 2026–2027 {conference.edition}. All content on this site is provisional.</p>
+        <div className="mt-16 flex flex-col gap-3 border-t border-white/10 pt-6 text-[11px] text-brume/60 sm:flex-row sm:items-center sm:justify-between">
+          <p>© 2026–2027 {conference.name}. All content on this site is provisional.</p>
           <p className="uppercase tracking-[0.18em]">{conference.domain}</p>
         </div>
       </div>

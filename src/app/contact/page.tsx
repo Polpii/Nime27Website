@@ -4,7 +4,7 @@ import { Container, PageHero, Provisional } from "@/components/ui";
 
 export const metadata: Metadata = {
   title: "Contact",
-  description: `How to reach the ${conference.edition} organising committee.`,
+  description: `How to reach the ${conference.name} organising committee.`,
 };
 
 const addresses = [
@@ -33,18 +33,18 @@ export default function ContactPage() {
         <div className="grid gap-14 lg:grid-cols-[1.1fr_1fr]">
           <div>
             <h2 className="font-display text-2xl font-bold">Who to write to</h2>
-            <ul className="mt-8 border-t border-pierre">
+            <ul className="mt-8 border-t border-white/10">
               {addresses.map((a) => (
                 <li
                   key={a.email}
-                  className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1 border-b border-pierre py-4"
+                  className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1 border-b border-white/10 py-4"
                 >
-                  <span className="text-[11px] font-semibold uppercase tracking-[0.16em] text-zinc-toit">
+                  <span className="text-[11px] font-semibold uppercase tracking-[0.16em] text-brume/70">
                     {a.role}
                   </span>
                   <a
                     href={`mailto:${a.email}`}
-                    className="link-underline text-[15px] text-plaque"
+                    className="link-underline text-[15px] text-neon-teal"
                   >
                     {a.email}
                   </a>
@@ -66,7 +66,7 @@ export default function ContactPage() {
           <aside className="space-y-10">
             <div>
               <h2 className="font-display text-2xl font-bold">Stay informed</h2>
-              <p className="mt-4 text-[17px] leading-[1.75] text-encre/80">
+              <p className="mt-4 text-[17px] leading-[1.75] text-brume">
                 Announcements — the call for contributions, registration opening, the
                 programme — are posted on the NIME forum and circulated on the NIME
                 mailing list.
@@ -77,7 +77,7 @@ export default function ContactPage() {
                     href="https://forum.nime.org"
                     target="_blank"
                     rel="noreferrer"
-                    className="link-underline text-[15px] text-plaque"
+                    className="link-underline text-[15px] text-neon-teal"
                   >
                     forum.nime.org
                   </a>
@@ -87,7 +87,7 @@ export default function ContactPage() {
                     href="https://nime.org"
                     target="_blank"
                     rel="noreferrer"
-                    className="link-underline text-[15px] text-plaque"
+                    className="link-underline text-[15px] text-neon-teal"
                   >
                     nime.org
                   </a>
@@ -95,17 +95,17 @@ export default function ContactPage() {
               </ul>
             </div>
 
-            <div className="border border-pierre bg-craie-2 p-7">
-              <h3 className="text-[11px] font-semibold uppercase tracking-[0.18em] text-rouge">
+            <div className="border border-white/10 bg-white/[0.03] p-7">
+              <h3 className="text-[11px] font-semibold uppercase tracking-[0.18em] text-neon-teal">
                 Conference
               </h3>
               <p className="mt-4 font-display text-2xl font-bold leading-snug">
-                {conference.edition}
+                {conference.name}
                 <br />
-                <span className="italic text-plaque">{conference.city}</span>
+                <span className="italic text-neon-teal">{conference.city}</span>
               </p>
-              <p className="mt-4 text-sm text-encre/70">{conference.dates}</p>
-              <p className="text-sm text-encre/70">{conference.location}</p>
+              <p className="mt-4 text-sm text-brume">{conference.dates}</p>
+              <p className="text-sm text-brume">{conference.location}</p>
             </div>
           </aside>
         </div>
