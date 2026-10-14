@@ -48,7 +48,7 @@ export default function Home() {
           (CHI) in 2001, and has been held annually around the world ever since.
         </p>
 
-        <p className="mt-10 max-w-md text-[13px] leading-relaxed text-brume/65">
+        <p className="mt-10 max-w-md text-[13px] leading-relaxed text-brume">
           The call for papers and participation will be published in{" "}
           <span className="font-semibold text-neon-teal">{conference.callOpens}</span>.
         </p>
@@ -66,9 +66,9 @@ export default function Home() {
       </div>
 
       <footer className="relative z-20 bg-gradient-to-t from-nuit via-nuit/85 to-transparent pb-7 pt-14 text-center">
-        <p className="text-[11px] uppercase tracking-[0.22em] text-brume/70">
+        <p className="text-[11px] uppercase tracking-[0.22em] text-brume">
           {conference.domain}
-          <span className="mx-3 text-brume/30">·</span>
+          <span className="mx-3 text-brume">·</span>
           <a
             href="https://nime.org"
             target="_blank"

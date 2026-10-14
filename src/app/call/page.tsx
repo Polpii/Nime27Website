@@ -3,7 +3,7 @@ import { importantDates, tracks } from "@/content/site";
 import { Card, Container, PageHero, Provisional } from "@/components/ui";
 
 export const metadata: Metadata = {
-  title: "Submissions",
+  title: "Call for Contributions",
   description:
     "All the ways to contribute to NIME 2027 in Paris: papers, music, workshops, alt.nime and the Student Consortium.",
 };
@@ -57,7 +57,7 @@ export default function SubmissionsPage() {
                 </li>
               ))}
             </ul>
-            <p className="mt-6 text-[11px] uppercase tracking-[0.16em] text-brume/70">
+            <p className="mt-6 text-[11px] uppercase tracking-[0.16em] text-brume">
               All deadlines 23:59 AoE
             </p>
           </aside>

@@ -107,7 +107,7 @@ export function Card({
   const body = (
     <>
       <span className="absolute inset-x-0 top-0 h-px origin-top bg-neon-or/60 transition-transform duration-300 group-hover:scale-y-[3]" />
-      <h3 className="font-display text-xl font-bold text-craie">{title}</h3>
+      <h2 className="font-display text-xl font-bold text-craie">{title}</h2>
       <p className="mt-3 text-[15px] leading-relaxed text-brume">{children}</p>
       {href && (
         <span className="mt-5 inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.14em] text-neon-teal">

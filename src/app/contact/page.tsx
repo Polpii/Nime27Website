@@ -39,7 +39,7 @@ export default function ContactPage() {
                   key={a.email}
                   className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1 border-b border-white/10 py-4"
                 >
-                  <span className="text-[11px] font-semibold uppercase tracking-[0.16em] text-brume/70">
+                  <span className="text-[11px] font-semibold uppercase tracking-[0.16em] text-brume">
                     {a.role}
                   </span>
                   <a

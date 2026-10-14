@@ -31,17 +31,17 @@ export function SiteFooter() {
             <p className="mt-3 max-w-xs text-sm leading-relaxed text-brume">
               {conference.seriesName} {conference.fullName}.
             </p>
-            <p className="mt-6 text-[11px] uppercase tracking-[0.18em] text-brume/70">
+            <p className="mt-6 text-[11px] uppercase tracking-[0.18em] text-brume">
               {conference.dates}
             </p>
-            <p className="text-[11px] uppercase tracking-[0.18em] text-brume/70">
+            <p className="text-[11px] uppercase tracking-[0.18em] text-brume">
               {conference.location}
             </p>
           </div>
 
           <div className="grid gap-10 sm:grid-cols-3">
             <div>
-              <h2 className="text-[11px] font-semibold uppercase tracking-[0.18em] text-brume/60">
+              <h2 className="text-[11px] font-semibold uppercase tracking-[0.18em] text-brume">
                 Conference
               </h2>
               <ul className="mt-4 space-y-2.5">
@@ -59,7 +59,7 @@ export function SiteFooter() {
             </div>
 
             <div>
-              <h2 className="text-[11px] font-semibold uppercase tracking-[0.18em] text-brume/60">
+              <h2 className="text-[11px] font-semibold uppercase tracking-[0.18em] text-brume">
                 Call
               </h2>
               <ul className="mt-4 space-y-2.5">
@@ -77,7 +77,7 @@ export function SiteFooter() {
             </div>
 
             <div>
-              <h2 className="text-[11px] font-semibold uppercase tracking-[0.18em] text-brume/60">
+              <h2 className="text-[11px] font-semibold uppercase tracking-[0.18em] text-brume">
                 Community
               </h2>
               <ul className="mt-4 space-y-2.5">
@@ -98,7 +98,7 @@ export function SiteFooter() {
           </div>
         </div>
 
-        <div className="mt-16 flex flex-col gap-3 border-t border-white/10 pt-6 text-[11px] text-brume/60 sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-16 flex flex-col gap-3 border-t border-white/10 pt-6 text-[11px] text-brume sm:flex-row sm:items-center sm:justify-between">
           <p>© 2026–2027 {conference.name}. All content on this site is provisional.</p>
           <p className="uppercase tracking-[0.18em]">{conference.domain}</p>
         </div>
