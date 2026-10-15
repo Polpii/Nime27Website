@@ -37,6 +37,17 @@ export function SiteHeader() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  // While the drawer is open the page behind it must not scroll — otherwise
+  // a swipe moves the page under a menu that stays put, which reads as broken.
+  useEffect(() => {
+    if (!open) return;
+    const previous = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = previous;
+    };
+  }, [open]);
+
   const isActive = (href: string) =>
     href === "/" ? pathname === "/" : pathname.startsWith(href);
 
@@ -108,15 +119,21 @@ export function SiteHeader() {
         </button>
       </div>
 
-      <div id="mobile-nav" hidden={!open} className="border-t border-white/10 bg-nuit lg:hidden">
-        <nav className="mx-auto max-w-5xl px-5 py-3" aria-label="Main (mobile)">
+      {/* The drawer scrolls inside itself rather than growing the document:
+          every sub-item is listed, which is taller than a phone screen. */}
+      <div
+        id="mobile-nav"
+        hidden={!open}
+        className="absolute inset-x-0 top-full max-h-[calc(100dvh-4rem)] overflow-y-auto overscroll-contain border-t border-white/10 bg-nuit shadow-[0_24px_40px_-20px_rgba(0,0,0,0.9)] lg:hidden"
+      >
+        <nav className="mx-auto max-w-5xl px-5 py-2" aria-label="Main (mobile)">
           <ul className="divide-y divide-white/10">
             {nav.map((item) => (
-              <li key={item.href} className="py-1">
+              <li key={item.href} className="py-0.5">
                 <Link
                   href={item.href}
                   onClick={close}
-                  className={`block py-2.5 text-sm font-semibold uppercase tracking-[0.08em] ${
+                  className={`block py-2.5 text-[13px] font-semibold uppercase tracking-[0.08em] ${
                     isActive(item.href) ? "text-neon-teal" : "text-craie"
                   }`}
                 >
@@ -129,7 +146,7 @@ export function SiteHeader() {
                         <Link
                           href={child.href}
                           onClick={close}
-                          className="block py-1.5 text-[13px] text-brume"
+                          className="block py-1.5 text-[12px] text-brume"
                         >
                           {child.label}
                         </Link>

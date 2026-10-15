@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { conference, nav } from "@/content/site";
-import { ParisSkyline } from "@/components/paris";
 
 const externalLinks = [
   { label: "NIME.org", href: "https://nime.org" },
@@ -14,15 +13,8 @@ export function SiteFooter() {
   const callChildren = nav.find((n) => n.label === "Call")?.children ?? [];
 
   return (
-    <footer className="relative mt-24 overflow-hidden border-t border-white/10 bg-nuit">
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-x-0 top-0 h-40 text-white/[0.03]"
-      >
-        <ParisSkyline className="h-full w-full" />
-      </div>
-
-      <div className="relative mx-auto max-w-5xl px-5 pb-12 pt-20 lg:px-8">
+    <footer className="mt-24 border-t border-white/10 bg-nuit">
+      <div className="mx-auto max-w-5xl px-5 pb-12 pt-16 lg:px-8">
         <div className="grid gap-12 lg:grid-cols-[1.2fr_2fr]">
           <div>
             <p className="font-display text-3xl font-bold leading-none text-craie">
