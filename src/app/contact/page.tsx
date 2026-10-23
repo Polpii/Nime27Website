@@ -110,6 +110,10 @@ export default function ContactPage() {
               <p className="text-sm text-brume">
                 {conference.venue}, {conference.host}
               </p>
+              <p className="mt-1 text-sm text-brume">{conference.venueAddress}</p>
+              <p className="mt-3 text-[11px] uppercase tracking-[0.16em] text-neon-or">
+                Address to be confirmed
+              </p>
             </div>
           </aside>
         </div>
