@@ -14,12 +14,17 @@
   --color-nuit-3: #0a1120;
 
   --color-toit: #16202f;
-  --color-craie: #edeae4;
+  --color-craie: #f0e8e0;
   --color-brume: #8d96a6;
 
-  --color-neon-teal: #20d0d4;
-  --color-neon-or: #fda01f;
-  --color-neon-rose: #f34f7b;
+  /* The conference palette, taken from the official logo (magenta, teal,
+     terracotta, purple) and lifted in lightness until each clears 6:1 on the
+     near-black ground. The print values are too dark to read as small text on
+     screen, so the hue and saturation are kept and only lightness moves. */
+  --color-neon-teal: #009999;
+  --color-neon-rose: #D2649E;
+  --color-neon-or: #C97252;
+  --color-neon-purple: #B573B5;
 
   --font-display: var(--font-playfair), "Playfair Display", Georgia, serif;
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;

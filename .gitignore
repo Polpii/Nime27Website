@@ -43,3 +43,6 @@ next-env.d.ts
 # Committee documents from the shared Drive: these carry ~40 people's personal
 # email addresses and must never reach this public repository.
 /NimeDocs/
+
+# Drive exports: private committee material, never commit to this public repo.
+*.zip

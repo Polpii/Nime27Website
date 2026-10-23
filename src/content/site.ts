@@ -24,8 +24,16 @@ export const conference = {
   city: "Paris",
   country: "France",
   location: "Paris, France",
-  /** Announced by nime.org. The exact site and address are still TBC. */
+  /** Announced by nime.org. */
   host: "Devinci Higher Education",
+  /** The venue named across the organisers' plans and location photographs. */
+  venue: "Campus du Parc",
+  /**
+   * Confirmed: it appears in the Papers, Music, Art / Installations and
+   * Artifacts & Ideas calls. The Student Consortium draft still carries an
+   * older name and is marked "TO UPDATE" in the source document.
+   */
+  theme: "Sensorial Symbiosis",
   /** The call is published the week commencing 26 October 2026. */
   callOpens: "October 2026",
   /** TBC — this address does not exist yet. */
@@ -225,4 +233,11 @@ export const conferenceWeek: ConferenceDay[] = [
     weekday: "Friday",
     items: ["Papers", "Demos", "Installations", "Concerts"],
   },
+];
+
+/** The theme text, as the organisers wrote it in the Papers and Music calls. */
+export const themeText = [
+  "In a time when machines and algorithms increasingly participate in creative practice, NIME 2027 asks what happens when expression no longer belongs neatly to a single body, instrument, or system. Musical interaction emerges through relations: among performers, instruments, computational systems, environments, audiences, and traces of other bodies and events across time.",
+  "We invite contributors to explore these sensorial symbioses, relationships that may be mutualistic, commensal, parasitic, intimate, asymmetric, productive, or unstable. How do bodies, instruments, machines, and environments continually shape one another? How do interfaces mediate relationships between people, alter what can be sensed and expressed, or allow gestures, affects, memories, and signals to persist beyond the bodies that produced them?",
+  "NIME 2027 asks how we make music with machines, and how musical relations transform the humans, technologies, and communities that enter into that process. As NIME returns to Paris, it does so in a city long shaped by artistic experimentation and newly alive with cultural and technological transformation.",
 ];

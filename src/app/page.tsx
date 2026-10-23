@@ -14,16 +14,16 @@ export default function Home() {
         </p>
 
         <Image
-          src="/logoNime27.png"
+          src="/nime2027-logo.png"
           alt={`${conference.name} — ${conference.city}`}
-          width={1254}
-          height={1254}
+          width={1600}
+          height={1028}
           priority
-          sizes="(max-width: 640px) 92vw, 470px"
-          className="mt-4 h-auto w-[92vw] max-w-[470px]"
+          sizes="(max-width: 640px) 92vw, 560px"
+          className="mt-6 h-auto w-[92vw] max-w-[560px]"
         />
 
-        <p className="-mt-2 text-balance text-[10px] font-medium uppercase tracking-[0.12em] text-brume min-[360px]:tracking-[0.18em] sm:text-[11px] sm:tracking-[0.28em]">
+        <p className="mt-9 text-balance text-[10px] font-medium uppercase tracking-[0.12em] text-brume min-[360px]:tracking-[0.18em] sm:text-[11px] sm:tracking-[0.28em]">
           {conference.seriesName}
         </p>
 
