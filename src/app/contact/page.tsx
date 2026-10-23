@@ -7,17 +7,23 @@ export const metadata: Metadata = {
   description: `How to reach the ${conference.name} organising committee.`,
 };
 
+/**
+ * Only addresses that actually exist on the domain. Every track address
+ * forwards to that track's confirmed chairs. Roles with no chair appointed
+ * yet (registration, proceedings, student volunteers, CMT) deliberately have
+ * no address: one that bounces is worse than none, so that mail goes to the
+ * general chairs instead.
+ */
 const addresses = [
-  { role: "General enquiries", email: "contact@nime2027.org" },
+  { role: "General enquiries", email: "general-chairs@nime2027.org" },
   { role: "Papers", email: "papers@nime2027.org" },
-  { role: "Music", email: "music@nime2027.org" },
+  { role: "Music / Performance", email: "music@nime2027.org" },
+  { role: "Art / Installations", email: "installations@nime2027.org" },
+  { role: "alt.nime", email: "alt.nime@nime2027.org" },
+  { role: "Artifacts & Ideas", email: "artifacts@nime2027.org" },
   { role: "Workshops", email: "workshops@nime2027.org" },
-  { role: "alt.nime", email: "altnime@nime2027.org" },
-  { role: "Student Consortium", email: "consortium@nime2027.org" },
-  { role: "Student Volunteers", email: "volunteers@nime2027.org" },
-  { role: "Registration", email: "registration@nime2027.org" },
+  { role: "Doctoral Consortium", email: "student-consortium@nime2027.org" },
   { role: "Accessibility", email: "access@nime2027.org" },
-  { role: "Press", email: "press@nime2027.org" },
 ];
 
 export default function ContactPage() {
@@ -26,13 +32,13 @@ export default function ContactPage() {
       <PageHero
         eyebrow="Get in touch"
         title="Contact"
-        intro="Questions about a track go to that track's chairs — they will get a faster answer than the general address."
+        intro="Questions about a track go to that track's chairs. They will get you a faster answer than the general address."
       />
 
       <Container className="py-16 lg:py-24">
         <div className="grid gap-14 lg:grid-cols-[1.1fr_1fr]">
           <div>
-            <h2 className="font-display text-2xl font-bold">Who to write to</h2>
+            <h2 className="font-display text-2xl text-craie">Who to write to</h2>
             <ul className="mt-8 border-t border-white/10">
               {addresses.map((a) => (
                 <li
@@ -53,22 +59,18 @@ export default function ContactPage() {
             </ul>
             <div className="mt-8">
               <Provisional>
-                These addresses are planned but not all of them are live yet. Until they
-                are, use{" "}
-                <a href={`mailto:${conference.email}`} className="underline">
-                  {conference.email}
-                </a>
-                .
+                Registration, proceedings, student volunteers and CMT have no chair
+                appointed yet, so they have no address. Write to the general chairs and
+                your message will reach the right person.
               </Provisional>
             </div>
           </div>
 
           <aside className="space-y-10">
             <div>
-              <h2 className="font-display text-2xl font-bold">Stay informed</h2>
+              <h2 className="font-display text-2xl text-craie">Stay informed</h2>
               <p className="mt-4 text-[17px] leading-[1.75] text-brume">
-                Announcements — the call for contributions, registration opening, the
-                programme — are posted on the NIME forum and circulated on the NIME
+                Announcements are posted on the NIME forum and circulated on the NIME
                 mailing list.
               </p>
               <ul className="mt-6 space-y-2.5">
@@ -99,13 +101,15 @@ export default function ContactPage() {
               <h3 className="text-[11px] font-semibold uppercase tracking-[0.18em] text-neon-teal">
                 Conference
               </h3>
-              <p className="mt-4 font-display text-2xl font-bold leading-snug">
+              <p className="mt-4 font-display text-2xl leading-snug text-craie">
                 {conference.name}
                 <br />
-                <span className="italic text-neon-teal">{conference.city}</span>
+                <span className="italic text-neon-or">{conference.city}</span>
               </p>
               <p className="mt-4 text-sm text-brume">{conference.dates}</p>
-              <p className="text-sm text-brume">{conference.location}</p>
+              <p className="text-sm text-brume">
+                {conference.venue}, {conference.host}
+              </p>
             </div>
           </aside>
         </div>

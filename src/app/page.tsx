@@ -27,18 +27,23 @@ export default function Home() {
           {conference.seriesName}
         </p>
 
-        <h1 className="mt-4 max-w-3xl font-display text-[1.5rem] leading-[1.15] font-bold min-[360px]:text-[1.9rem] sm:text-5xl lg:text-[3.4rem]">
+        <h1 className="mt-4 max-w-3xl font-display text-[1.5rem] leading-[1.15] min-[360px]:text-[1.9rem] sm:text-5xl lg:text-[3.4rem]">
           New Interfaces for
           <br />
           Musical Expression
         </h1>
 
-        <p className="mt-11 font-display text-[1.75rem] leading-none font-bold text-neon-or glow-or min-[360px]:text-4xl sm:text-6xl lg:text-7xl">
+        <p className="mt-11 font-display text-[1.75rem] leading-none text-neon-or glow-or min-[360px]:text-4xl sm:text-6xl lg:text-7xl">
           {conference.dates}
         </p>
 
         <p className="mt-5 text-[13px] font-semibold uppercase tracking-[0.3em] text-neon-rose sm:text-sm">
           {conference.location}
+        </p>
+
+        <p className="mt-7 text-[12px] uppercase tracking-[0.26em] text-brume">
+          Theme
+          <span className="ml-3 text-neon-teal">{conference.theme}</span>
         </p>
 
         <p className="mt-14 max-w-xl text-[15px] leading-[1.8] text-brume sm:text-base">

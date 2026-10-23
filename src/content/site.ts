@@ -37,7 +37,7 @@ export const conference = {
   /** The call is published the week commencing 26 October 2026. */
   callOpens: "October 2026",
   /** TBC — this address does not exist yet. */
-  email: "contact@nime2027.org",
+  email: "general-chairs@nime2027.org",
   /** Shown to readers. */
   domain: "nime2027.org",
   /**

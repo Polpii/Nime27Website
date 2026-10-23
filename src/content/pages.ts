@@ -175,7 +175,7 @@ export const pages: Record<string, PageContent> = {
       "Say what the work contributes before saying what is missing. Be specific about what would change your assessment. Remember that a NIME submission may be an artistic contribution, an engineering contribution, a study, or all three — and should be judged on the terms it sets for itself.",
       "Reviewing is double-blind. Do not attempt to identify the authors, and declare any conflict of interest as soon as you spot one.",
       "## Contact",
-      "[reviewing@nime2027.org](mailto:reviewing@nime2027.org)",
+      "[papers@nime2027.org](mailto:papers@nime2027.org)",
     ],
   },
 
@@ -198,7 +198,7 @@ export const pages: Record<string, PageContent> = {
       "## Proceedings",
       "NIME proceedings are open access and archived at [nime.org/papers](https://nime.org/papers/).",
       "## Contact",
-      "[proceedings@nime2027.org](mailto:proceedings@nime2027.org)",
+      "[general-chairs@nime2027.org](mailto:general-chairs@nime2027.org)",
     ],
   },
 
@@ -227,7 +227,7 @@ export const pages: Record<string, PageContent> = {
       "## Financial support",
       "We intend to offer a limited number of fee waivers and travel bursaries, prioritising students and delegates who would otherwise be unable to attend. Details will be published with the registration rates.",
       "## Contact",
-      "[registration@nime2027.org](mailto:registration@nime2027.org)",
+      "[general-chairs@nime2027.org](mailto:general-chairs@nime2027.org)",
     ],
   },
 
@@ -262,7 +262,7 @@ export const pages: Record<string, PageContent> = {
       "NIME 2027 will host keynote talks and performances from figures whose work has shaped how instruments are designed, built, played and shared.",
       "Speakers will be announced here and on the NIME forum as they are confirmed.",
       "## Suggest a speaker",
-      "The committee welcomes suggestions from the community, particularly for voices under-represented in previous NIME keynote programmes. Write to [programme@nime2027.org](mailto:programme@nime2027.org).",
+      "The committee welcomes suggestions from the community, particularly for voices under-represented in previous NIME keynote programmes. Write to [general-chairs@nime2027.org](mailto:general-chairs@nime2027.org).",
     ],
   },
 
@@ -307,7 +307,7 @@ export const pages: Record<string, PageContent> = {
       "## The NIME Open Day",
       "On 26 June 2027 the conference opens to the public: instruments to try, installations to walk through, and short talks aimed at an audience with no prior connection to the field.",
       "## Propose an event",
-      "If you are organising something in Paris that week and would like it listed, write to [satellite@nime2027.org](mailto:satellite@nime2027.org).",
+      "If you are organising something in Paris that week and would like it listed, write to [general-chairs@nime2027.org](mailto:general-chairs@nime2027.org).",
     ],
   },
 

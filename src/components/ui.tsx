@@ -28,7 +28,7 @@ export function PageHero({
     <div className="relative border-b border-white/10 bg-nuit-3">
       <Container className="py-16 lg:py-24">
         {eyebrow && <Eyebrow>{eyebrow}</Eyebrow>}
-        <h1 className="mt-4 max-w-4xl font-display text-[2rem] leading-[1.1] font-bold sm:text-5xl lg:text-6xl">
+        <h1 className="mt-4 max-w-4xl font-display text-[2rem] leading-[1.1] sm:text-5xl lg:text-6xl">
           {title}
         </h1>
         {intro && <p className="mt-6 max-w-2xl text-lg leading-relaxed text-brume">{intro}</p>}
@@ -107,7 +107,7 @@ export function Card({
   const body = (
     <>
       <span className="absolute inset-x-0 top-0 h-px origin-top bg-neon-or/60 transition-transform duration-300 group-hover:scale-y-[3]" />
-      <h2 className="font-display text-xl font-bold text-craie">{title}</h2>
+      <h2 className="font-display text-xl text-craie">{title}</h2>
       <p className="mt-3 text-[15px] leading-relaxed text-brume">{children}</p>
       {href && (
         <span className="mt-5 inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.14em] text-neon-teal">

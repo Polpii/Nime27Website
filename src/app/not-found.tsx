@@ -6,7 +6,7 @@ export default function NotFound() {
   return (
     <main className="flex min-h-dvh flex-col items-center justify-center px-5 text-center">
       <EiffelTower className="h-24 w-auto text-toit" />
-      <p className="mt-8 font-display text-4xl font-bold">404</p>
+      <p className="mt-8 font-display text-4xl">404</p>
       <p className="mt-4 max-w-sm text-[15px] leading-relaxed text-brume">
         There is only one page here for now.
       </p>

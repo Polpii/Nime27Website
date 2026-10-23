@@ -29,7 +29,7 @@ export default function CommitteePage() {
               <ul className="mt-5 space-y-4">
                 {group.members.map((m) => (
                   <li key={m.name}>
-                    <p className="font-display text-lg leading-tight font-bold text-craie">
+                    <p className="font-display text-lg leading-tight text-craie">
                       {m.name}
                     </p>
                     {m.affiliation && (
@@ -50,7 +50,7 @@ export default function CommitteePage() {
         </div>
 
         <div className="mt-20 max-w-2xl space-y-6">
-          <h2 className="font-display text-2xl font-bold text-craie">Roles still open</h2>
+          <h2 className="font-display text-2xl text-craie">Roles still open</h2>
           <p className="text-[17px] leading-[1.75] text-brume">
             The following roles have nobody appointed yet. If you would like to help with
             one of them, write to the general chairs.

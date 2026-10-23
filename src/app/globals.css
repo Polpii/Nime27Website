@@ -26,7 +26,7 @@
   --color-neon-or: #C97252;
   --color-neon-purple: #B573B5;
 
-  --font-display: var(--font-playfair), "Playfair Display", Georgia, serif;
+  --font-display: var(--font-display-face), "Poiret One", "Josefin Sans", sans-serif;
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
 }
 

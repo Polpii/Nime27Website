@@ -85,7 +85,7 @@ function render(body: string[]): ReactNode[] {
       out.push(
         <h2
           key={index}
-          className="pt-6 font-display text-2xl font-bold text-craie sm:text-[1.7rem]"
+          className="pt-6 font-display text-2xl text-craie sm:text-[1.7rem]"
         >
           {line.slice(3)}
         </h2>,

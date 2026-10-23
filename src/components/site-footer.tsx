@@ -17,7 +17,7 @@ export function SiteFooter() {
       <div className="mx-auto max-w-5xl px-5 pb-12 pt-16 lg:px-8">
         <div className="grid gap-12 lg:grid-cols-[1.2fr_2fr]">
           <div>
-            <p className="font-display text-3xl font-bold leading-none text-craie">
+            <p className="font-display text-3xl leading-none text-craie">
               NIME <span className="italic text-neon-or">2027</span>
             </p>
             <p className="mt-3 max-w-xs text-sm leading-relaxed text-brume">

@@ -13,7 +13,7 @@ function Wordmark({ onNavigate }: { onNavigate?: () => void }) {
       className="group flex items-baseline gap-2"
       aria-label={`${conference.name} home`}
     >
-      <span className="font-display text-xl leading-none font-bold tracking-tight text-craie">
+      <span className="font-display text-xl leading-none tracking-tight text-craie">
         NIME
       </span>
       <span className="font-display text-xl leading-none italic text-neon-or">2027</span>

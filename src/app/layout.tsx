@@ -1,12 +1,15 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, Playfair_Display } from "next/font/google";
+import { Inter, Poiret_One } from "next/font/google";
 import "./globals.css";
 import { conference } from "@/content/site";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 
-const playfair = Playfair_Display({
-  variable: "--font-playfair",
+// Poiret One is the closest freely licensed face to the 1930s Paris
+// direction in the branding document. It has one weight only.
+const poiret = Poiret_One({
+  variable: "--font-display-face",
+  weight: "400",
   subsets: ["latin"],
   display: "swap",
 });
@@ -46,7 +49,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     // The font variables must land on :root — the @theme tokens that reference
     // them are declared there, and a var() only resolves in its own scope.
-    <html lang="en" className={`${playfair.variable} ${inter.variable}`}>
+    <html lang="en" className={`${poiret.variable} ${inter.variable}`}>
       <body className="antialiased">
         <a
           href="#main"

@@ -24,7 +24,7 @@ export default function ProgrammePage() {
 
       <Container className="py-16 lg:py-24">
         <section>
-          <h2 className="font-display text-3xl font-bold text-craie">The week</h2>
+          <h2 className="font-display text-3xl text-craie">The week</h2>
           <p className="mt-4 max-w-2xl text-[17px] leading-[1.75] text-brume">
             The published range covers the pre-conference activities. If you are booking
             travel, note that things start on the Monday, not on the Wednesday.
@@ -39,7 +39,7 @@ export default function ProgrammePage() {
                 <p className="text-[10px] font-semibold uppercase tracking-[0.16em] text-brume">
                   {day.weekday}
                 </p>
-                <p className="mt-1 font-display text-xl font-bold text-neon-teal">
+                <p className="mt-1 font-display text-xl text-neon-teal">
                   {day.date}
                 </p>
                 <ul className="mt-4 space-y-1.5">
@@ -55,7 +55,7 @@ export default function ProgrammePage() {
         </section>
 
         <section className="mt-20">
-          <h2 className="font-display text-3xl font-bold text-craie">Key dates</h2>
+          <h2 className="font-display text-3xl text-craie">Key dates</h2>
           <p className="mt-4 max-w-2xl text-[17px] leading-[1.75] text-brume">
             All submission deadlines are 23:59 Anywhere on Earth.
           </p>
@@ -66,7 +66,7 @@ export default function ProgrammePage() {
                 key={`${d.date}-${d.label}`}
                 className="grid grid-cols-1 gap-1 border-b border-white/10 py-5 transition-colors hover:bg-white/[0.02] sm:grid-cols-[260px_1fr] sm:gap-8"
               >
-                <p className={`font-display text-lg font-bold ${kindStyle[d.kind]}`}>
+                <p className={`font-display text-lg ${kindStyle[d.kind]}`}>
                   {d.date}
                 </p>
                 <div className="flex flex-wrap items-baseline gap-3">
