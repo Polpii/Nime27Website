@@ -12,8 +12,13 @@ export const conference = {
   fullName: "New Interfaces for Musical Expression",
   /** nime.org's own wording for the conference series. */
   seriesName: "The International Conference on",
-  dates: "22–25 June 2027",
-  datesShort: "22–25 JUN 2027",
+  /**
+   * 21-25 June, not 22-25: the organisers include the pre-conference
+   * activities in the published range so nobody books travel that misses them.
+   * This also matches what nime.org announces.
+   */
+  dates: "21–25 June 2027",
+  datesShort: "21–25 JUN 2027",
   city: "Paris",
   country: "France",
   location: "Paris, France",
