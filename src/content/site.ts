@@ -195,3 +195,34 @@ export const tracks: Track[] = [
     blurb: "Feedback on a developing PhD project from peers and senior mentors.",
   },
 ];
+
+export type ConferenceDay = { date: string; weekday: string; items: string[] };
+
+/**
+ * The shape of the week, from the organisers' general schedule. Note that the
+ * source spreadsheet dates these columns June 2026; that is a typo in their
+ * file, the conference is 2027.
+ */
+export const conferenceWeek: ConferenceDay[] = [
+  { date: "21 June", weekday: "Monday", items: ["Fête de la musique"] },
+  {
+    date: "22 June",
+    weekday: "Tuesday",
+    items: ["Workshops", "Doctoral Consortium", "Reception", "Concert"],
+  },
+  {
+    date: "23 June",
+    weekday: "Wednesday",
+    items: ["Papers", "Demos", "Installations", "Concerts"],
+  },
+  {
+    date: "24 June",
+    weekday: "Thursday",
+    items: ["Papers", "Demos", "Installations", "Concerts"],
+  },
+  {
+    date: "25 June",
+    weekday: "Friday",
+    items: ["Papers", "Demos", "Installations", "Concerts"],
+  },
+];

@@ -1,14 +1,77 @@
 import type { Metadata } from "next";
-import { SimplePage } from "@/components/simple-page";
-import { pages } from "@/content/pages";
-
-const page = pages["committee"];
+import { committee, vacantRoles } from "@/content/committee";
+import { conference } from "@/content/site";
+import { Container, PageHero, Provisional } from "@/components/ui";
 
 export const metadata: Metadata = {
-  title: page.title,
-  description: page.intro,
+  title: "Committee",
+  description: `The people organising ${conference.name} in ${conference.city}.`,
 };
 
-export default function Page() {
-  return <SimplePage page={page} />;
+export default function CommitteePage() {
+  const total = committee.reduce((n, g) => n + g.members.length, 0);
+
+  return (
+    <>
+      <PageHero
+        eyebrow="Organisation"
+        title="Committee"
+        intro={`${conference.name} is organised by a committee working with the international NIME steering committee. ${total} people are on the committee so far, and several roles are still open.`}
+      />
+
+      <Container className="py-16 lg:py-24">
+        <div className="grid gap-x-12 gap-y-14 sm:grid-cols-2">
+          {committee.map((group) => (
+            <section key={group.title}>
+              <h2 className="border-b border-white/10 pb-3 text-[11px] font-semibold uppercase tracking-[0.18em] text-neon-teal">
+                {group.title}
+              </h2>
+              <ul className="mt-5 space-y-4">
+                {group.members.map((m) => (
+                  <li key={m.name}>
+                    <p className="font-display text-lg leading-tight font-bold text-craie">
+                      {m.name}
+                    </p>
+                    {m.affiliation && (
+                      <p className="mt-0.5 text-[14px] leading-snug text-brume">
+                        {m.affiliation}
+                      </p>
+                    )}
+                  </li>
+                ))}
+                {group.vacancies ? (
+                  <li className="text-[14px] italic text-brume">
+                    {group.vacancies} {group.vacancies === 1 ? "place" : "places"} still open
+                  </li>
+                ) : null}
+              </ul>
+            </section>
+          ))}
+        </div>
+
+        <div className="mt-20 max-w-2xl space-y-6">
+          <h2 className="font-display text-2xl font-bold text-craie">Roles still open</h2>
+          <p className="text-[17px] leading-[1.75] text-brume">
+            The following roles have nobody appointed yet. If you would like to help with
+            one of them, write to the general chairs.
+          </p>
+          <ul className="ml-1 space-y-2 border-l border-white/10 pl-6">
+            {vacantRoles.map((r) => (
+              <li key={r} className="relative text-[16px] text-brume">
+                <span
+                  className="absolute -left-[25px] top-[10px] h-[5px] w-[5px] rotate-45 bg-neon-or"
+                  aria-hidden="true"
+                />
+                {r}
+              </li>
+            ))}
+          </ul>
+          <Provisional>
+            Only confirmed members are listed. The committee is still being assembled, so
+            this page will grow. Reviewers are credited separately once reviewing closes.
+          </Provisional>
+        </div>
+      </Container>
+    </>
+  );
 }

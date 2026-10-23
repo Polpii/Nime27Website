@@ -1,0 +1,114 @@
+/**
+ * The organising committee.
+ *
+ * ONLY people recorded as Confirmed in the committee sheet appear here, with
+ * one deliberate exception noted below. Several roles are still vacant
+ * (Proceedings, Registration, CMT, Student Volunteers, local and venue chairs)
+ * and are listed as such rather than hidden, so the gaps are visible to anyone
+ * who might fill them.
+ *
+ * Never publish anyone marked Invited, Proposed, Interested or declined: an
+ * invitation is not an acceptance, and two people have already declined.
+ */
+
+export type Member = { name: string; affiliation?: string };
+export type CommitteeGroup = { title: string; members: Member[]; vacancies?: number };
+
+export const committee: CommitteeGroup[] = [
+  {
+    title: "General chairs",
+    members: [
+      { name: "Xiao Xiao", affiliation: "IFT, DVHE / MIT Media Lab" },
+      { name: "Sofy Yuditskaya", affiliation: "IIM, DVHE" },
+      { name: "Paul Strohmeier", affiliation: "MPI-INF" },
+    ],
+  },
+  {
+    title: "Papers",
+    members: [
+      { name: "Akito Van Troyer", affiliation: "Berklee College of Music" },
+      { name: "Enrique 'Kike' Tomás", affiliation: "Tangible Music Lab, University of Arts Linz" },
+    ],
+  },
+  {
+    title: "Music / Performance",
+    members: [
+      { name: "Meg Schedel", affiliation: "Stony Brook University" },
+      { name: "Christophe d'Alessandro", affiliation: "Sorbonne Université" },
+      { name: "Manaswi Mishra", affiliation: "MIT Media Lab" },
+    ],
+  },
+  {
+    title: "Art / Installations",
+    members: [
+      { name: "David Ramsay", affiliation: "DePaul University" },
+      { name: "Mirna Zordan", affiliation: "SUSTech" },
+    ],
+    vacancies: 1,
+  },
+  {
+    title: "alt.nime",
+    members: [
+      // Emilien is "onboarding sent" in the sheet rather than Confirmed, but he
+      // and Tove both stated publicly that the three of them chair alt.nime.
+      { name: "Tove Grimstad Bang", affiliation: "IRCAM" },
+      { name: "Théo Jourdan", affiliation: "IRCAM" },
+      { name: "Emilien Ghomi" },
+    ],
+  },
+  {
+    title: "Artifacts & Ideas",
+    members: [{ name: "Nicolò Merendino" }, { name: "Kazuhiro Jo" }],
+    vacancies: 1,
+  },
+  {
+    title: "Workshops",
+    members: [{ name: "Lea Schirp" }],
+    vacancies: 2,
+  },
+  {
+    title: "Doctoral Consortium",
+    members: [
+      { name: "Martin Kaltenbrunner", affiliation: "Tangible Music Lab, University of Arts Linz" },
+      { name: "Sarah Nabi", affiliation: "IRCAM" },
+    ],
+  },
+  {
+    title: "Awards",
+    members: [{ name: "Stefania Serafin", affiliation: "DTU" }],
+  },
+  {
+    title: "Accessibility & Family",
+    members: [{ name: "Rébecca Kleinberger", affiliation: "Northeastern University" }],
+    vacancies: 1,
+  },
+  {
+    title: "Hybrid",
+    members: [
+      { name: "Leo Mercier", affiliation: "IRCAM" },
+      { name: "Balthazar Bujard", affiliation: "IRCAM" },
+    ],
+  },
+  {
+    title: "Design",
+    members: [
+      { name: "Ziyue Piao", affiliation: "McGill University" },
+      { name: "Jian Gao", affiliation: "University of British Columbia" },
+    ],
+  },
+  {
+    title: "Web",
+    members: [{ name: "Paul-Peter Arslan", affiliation: "De Vinci Higher Education" }],
+  },
+];
+
+/** Roles with nobody appointed yet. Shown so the gaps are findable. */
+export const vacantRoles = [
+  "Proceedings",
+  "Registration",
+  "CMT",
+  "Student Volunteers",
+  "Concert (local)",
+  "Local and venue chairs",
+  "Kids programme",
+];
