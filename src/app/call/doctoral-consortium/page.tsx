@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { SimplePage } from "@/components/simple-page";
 import { pages } from "@/content/pages";
 
-const page = pages["student-consortium"];
+const page = pages["doctoral-consortium"];
 
 export const metadata: Metadata = {
   title: page.title,

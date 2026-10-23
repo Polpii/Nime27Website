@@ -1,13 +1,10 @@
 /**
  * Site content.
  *
- * CONFIRMED facts and PLACEHOLDERS are both here, but they are not equal:
- * anything marked `TBC` below is carried over from NIME 2026 or extrapolated,
- * and is rendered on the page inside a <Provisional> callout so no reader can
- * mistake it for a decision. See TBC.txt for the full audit.
- *
- * Confirmed so far: the name, the dates, Paris, and that the call for papers
- * and participation is published in October 2026.
+ * Most of this is now CONFIRMED, taken from the organisers' own documents:
+ * the call overview, the track schedule and the chairs sheet. Anything still
+ * unsettled is marked TBC and rendered inside a <Provisional> callout so no
+ * reader can mistake it for a decision. See TBC.txt for the remaining gaps.
  */
 
 export const conference = {
@@ -18,9 +15,9 @@ export const conference = {
   /** TBC — the edition number has never been published by NIME itself. */
   number: "The International Conference on",
   /**
-   * 21-25 June, not 22-25: the organisers include the pre-conference
-   * activities in the published range so nobody books travel that misses them.
-   * This also matches what nime.org announces.
+   * 21-25 June, not 22-25: the published range covers the pre-conference
+   * activities (21 June is the fête de la musique, 22 June the workshops and
+   * reception), so nobody books travel that misses them.
    */
   dates: "21–25 June 2027",
   datesShort: "21–25 JUN 2027",
@@ -29,7 +26,7 @@ export const conference = {
   location: "Paris, France",
   /** Announced by nime.org. The exact site and address are still TBC. */
   host: "Devinci Higher Education",
-  /** When the call for papers and participation is published. */
+  /** The call is published the week commencing 26 October 2026. */
   callOpens: "October 2026",
   /** TBC — this address does not exist yet. */
   email: "contact@nime2027.org",
@@ -56,11 +53,12 @@ export const nav: NavItem[] = [
     href: "/call",
     children: [
       { label: "Papers", href: "/call/papers" },
-      { label: "Music", href: "/call/music" },
-      { label: "Workshops", href: "/call/workshops" },
+      { label: "Music / Performance", href: "/call/music" },
+      { label: "Art / Installations", href: "/call/installations" },
       { label: "alt.nime", href: "/call/alt-nime" },
-      { label: "Student Consortium", href: "/call/student-consortium" },
-      { label: "Student Volunteers", href: "/call/student-volunteers" },
+      { label: "Artifacts & Ideas", href: "/call/artifacts" },
+      { label: "Workshops", href: "/call/workshops" },
+      { label: "Doctoral Consortium", href: "/call/doctoral-consortium" },
       { label: "Reviewing", href: "/call/reviewing" },
       { label: "Camera-Ready", href: "/call/camera-ready" },
     ],
@@ -87,61 +85,113 @@ export const nav: NavItem[] = [
   { label: "Contact", href: "/contact" },
 ];
 
+/**
+ * The two submission deadlines everything else hangs off. Both are AoE.
+ * Taken from the organisers' call overview.
+ */
+export const deadlines = {
+  peerReviewed: "Sunday 31 January 2027",
+  curated: "Sunday 4 April 2027",
+} as const;
+
 export type ImportantDate = {
   date: string;
   label: string;
   kind: "deadline" | "event" | "info";
 };
 
-/**
- * TBC — every date except the conference itself is extrapolated one year
- * forward from NIME 2026. The conference range itself is confirmed at 21–25 June.
- */
+/** From the organisers' track schedule. All submission deadlines are 23:59 AoE. */
 export const importantDates: ImportantDate[] = [
-  { date: "October 2026", label: "Call for papers and participation published", kind: "info" },
-  { date: "December 2026", label: "Submission site opens", kind: "info" },
-  { date: "February 2027", label: "Papers & Music — submissions due", kind: "deadline" },
-  { date: "March 2027", label: "Workshops, alt.nime & Student Consortium due", kind: "deadline" },
-  { date: "April 2027", label: "Acceptance decisions and reviews released", kind: "info" },
-  { date: "April 2027", label: "Camera-ready and presenter registration deadline", kind: "deadline" },
-  { date: "21–25 June 2027", label: "Conference, including pre-conference activities", kind: "event" },
+  { date: "October 2026", label: "Call for contributions published", kind: "info" },
+  { date: "December 2026", label: "Submission system opens", kind: "info" },
+  {
+    date: "Sunday 24 January 2027",
+    label: "Peer reviewed tracks — titles, abstracts and authors due",
+    kind: "deadline",
+  },
+  {
+    date: "Sunday 31 January 2027",
+    label: "Peer reviewed tracks — full submissions due",
+    kind: "deadline",
+  },
+  { date: "Friday 26 March 2027", label: "Peer reviewed decisions released", kind: "info" },
+  {
+    date: "Sunday 4 April 2027",
+    label: "Curated tracks — submissions due",
+    kind: "deadline",
+  },
+  { date: "Friday 30 April 2027", label: "Curated decisions released", kind: "info" },
+  { date: "May 2027", label: "Final materials and camera-ready due", kind: "deadline" },
+  { date: "Monday 21 June 2027", label: "Fête de la musique", kind: "event" },
+  {
+    date: "Tuesday 22 June 2027",
+    label: "Workshops, Doctoral Consortium, reception and opening concert",
+    kind: "event",
+  },
+  { date: "23–25 June 2027", label: "Main conference", kind: "event" },
 ];
 
-export const tracks = [
+export type Track = {
+  title: string;
+  href: string;
+  /** Which of the two deadlines this track falls under. */
+  group: "peer-reviewed" | "curated";
+  blurb: string;
+};
+
+/**
+ * The seven calls, in the organisers' own words. Note the grouping: three
+ * tracks are peer reviewed and close in January, four are curated and close
+ * in April. The intro page leads with that split because it is the thing a
+ * reader most needs to get right.
+ */
+export const tracks: Track[] = [
   {
     title: "Papers",
     href: "/call/papers",
+    group: "peer-reviewed",
     blurb:
-      "Original research on the scientific and artistic use of new interfaces for musical expression, in long, medium and short length classes.",
+      "Research, such as a study of musical gestures, a new instrument design or a reflection on performance practice.",
   },
   {
-    title: "Music",
+    title: "Music / Performance",
     href: "/call/music",
+    group: "peer-reviewed",
     blurb:
-      "Performances, installations and sound works that put new instruments in front of an audience across the conference venues.",
+      "Concert works, such as a piece for a custom controller or a human–machine duet.",
   },
   {
-    title: "Workshops",
-    href: "/call/workshops",
+    title: "Art / Installations",
+    href: "/call/installations",
+    group: "peer-reviewed",
     blurb:
-      "Half- and full-day hands-on sessions run on the day before the main conference programme opens.",
+      "Artworks, such as an interactive sound sculpture or a room that responds musically to visitors.",
   },
   {
     title: "alt.nime",
     href: "/call/alt-nime",
+    group: "curated",
     blurb:
-      "Formats that do not fit anywhere else: provocations, unconferences, listening sessions, experiments in how we meet.",
+      "Work that challenges conventional formats, such as a zine, a participatory ritual or an experimental lecture.",
   },
   {
-    title: "Student Consortium",
-    href: "/call/student-consortium",
+    title: "Artifacts & Ideas",
+    href: "/call/artifacts",
+    group: "curated",
     blurb:
-      "A dedicated day for doctoral researchers to present work in progress and get feedback from senior mentors.",
+      "Works without an accompanying research paper, such as a DIY instrument presented as a demo, or a musical interaction concept presented as a poster.",
   },
   {
-    title: "Student Volunteers",
-    href: "/call/student-volunteers",
+    title: "Workshops",
+    href: "/call/workshops",
+    group: "curated",
     blurb:
-      "Help run the conference, meet the community and attend for a reduced registration fee.",
+      "Shared activities, such as exploring collaborative live coding, discussing accessible music-making, or get-togethers of subcommunities within NIME.",
+  },
+  {
+    title: "Doctoral Consortium",
+    href: "/call/doctoral-consortium",
+    group: "curated",
+    blurb: "Feedback on a developing PhD project from peers and senior mentors.",
   },
 ];

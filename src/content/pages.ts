@@ -50,7 +50,7 @@ export const pages: Record<string, PageContent> = {
 
   music: {
     slug: "call/music",
-    title: "Call for Music",
+    title: "Call for Music / Performance",
     eyebrow: "Call",
     intro:
       "Performances, installations and sound works that put new instruments in front of an audience.",
@@ -115,9 +115,9 @@ export const pages: Record<string, PageContent> = {
     ],
   },
 
-  "student-consortium": {
-    slug: "call/student-consortium",
-    title: "Student Consortium",
+  "doctoral-consortium": {
+    slug: "call/doctoral-consortium",
+    title: "Doctoral Consortium",
     eyebrow: "Call",
     intro:
       "A dedicated day for doctoral researchers to present work in progress and get feedback from senior mentors.",
@@ -135,28 +135,6 @@ export const pages: Record<string, PageContent> = {
     ],
   },
 
-  "student-volunteers": {
-    slug: "call/student-volunteers",
-    title: "Student Volunteers",
-    eyebrow: "Call",
-    intro:
-      "Help run the conference, meet the community, and attend for a reduced registration fee.",
-    body: [
-      provisional,
-      "Student volunteers keep NIME running: session chairing support, registration desk, concert set-up and strike, streaming, and helping delegates find the right room in an unfamiliar city.",
-      "## What we ask",
-      "- Availability for a set number of shifts across the conference",
-      "- Attendance at a briefing before the conference opens",
-      "- Enthusiasm at eight in the morning on the third day",
-      "## What you get",
-      "- A reduced registration fee",
-      "- Access to the full conference programme outside your shifts",
-      "- A short route into the community for anyone attending NIME for the first time",
-      "Applications open with registration. Places are limited and allocated with attention to geographic and institutional diversity.",
-      "## Contact",
-      "[volunteers@nime2027.org](mailto:volunteers@nime2027.org)",
-    ],
-  },
 
   reviewing: {
     slug: "call/reviewing",
@@ -377,6 +355,43 @@ export const pages: Record<string, PageContent> = {
       "Concert programmes will carry advance notice of high volume levels, strobe and flashing light, and haptic intensity. Ear protection will be available. Seating will be reserved at each concert for delegates who need it.",
       "## I have a requirement that is not listed here",
       "Please write to [access@nime2027.org](mailto:access@nime2027.org). We would much rather hear about a barrier in January than discover it in June.",
+    ],
+  },
+
+  installations: {
+    slug: "call/installations",
+    title: "Call for Art / Installations",
+    eyebrow: "Call",
+    intro:
+      "Artworks, such as an interactive sound sculpture or a room that responds musically to visitors.",
+    body: [
+      "> The full call is being finalised by the chairs. What follows is the shape it will take.",
+      "Art and Installations is one of the three **peer reviewed** tracks, alongside Papers and Music / Performance. Submissions close on **Sunday 31 January 2027, AoE**, with titles, abstracts and authors due a week earlier on **Sunday 24 January**.",
+      "## What to submit",
+      "- A description of the work and what a visitor experiences",
+      "- Documentation: images, video, audio as appropriate",
+      "- A technical rider covering space, power, light, sound and network",
+      "- Installation and strike requirements, and whether the work can be left unattended",
+      "## Review",
+      "Submissions are assessed by the Art / Installations chairs together with a jury. Decisions are released on **Friday 26 March 2027**.",
+    ],
+  },
+
+  artifacts: {
+    slug: "call/artifacts",
+    title: "Call for Artifacts & Ideas",
+    eyebrow: "Call",
+    intro:
+      "Works without an accompanying research paper: a DIY instrument presented as a demo, or a musical interaction concept presented as a poster.",
+    body: [
+      "> The full call is being finalised by the chairs. What follows is the shape it will take.",
+      "Artifacts & Ideas is one of the four **curated** tracks. Submissions close on **Sunday 4 April 2027, AoE**, and decisions are released on **Friday 30 April 2027**.",
+      "This is the track for work that is worth showing but does not come with a paper. A built instrument, a controller, a piece of software, a provocation, a sketch of an interaction that deserves an audience and a conversation.",
+      "## What to submit",
+      "- A description of the artifact or idea",
+      "- Images, video or audio documentation",
+      "- Whether you intend it as a **demo** (something people handle) or a **poster** (something people read and discuss)",
+      "- Space, power and technical requirements for the demo session",
     ],
   },
 };

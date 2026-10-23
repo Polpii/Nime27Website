@@ -39,3 +39,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Committee documents from the shared Drive: these carry ~40 people's personal
+# email addresses and must never reach this public repository.
+/NimeDocs/
