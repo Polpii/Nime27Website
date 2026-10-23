@@ -78,7 +78,7 @@ export function SiteHeader() {
               </Link>
 
               {item.children && (
-                <div className="invisible absolute left-0 top-full w-60 translate-y-1 opacity-0 transition-all duration-200 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:visible group-focus-within:translate-y-0 group-focus-within:opacity-100">
+                <div className="invisible absolute right-0 top-full w-60 translate-y-1 opacity-0 transition-all duration-200 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:visible group-focus-within:translate-y-0 group-focus-within:opacity-100">
                   <ul className="mt-1 border border-white/10 bg-nuit-3 shadow-[0_18px_40px_-20px_rgba(0,0,0,0.9)]">
                     {item.children.map((child) => (
                       <li key={child.href} className="border-b border-white/5 last:border-0">

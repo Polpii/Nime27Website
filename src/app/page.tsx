@@ -70,20 +70,6 @@ export default function Home() {
         <ParisSkyline className="h-full w-full" />
       </div>
 
-      <footer className="relative z-20 bg-gradient-to-t from-nuit via-nuit/85 to-transparent pb-7 pt-14 text-center">
-        <p className="text-[11px] uppercase tracking-[0.22em] text-brume">
-          {conference.domain}
-          <span className="mx-3 text-brume">·</span>
-          <a
-            href="https://nime.org"
-            target="_blank"
-            rel="noreferrer"
-            className="transition-colors hover:text-neon-teal"
-          >
-            nime.org
-          </a>
-        </p>
-      </footer>
     </main>
   );
 }
