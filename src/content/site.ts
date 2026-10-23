@@ -17,8 +17,13 @@ export const conference = {
   seriesName: "The International Conference on",
   /** TBC — the edition number has never been published by NIME itself. */
   number: "The International Conference on",
-  dates: "22–25 June 2027",
-  datesShort: "22–25 JUN 2027",
+  /**
+   * 21-25 June, not 22-25: the organisers include the pre-conference
+   * activities in the published range so nobody books travel that misses them.
+   * This also matches what nime.org announces.
+   */
+  dates: "21–25 June 2027",
+  datesShort: "21–25 JUN 2027",
   city: "Paris",
   country: "France",
   location: "Paris, France",
@@ -90,8 +95,7 @@ export type ImportantDate = {
 
 /**
  * TBC — every date except the conference itself is extrapolated one year
- * forward from NIME 2026. Note that nime.org announces 21–25 June for the
- * conference while the organisers gave 22–25; that discrepancy is unresolved.
+ * forward from NIME 2026. The conference range itself is confirmed at 21–25 June.
  */
 export const importantDates: ImportantDate[] = [
   { date: "October 2026", label: "Call for papers and participation published", kind: "info" },
@@ -100,7 +104,7 @@ export const importantDates: ImportantDate[] = [
   { date: "March 2027", label: "Workshops, alt.nime & Student Consortium due", kind: "deadline" },
   { date: "April 2027", label: "Acceptance decisions and reviews released", kind: "info" },
   { date: "April 2027", label: "Camera-ready and presenter registration deadline", kind: "deadline" },
-  { date: "22–25 June 2027", label: "Conference", kind: "event" },
+  { date: "21–25 June 2027", label: "Conference, including pre-conference activities", kind: "event" },
 ];
 
 export const tracks = [
