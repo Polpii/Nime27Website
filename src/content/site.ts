@@ -106,7 +106,7 @@ export const nav: NavItem[] = [
  */
 export const deadlines = {
   peerReviewed: "Sunday 31 January 2027",
-  curated: "Sunday 4 April 2027",
+  juried: "Sunday 4 April 2027",
 } as const;
 
 export type ImportantDate = {
@@ -115,48 +115,54 @@ export type ImportantDate = {
   kind: "deadline" | "event" | "info";
 };
 
-/** From the organisers' track schedule. All submission deadlines are 23:59 AoE. */
+/**
+ * From NIME Track Schedules.xlsx, which the general chairs confirmed is the
+ * master schedule. Where the individual call documents disagree with these
+ * dates, the schedule wins. All submission deadlines are 23:59 AoE.
+ */
 export const importantDates: ImportantDate[] = [
-  { date: "October 2026", label: "Call for contributions published", kind: "info" },
-  { date: "December 2026", label: "Submission system opens", kind: "info" },
+  { date: "26 October 2026", label: "Call for contributions published", kind: "info" },
+  { date: "14 December 2026", label: "Submission system opens for the peer reviewed tracks", kind: "info" },
   {
     date: "Sunday 24 January 2027",
-    label: "Peer reviewed tracks — titles, abstracts and authors due",
+    label: "Peer reviewed — titles, abstracts and authors due",
     kind: "deadline",
   },
   {
     date: "Sunday 31 January 2027",
-    label: "Peer reviewed tracks — full submissions due",
+    label: "Peer reviewed — full submissions due",
     kind: "deadline",
   },
+  { date: "Monday 8 — Sunday 28 February 2027", label: "Review period", kind: "info" },
   { date: "Friday 26 March 2027", label: "Peer reviewed decisions released", kind: "info" },
+  { date: "22 March 2027", label: "Submission system opens for the juried tracks", kind: "info" },
+  { date: "Sunday 4 April 2027", label: "Juried — submissions due", kind: "deadline" },
+  { date: "Friday 30 April 2027", label: "Juried decisions released", kind: "info" },
   {
-    date: "Sunday 4 April 2027",
-    label: "Curated tracks — submissions due",
+    date: "Sunday 9 May 2027",
+    label: "Final materials, camera-ready and presenter registration due",
     kind: "deadline",
   },
-  { date: "Friday 30 April 2027", label: "Curated decisions released", kind: "info" },
-  { date: "May 2027", label: "Final materials and camera-ready due", kind: "deadline" },
   { date: "Monday 21 June 2027", label: "Fête de la musique", kind: "event" },
   {
     date: "Tuesday 22 June 2027",
     label: "Workshops, Doctoral Consortium, reception and opening concert",
     kind: "event",
   },
-  { date: "23–25 June 2027", label: "Main conference", kind: "event" },
+  { date: "Wednesday 23 — Friday 25 June 2027", label: "Main conference", kind: "event" },
 ];
 
 export type Track = {
   title: string;
   href: string;
   /** Which of the two deadlines this track falls under. */
-  group: "peer-reviewed" | "curated";
+  group: "peer-reviewed" | "juried";
   blurb: string;
 };
 
 /**
  * The seven calls, in the organisers' own words. Note the grouping: three
- * tracks are peer reviewed and close in January, four are curated and close
+ * tracks are peer reviewed and close in January, four are juried and close
  * in April. The intro page leads with that split because it is the thing a
  * reader most needs to get right.
  */
@@ -185,28 +191,28 @@ export const tracks: Track[] = [
   {
     title: "alt.nime",
     href: "/call/alt-nime",
-    group: "curated",
+    group: "juried",
     blurb:
       "Work that challenges conventional formats, such as a zine, a participatory ritual or an experimental lecture.",
   },
   {
     title: "Artifacts & Ideas",
     href: "/call/artifacts",
-    group: "curated",
+    group: "juried",
     blurb:
       "Works without an accompanying research paper, such as a DIY instrument presented as a demo, or a musical interaction concept presented as a poster.",
   },
   {
     title: "Workshops",
     href: "/call/workshops",
-    group: "curated",
+    group: "juried",
     blurb:
       "Shared activities, such as exploring collaborative live coding, discussing accessible music-making, or get-togethers of subcommunities within NIME.",
   },
   {
     title: "Doctoral Consortium",
     href: "/call/doctoral-consortium",
-    group: "curated",
+    group: "juried",
     blurb: "Feedback on a developing PhD project from peers and senior mentors.",
   },
 ];

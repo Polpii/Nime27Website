@@ -23,9 +23,19 @@ export default function CommitteePage() {
         <div className="grid gap-x-12 gap-y-14 sm:grid-cols-2">
           {committee.map((group) => (
             <section key={group.title}>
-              <h2 className="border-b border-white/10 pb-3 text-[11px] font-semibold uppercase tracking-[0.18em] text-neon-teal">
-                {group.title}
-              </h2>
+              <div className="border-b border-white/10 pb-3">
+                <h2 className="text-[11px] font-semibold uppercase tracking-[0.18em] text-neon-teal">
+                  {group.title}
+                </h2>
+                {group.email && (
+                  <a
+                    href={`mailto:${group.email}`}
+                    className="link-underline mt-1.5 inline-block text-[13px] text-brume hover:text-neon-teal"
+                  >
+                    {group.email}
+                  </a>
+                )}
+              </div>
               <ul className="mt-5 space-y-4">
                 {group.members.map((m) => (
                   <li key={m.name}>

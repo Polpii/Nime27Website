@@ -12,11 +12,18 @@
  */
 
 export type Member = { name: string; affiliation?: string };
-export type CommitteeGroup = { title: string; members: Member[]; vacancies?: number };
+export type CommitteeGroup = {
+  title: string;
+  members: Member[];
+  vacancies?: number;
+  /** The track address, where one exists. Groups without a chair have none. */
+  email?: string;
+};
 
 export const committee: CommitteeGroup[] = [
   {
     title: "General chairs",
+    email: "general-chairs@nime2027.org",
     members: [
       { name: "Xiao Xiao", affiliation: "IFT, DVHE / MIT Media Lab" },
       { name: "Sofy Yuditskaya", affiliation: "IIM, DVHE" },
@@ -25,6 +32,7 @@ export const committee: CommitteeGroup[] = [
   },
   {
     title: "Papers",
+    email: "papers@nime2027.org",
     members: [
       { name: "Akito Van Troyer", affiliation: "Berklee College of Music" },
       { name: "Enrique 'Kike' Tomás", affiliation: "Tangible Music Lab, University of Arts Linz" },
@@ -32,6 +40,7 @@ export const committee: CommitteeGroup[] = [
   },
   {
     title: "Music / Performance",
+    email: "music@nime2027.org",
     members: [
       { name: "Meg Schedel", affiliation: "Stony Brook University" },
       { name: "Christophe d'Alessandro", affiliation: "Sorbonne Université" },
@@ -40,6 +49,7 @@ export const committee: CommitteeGroup[] = [
   },
   {
     title: "Art / Installations",
+    email: "installations@nime2027.org",
     members: [
       { name: "David Ramsay", affiliation: "DePaul University" },
       { name: "Mirna Zordan", affiliation: "SUSTech" },
@@ -48,6 +58,7 @@ export const committee: CommitteeGroup[] = [
   },
   {
     title: "alt.nime",
+    email: "alt.nime@nime2027.org",
     members: [
       // Emilien is "onboarding sent" in the sheet rather than Confirmed, but he
       // and Tove both stated publicly that the three of them chair alt.nime.
@@ -58,16 +69,19 @@ export const committee: CommitteeGroup[] = [
   },
   {
     title: "Artifacts & Ideas",
+    email: "artifacts@nime2027.org",
     members: [{ name: "Nicolò Merendino" }, { name: "Kazuhiro Jo" }],
     vacancies: 1,
   },
   {
     title: "Workshops",
+    email: "workshops@nime2027.org",
     members: [{ name: "Lea Schirp" }],
     vacancies: 2,
   },
   {
     title: "Doctoral Consortium",
+    email: "student-consortium@nime2027.org",
     members: [
       { name: "Martin Kaltenbrunner", affiliation: "Tangible Music Lab, University of Arts Linz" },
       { name: "Sarah Nabi", affiliation: "IRCAM" },
@@ -79,6 +93,7 @@ export const committee: CommitteeGroup[] = [
   },
   {
     title: "Accessibility & Family",
+    email: "access@nime2027.org",
     members: [{ name: "Rébecca Kleinberger", affiliation: "Northeastern University" }],
     vacancies: 1,
   },

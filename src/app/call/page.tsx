@@ -5,11 +5,11 @@ import { Card, Container, PageHero, Provisional } from "@/components/ui";
 export const metadata: Metadata = {
   title: "Call for Contributions",
   description:
-    "All the ways to contribute to NIME 2027 in Paris, grouped around two deadlines: peer reviewed tracks close 31 January 2027, curated tracks close 4 April 2027.",
+    "All the ways to contribute to NIME 2027 in Paris, grouped around two deadlines: peer reviewed tracks close 31 January 2027, juried tracks close 4 April 2027.",
 };
 
 /**
- * The split between peer reviewed and curated is the thing a reader most needs
+ * The split between peer reviewed and juried is the thing a reader most needs
  * to get right, because it decides their deadline. It leads the page rather
  * than hiding inside each individual call.
  */
@@ -18,13 +18,13 @@ const groups = [
     key: "peer-reviewed" as const,
     title: "Peer reviewed",
     deadline: deadlines.peerReviewed,
-    note: "Reviewed by the track committees. Titles, abstracts and authors are due a week earlier, on Sunday 24 January 2027.",
+    note: "Peer reviewed submissions receive three double-blind reviews by peer experts, as well as a meta review by an experienced member of the NIME community. Titles, abstracts and authors are due a week earlier, on Sunday 24 January 2027.",
   },
   {
-    key: "curated" as const,
-    title: "Curated",
-    deadline: deadlines.curated,
-    note: "Selected by the track chairs rather than through peer review.",
+    key: "juried" as const,
+    title: "Juried",
+    deadline: deadlines.juried,
+    note: "Juried content is reviewed by a committee, in a less rigorous process than peer review. Authors submitting to juried tracks may expect light feedback, up to a few paragraphs.",
   },
 ];
 
@@ -97,12 +97,13 @@ export default function CallPage() {
             </p>
             <p className="text-[17px] leading-[1.75] text-brume">
               Submissions are handled through CMT. The submission system opens in December
-              2026 for the peer reviewed tracks, and in March 2027 for the curated ones.
+              2026 for the peer reviewed tracks, and in March 2027 for the juried ones.
             </p>
             <Provisional>
-              The individual calls are still being finalised by the track chairs, and the
-              CMT submission link does not exist yet. The deadlines and the track list on
-              this page are confirmed.
+              The wording describing the two review processes is a first draft from the
+              general chairs and is still under discussion. The dates and the track list
+              are confirmed, and come from the master schedule. The CMT submission link
+              does not exist yet.
             </Provisional>
           </div>
 
