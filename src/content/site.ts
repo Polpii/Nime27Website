@@ -55,6 +55,22 @@ export const conference = {
   origin: "https://www.nime2027.org",
 } as const;
 
+/**
+ * External services the site has to link to but does not own. Each stays null
+ * until it actually exists: the pages that depend on one say plainly that it
+ * is not open yet rather than linking nowhere. Switching one on is a one-line
+ * change here.
+ */
+export const links: {
+  /** The CMT submission site. Opens 14 December 2026 for the peer reviewed tracks. */
+  submissions: string | null;
+  /** The reviewer sign-up form. Needed well before the review period starts. */
+  reviewerSignUp: string | null;
+} = {
+  submissions: null,
+  reviewerSignUp: null,
+};
+
 export type NavItem = {
   label: string;
   href: string;
@@ -74,7 +90,8 @@ export const nav: NavItem[] = [
       { label: "Artifacts & Ideas", href: "/call/artifacts" },
       { label: "Workshops", href: "/call/workshops" },
       { label: "Doctoral Consortium", href: "/call/doctoral-consortium" },
-      { label: "Reviewing", href: "/call/reviewing" },
+      { label: "Submission instructions", href: "/call/submission-instructions" },
+      { label: "Review for NIME", href: "/call/reviewing" },
       { label: "Camera-Ready", href: "/call/camera-ready" },
     ],
   },
@@ -93,6 +110,7 @@ export const nav: NavItem[] = [
     label: "Visit",
     href: "/visit",
     children: [
+      { label: "Conference map", href: "/visit/map" },
       { label: "Get around", href: "/visit/get-around" },
       { label: "Accessibility FAQ", href: "/visit/accessibility" },
     ],

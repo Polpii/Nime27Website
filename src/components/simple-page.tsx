@@ -3,35 +3,53 @@ import type { ReactNode } from "react";
 import type { PageContent } from "@/content/pages";
 import { Container, PageHero, Provisional } from "@/components/ui";
 
-/** Renders **bold** and [label](href) inside a single line of body text. */
+/**
+ * Renders the inline marks inside a single line of body text: **bold**,
+ * *italic*, `code` and [label](href). The order of the alternatives matters,
+ * because ** has to be tried before a single *.
+ */
 function inline(text: string, keyPrefix: string): ReactNode[] {
   const nodes: ReactNode[] = [];
-  const pattern = /\*\*(.+?)\*\*|\[([^\]]+)\]\(([^)]+)\)/g;
+  const pattern =
+    /`([^`]+)`|\*\*(.+?)\*\*|__(.+?)__|\*([^*\n]+)\*|(?<![\w\])_([^_\n]+)_(?![\w])|\[([^\]]+)\]\(([^)]+)\)/g;
   let last = 0;
   let match: RegExpExecArray | null;
   let i = 0;
 
   while ((match = pattern.exec(text)) !== null) {
     if (match.index > last) nodes.push(text.slice(last, match.index));
+    const key = `${keyPrefix}-${i}`;
 
     if (match[1] !== undefined) {
       nodes.push(
-        <strong key={`${keyPrefix}-b${i}`} className="font-semibold text-craie">
+        <code key={key} className="bg-white/[0.07] px-1.5 py-0.5 text-[0.9em] text-craie">
           {match[1]}
+        </code>,
+      );
+    } else if (match[2] !== undefined || match[3] !== undefined) {
+      nodes.push(
+        <strong key={key} className="font-semibold text-craie">
+          {match[2] ?? match[3]}
         </strong>,
       );
+    } else if (match[4] !== undefined || match[5] !== undefined) {
+      nodes.push(
+        <em key={key} className="italic text-craie/90">
+          {match[4] ?? match[5]}
+        </em>,
+      );
     } else {
-      const label = match[2];
-      const href = match[3];
+      const label = match[6];
+      const href = match[7];
       const className = "text-neon-teal underline underline-offset-4 hover:text-neon-or";
       nodes.push(
         href.startsWith("/") ? (
-          <Link key={`${keyPrefix}-l${i}`} href={href} className={className}>
+          <Link key={key} href={href} className={className}>
             {label}
           </Link>
         ) : (
           <a
-            key={`${keyPrefix}-l${i}`}
+            key={key}
             href={href}
             className={className}
             {...(href.startsWith("http") ? { target: "_blank", rel: "noreferrer" } : {})}
@@ -50,10 +68,23 @@ function inline(text: string, keyPrefix: string): ReactNode[] {
   return nodes;
 }
 
-/** Groups the flat `body` array into headings, paragraphs, lists and callouts. */
+const ORDERED = /^\d+\.\s/;
+/** A table's separator row, which marks the row above it as the header. */
+const TABLE_RULE = /^\|(\s*:?-+:?\s*\|)+$/;
+
+function splitRow(line: string): string[] {
+  return line
+    .replace(/^\||\|$/g, "")
+    .split("|")
+    .map((cell) => cell.trim());
+}
+
+/** Groups the flat `body` lines into headings, paragraphs, lists and tables. */
 function render(body: string[]): ReactNode[] {
   const out: ReactNode[] = [];
   let bullets: string[] = [];
+  let ordered: string[] = [];
+  let table: string[] = [];
 
   const flushBullets = () => {
     if (bullets.length === 0) return;
@@ -74,19 +105,117 @@ function render(body: string[]): ReactNode[] {
     );
   };
 
+  const flushOrdered = () => {
+    if (ordered.length === 0) return;
+    const items = ordered;
+    ordered = [];
+    out.push(
+      <ol key={`ol-${out.length}`} className="ml-1 space-y-3 border-l border-white/10 pl-6">
+        {items.map((item, i) => (
+          <li key={i} className="relative text-[17px] leading-[1.7] text-brume">
+            <span
+              className="absolute -left-[31px] top-0 text-[13px] font-semibold tabular-nums text-neon-or"
+              aria-hidden="true"
+            >
+              {i + 1}
+            </span>
+            {inline(item, `oli-${out.length}-${i}`)}
+          </li>
+        ))}
+      </ol>,
+    );
+  };
+
+  const flushTable = () => {
+    if (table.length === 0) return;
+    const rows = table;
+    table = [];
+    const hasHeader = rows.length > 1 && TABLE_RULE.test(rows[1]);
+    const head = hasHeader ? splitRow(rows[0]) : null;
+    const bodyRows = (hasHeader ? rows.slice(2) : rows)
+      .filter((r) => !TABLE_RULE.test(r))
+      .map(splitRow);
+
+    out.push(
+      // Narrow screens scroll the table sideways rather than squeezing the
+      // columns into unreadable slivers.
+      <div key={`table-${out.length}`} className="-mx-5 overflow-x-auto px-5 lg:mx-0 lg:px-0">
+        <table className="w-full min-w-[30rem] border-collapse text-left text-[15px]">
+          {head && (
+            <thead>
+              <tr>
+                {head.map((cell, i) => (
+                  <th
+                    key={i}
+                    scope="col"
+                    className="border-b border-white/15 pb-3 pr-6 text-[11px] font-semibold uppercase tracking-[0.14em] text-neon-teal last:pr-0"
+                  >
+                    {inline(cell, `th-${out.length}-${i}`)}
+                  </th>
+                ))}
+              </tr>
+            </thead>
+          )}
+          <tbody>
+            {bodyRows.map((row, r) => (
+              <tr key={r}>
+                {row.map((cell, c) => (
+                  <td
+                    key={c}
+                    className="border-b border-white/[0.07] py-3 pr-6 align-top leading-relaxed text-brume last:pr-0"
+                  >
+                    {inline(cell, `td-${out.length}-${r}-${c}`)}
+                  </td>
+                ))}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>,
+    );
+  };
+
+  const flushAll = () => {
+    flushBullets();
+    flushOrdered();
+    flushTable();
+  };
+
   body.forEach((line, index) => {
     if (line.startsWith("- ")) {
+      flushOrdered();
+      flushTable();
       bullets.push(line.slice(2));
       return;
     }
-    flushBullets();
+    if (ORDERED.test(line)) {
+      flushBullets();
+      flushTable();
+      ordered.push(line.replace(ORDERED, ""));
+      return;
+    }
+    if (line.startsWith("|")) {
+      flushBullets();
+      flushOrdered();
+      table.push(line);
+      return;
+    }
+    flushAll();
 
-    if (line.startsWith("## ")) {
+    if (line === "---") {
+      out.push(<hr key={index} className="border-white/10" />);
+    } else if (line.startsWith("### ")) {
       out.push(
-        <h2
+        <h3
           key={index}
-          className="pt-6 font-display text-2xl text-craie sm:text-[1.7rem]"
+          className="pt-4 text-[12px] font-semibold uppercase tracking-[0.16em] text-neon-teal"
         >
+          {line.slice(4)}
+        </h3>,
+      );
+    } else if (line.startsWith("## ")) {
+      out.push(
+        <h2 key={index} className="pt-6 font-display text-2xl text-craie sm:text-[1.7rem]">
           {line.slice(3)}
         </h2>,
       );
@@ -101,16 +230,17 @@ function render(body: string[]): ReactNode[] {
     }
   });
 
-  flushBullets();
+  flushAll();
   return out;
 }
 
-export function SimplePage({ page }: { page: PageContent }) {
+export function SimplePage({ page, children }: { page: PageContent; children?: ReactNode }) {
   return (
     <>
       <PageHero eyebrow={page.eyebrow} title={page.title} intro={page.intro} />
       <Container className="py-16 lg:py-24">
         <div className="max-w-2xl space-y-6">{render(page.body)}</div>
+        {children}
       </Container>
     </>
   );

@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { SimplePage } from "@/components/simple-page";
-import { pages } from "@/content/pages";
+import { getPage } from "@/content/get-page";
 
-const page = pages["alt-nime"];
+const page = getPage("alt-nime");
 
 export const metadata: Metadata = {
   title: page.title,
