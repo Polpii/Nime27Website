@@ -68,7 +68,8 @@ export const links: {
   reviewerSignUp: string | null;
 } = {
   submissions: null,
-  reviewerSignUp: null,
+  reviewerSignUp:
+    "https://docs.google.com/forms/d/e/1FAIpQLSeT8lwP7hdRN7QwTxhyjuPK_EZDy7XURpWXmhLIEj3y0iymPw/viewform",
 };
 
 export type NavItem = {
