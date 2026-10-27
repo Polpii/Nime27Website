@@ -18,7 +18,6 @@ if (!literal) {
   process.exit(1);
 }
 
-// eslint-disable-next-line no-eval
 const pattern = eval(literal[1]);
 
 /** [input, group index that must capture, expected value] */

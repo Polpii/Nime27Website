@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { conference, deadlines, themeText, tracks } from "@/content/site";
 import { Card, Container, PageHero, Provisional } from "@/components/ui";
+
+const inlineLink = "text-neon-teal underline underline-offset-4 hover:text-neon-or";
 
 export const metadata: Metadata = {
   title: "Call for Contributions",
@@ -97,7 +100,12 @@ export default function CallPage() {
             </p>
             <p className="text-[17px] leading-[1.75] text-brume">
               Submissions are handled through CMT. The submission system opens in December
-              2026 for the peer reviewed tracks, and in March 2027 for the juried ones.
+              2026 for the peer reviewed tracks, and in March 2027 for the juried ones. The
+              steps that are the same whichever track you choose are on{" "}
+              <Link href="/call/submission-instructions" className={inlineLink}>
+                submission instructions
+              </Link>
+              .
             </p>
             <Provisional>
               The wording describing the two review processes is a first draft from the
@@ -128,6 +136,25 @@ export default function CallPage() {
             </p>
           </aside>
         </div>
+
+        {/* Reviewing used to be reachable only from the navigation dropdown,
+            which is the one place a prospective author is not looking. */}
+        <section className="mt-20 border-t border-white/10 pt-14">
+          <h2 className="font-display text-3xl text-craie">Review for NIME 2027</h2>
+          <p className="mt-6 max-w-2xl text-[17px] leading-[1.75] text-brume">
+            Every peer reviewed submission gets three reviews from peer experts and a meta
+            review from an experienced member of the community. That only works if enough
+            people volunteer, so we ask everyone who submits to review as well. Reviewing
+            runs through February 2027.
+          </p>
+          <p className="mt-5 max-w-2xl text-[17px] leading-[1.75] text-brume">
+            Sign up on the{" "}
+            <Link href="/call/reviewing" className={inlineLink}>
+              reviewing page
+            </Link>
+            .
+          </p>
+        </section>
       </Container>
     </>
   );

@@ -29,10 +29,9 @@ export const conference = {
   /** The venue named across the organisers' plans and location photographs. */
   venue: "Campus du Parc",
   /**
-   * TBC. ESILV's own pages give 29 Allée le Corbusier, but a Devinci
-   * Executive Education page says 41. Two official sources disagree on the
-   * street number, so this needs confirming with the general chairs before
-   * anyone books travel against it.
+   * Confirmed against ESILV's own campus page in both languages, which give
+   * the same street number. An older Devinci Executive Education page says
+   * 41; the venue's current pages win.
    */
   venueAddress: "29 Allée le Corbusier, 92000 Nanterre",
   /**
