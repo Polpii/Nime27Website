@@ -11,7 +11,7 @@ import { Container, PageHero, Provisional } from "@/components/ui";
 function inline(text: string, keyPrefix: string): ReactNode[] {
   const nodes: ReactNode[] = [];
   const pattern =
-    /`([^`]+)`|\*\*(.+?)\*\*|__(.+?)__|\*([^*\n]+)\*|(?<![\w\])_([^_\n]+)_(?![\w])|\[([^\]]+)\]\(([^)]+)\)/g;
+    /`([^`]+)`|\*\*(.+?)\*\*|__(.+?)__|\*([^*\n]+)\*|(?<![A-Za-z0-9_])_([^_\n]+)_(?![A-Za-z0-9_])|\[([^\]]+)\]\(([^)]+)\)/g;
   let last = 0;
   let match: RegExpExecArray | null;
   let i = 0;
