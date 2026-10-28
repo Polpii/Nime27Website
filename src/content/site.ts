@@ -61,7 +61,7 @@ export const conference = {
  * change here.
  */
 export const links: {
-  /** The CMT submission site. Opens 14 December 2026 for the peer reviewed tracks. */
+  /** The CMT submission site. Opens 4 December 2026 for the peer reviewed tracks. */
   submissions: string | null;
   /** The reviewer sign-up form. Needed well before the review period starts. */
   reviewerSignUp: string | null;
@@ -142,11 +142,12 @@ export const importantDates: ImportantDate[] = [
   { date: "26 October 2026", label: "Call for contributions published", kind: "info" },
   {
     /**
-     * The calls say 4 December, the master schedule says the 14th. Naming
-     * the month only keeps both true, and nobody meets a dead URL on a day
-     * we promised.
+     * The calls say 4 December, the master schedule said the 14th. The
+     * chairs' own call documents are the later word, so they win. If CMT
+     * is not open that morning the chairs will hear about it, which is the
+     * trade they chose.
      */
-    date: "December 2026",
+    date: "4 December 2026",
     label: "Submission system opens for the peer reviewed tracks",
     kind: "info",
   },

@@ -6,7 +6,7 @@ Artworks, such as an interactive sound sculpture or a room that responds musical
 
 **All dates are 23:59 AoE (Anywhere on Earth).**
 
-- December 2026: Submission CMT site opens
+- 4 December 2026: Submission CMT site opens
 - 24 January 2027: Titles, abstracts, and author lists due
 - 31 January 2027: Final submissions due
 - 19 March 2027: Acceptance decisions and reviews released

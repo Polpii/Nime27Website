@@ -6,7 +6,7 @@ Concert works, such as a piece for a custom controller or a human–machine duet
 
 All dates are 23:59 AoE (Anywhere on Earth). 
 
-- December 2026: Submission CMT site opens
+- 4 December 2026: Submission CMT site opens
 - 24 January 2027: Titles, program notes, and author/performer lists due
 - 31 January 2027: Final submissions due (documentation, technical rider, stage plot)
 - 19 March 2027: Acceptance decisions and reviews released
