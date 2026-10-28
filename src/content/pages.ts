@@ -90,6 +90,7 @@ export const pages: Record<string, PageContent> = {
       "## In the meantime",
       "If you are thinking about proposing a workshop and want to know whether an idea fits, write to the workshop chairs at [workshops@nime2027.org](mailto:workshops@nime2027.org).",
       "The other calls are on the [call for contributions](/call), and the dates for every track are in [key dates](/programme).",
+      "NIME depends on volunteers. Whatever you submit, please also [sign up to review](/call/reviewing).",
     ],
   },
 
@@ -147,6 +148,7 @@ export const pages: Record<string, PageContent> = {
       "Final papers for the Doctoral Consortium are **not** published in the NIME proceedings.",
       "## Contact",
       "[student-consortium@nime2027.org](mailto:student-consortium@nime2027.org)",
+      "NIME depends on volunteers. Whatever you submit, please also [sign up to review](/call/reviewing).",
     ],
   },
 

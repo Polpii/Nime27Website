@@ -74,7 +74,9 @@ Repository links and supporting build documentation are strongly encouraged but 
 
 Artifacts & Ideas uses a juried selection process.
 
-Jurors will provide brief assessments of submissions, and the track chairs will make final decisions based on jury recommendations, their own assessment, and the overall program. No paper-style meta-review is planned. 
+Jurors will provide brief assessments of submissions, and the track chairs will make final decisions based on jury recommendations, their own assessment, and the overall program. No paper-style meta-review is planned.
+
+NIME depends on volunteers. To serve on the jury, [sign up to review](/call/reviewing) and name Artifacts & Ideas among the tracks you are willing to take on. 
 
 The selection criteria are:
 

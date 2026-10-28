@@ -52,10 +52,10 @@ The process will:
 
 1. Begin with an initial review by the jury, followed by
 2. A period of private, asynchronous discussion between authors, jury and chairs. All parties will have the opportunity to engage in constructive dialogue, exchange perspectives, and discuss the arguments and ideas presented in the submission. 
-3. In cases where these discussions are considered valuable for the broader community, and with the authors' and jury’s consent, they will be made accessible through the NIME forum, allowing members of the NIME community to contribute their own perspectives and insights to the ongoing conversation.
+3. In cases where these discussions are considered valuable for the broader community, and with the authors' and jury’s consent, they will be made accessible through the [NIME forum](https://forum.nime.org), allowing members of the NIME community to contribute their own perspectives and insights to the ongoing conversation.
 4. At the end of this discussion period, alt.nime chairs will base their acceptance decisions on the final recommendations of the jurors.
 
-See the call for alt.nime jurors for more details on this process. That call will be linked here once it is published. We invite artists, musicians, researchers and instrument makers from within and beyond academia to respond to the open call for jurors.
+See the call for alt.nime jurors for more details on this process. That call will be linked here once it is published. We invite artists, musicians, researchers and instrument makers from within and beyond academia to respond to the open call for jurors. You can also [sign up to review](/call/reviewing) for NIME 2027 and name alt.nime among the tracks you are willing to take on.
 
 # Presentation and Participation
 
