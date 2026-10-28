@@ -29,7 +29,7 @@ export const pages: Record<string, PageContent> = {
     intro:
       "Original research on the scientific and artistic use of new interfaces for musical expression.",
     body: [
-      "> The chairs are still finalising this call and the submission link does not exist yet. For deadlines see [key dates](/programme), which follow the master schedule.",
+      "> The chairs are still finalising this call and the submission link does not exist yet. For deadlines see [key dates](/programme).",
       "Papers is one of the three peer reviewed tracks. We welcome submissions of original research on the scientific and artistic use of new interfaces for musical expression.",
       "## Length",
       "Full papers must be between **2,000 and 6,000 words**. The count covers the main text, including section headings, figure and table captions, and footnotes. It excludes the title, abstract and references.",
@@ -54,7 +54,7 @@ export const pages: Record<string, PageContent> = {
     intro:
       "Performances and installations that showcase new interfaces for musical expression in composition, performance and sound art.",
     body: [
-      "> The chairs are still finalising this call and the submission link does not exist yet. For deadlines see [key dates](/programme), which follow the master schedule.",
+      "> The chairs are still finalising this call and the submission link does not exist yet. For deadlines see [key dates](/programme).",
       "We look forward to receiving work that expands and reshapes our understanding of NIME in the conceptualisation, performance and reception of music. Submissions may be existing works or proposals for new ones, and there are no limitations or requirements concerning musical style.",
       "## Categories",
       "- **Live (in person) performance** — at least one performer is present at NIME. A live work may also involve an online connection to an artist who is not present, provided the technical requirements are fully documented and approved by the chairs",
@@ -101,7 +101,7 @@ export const pages: Record<string, PageContent> = {
     intro:
       "A space for contributions that question, challenge, or expand what NIME can be.",
     body: [
-      "> The chairs are still finalising this call and the submission link does not exist yet. For deadlines see [key dates](/programme), which follow the master schedule.",
+      "> The chairs are still finalising this call and the submission link does not exist yet. For deadlines see [key dates](/programme).",
       "Building on the experimental spirit of alt.nime 2026 and the heritage of alt.chi, alt.nime welcomes work that may not fit comfortably within conventional academic categories. Not because it is unfinished, but because it deliberately proposes a different way of contributing to NIME.",
       "alt.nime is a place where it is legitimate to take a position. Contributions may be personal, situated, political, activist, speculative or provocative. They do not need to perform neutrality. We expect contributors to situate their positions, engage critically with their implications, and create opportunities for meaningful discussion rather than provocation for its own sake.",
       "## What might a contribution do?",
@@ -129,7 +129,7 @@ export const pages: Record<string, PageContent> = {
     intro:
       "Feedback from the NIME community on the conceptual, theoretical, technical and musical components of your research.",
     body: [
-      "> The chairs are still finalising this call and the submission link does not exist yet. For deadlines see [key dates](/programme), which follow the master schedule.",
+      "> The chairs are still finalising this call and the submission link does not exist yet. For deadlines see [key dates](/programme).",
       "The Consortium takes place as a **half-day session on 22 June 2027**. Peers and senior researchers, interaction designers and computer musicians are mixed together for an open discussion of NIME-related work.",
       "Ideal candidates are early-stage or mid-way into their project, presenting concrete research content within the NIME topics but with no conclusive results yet. Candidates should explain clearly what they bring to the Consortium and what they expect to get from it.",
       "## Two categories",
@@ -334,7 +334,7 @@ export const pages: Record<string, PageContent> = {
     intro:
       "Artworks, such as an interactive sound sculpture or a room that responds musically to visitors.",
     body: [
-      "> The chairs are still finalising this call and the submission link does not exist yet. For deadlines see [key dates](/programme), which follow the master schedule.",
+      "> The chairs are still finalising this call and the submission link does not exist yet. For deadlines see [key dates](/programme).",
       "Art / Installations is one of the three peer reviewed tracks. Installations can be physical works exhibited in foyer, room or gallery space, as well as virtual works that exist online.",
       "## The theme",
       "In line with the NIME 2027 theme of **Sensorial Symbiosis**, we encourage proposals that explore the novel relationships amongst bodies, instruments, machines, environments and audiences in musical interaction; shared agency and authorship across performers and machines; interfaces that extend, substitute or reshape perception; and works that engage with traces across time.",
@@ -358,7 +358,7 @@ export const pages: Record<string, PageContent> = {
     intro:
       "Practice-based work without an accompanying research paper: a DIY instrument presented as a demo, or a musical interaction concept presented as a poster.",
     body: [
-      "> The chairs are still finalising this call and the submission link does not exist yet. For deadlines see [key dates](/programme), which follow the master schedule.",
+      "> The chairs are still finalising this call and the submission link does not exist yet. For deadlines see [key dates](/programme).",
       "The track welcomes well-developed projects (**Artifacts**) and theoretical insights (**Ideas**) that represent substantial creative, technical or experimental contributions, but are not necessarily framed as conventional academic papers. It provides a space for work whose significance lies primarily in its design, implementation, functionality or creative possibilities.",
       "We welcome instrument makers, musicians, artists, designers, developers and researchers from within and beyond academia. Contributions may emerge from individual practice, community initiatives, independent workshops, educational settings or companies.",
       "Contributions should go beyond preliminary demonstrations or early-stage concepts, presenting consolidated, functioning artifacts that embody a clearly articulated idea. Projects need not be commercially polished, but should show a meaningful degree of development and practical realisation.",
@@ -386,7 +386,7 @@ export const pages: Record<string, PageContent> = {
     intro:
       "How to prepare and upload a submission, in one place, for every track.",
     body: [
-      "> This page is not written yet. The chairs are drafting it and it will be published here before the submission system opens on 14 December 2026.",
+      "> This page is not written yet. The chairs are drafting it and it will be published here before the submission system opens on 4 December 2026.",
       "It will cover the parts that are the same whichever track you submit to: making an account on the submission system, the templates, how to anonymise a submission, how to upload supplementary media, and how to change a submission before the deadline.",
       "Until then, the requirements specific to each track are in its own call:",
       "- [Papers](/call/papers)",
