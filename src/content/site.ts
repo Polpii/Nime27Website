@@ -251,7 +251,13 @@ export const tracks: Track[] = [
     title: "Doctoral Consortium",
     href: "/call/doctoral-consortium",
     group: "juried",
-    blurb: "Feedback on a developing PhD project from peers and senior mentors.",
+    /**
+     * Not PhD only. The call itself takes two categories, doctoral and
+     * taught-degree students, so a summary naming only the PhD turns
+     * away exactly the master's students it means to invite.
+     */
+    blurb:
+      "Feedback on a developing doctoral or master's project from peers and senior mentors.",
   },
 ];
 
