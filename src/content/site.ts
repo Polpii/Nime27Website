@@ -238,7 +238,7 @@ export const tracks: Track[] = [
     href: "/call/artifacts",
     group: "juried",
     blurb:
-      "Works without an accompanying research paper, such as a DIY instrument presented as a demo, or a musical interaction concept presented as a poster.",
+      "Work without an accompanying research paper, such as a DIY instrument presented as a demonstration or a musical-interaction concept presented as a poster.",
   },
   {
     title: "Workshops",

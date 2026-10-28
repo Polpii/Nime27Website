@@ -37,7 +37,7 @@ export default function CallPage() {
       <PageHero
         eyebrow="NIME 2027"
         title="Call for Contributions"
-        intro="Whether you are a researcher, musician, artist, instrument builder or simply exploring new ways to make music, we would love to see your contribution at the conference. There are many ways to get involved, grouped around two main deadlines."
+        intro="Whether you’re a researcher, musician, artist, instrument builder, or simply exploring new ways to make music, we’d love to see your contribution at the conference. There are many ways to get involved, grouped around two main deadlines."
       />
 
       <Container className="py-16 lg:py-24">
