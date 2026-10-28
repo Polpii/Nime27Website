@@ -21,13 +21,13 @@ const groups = [
     key: "peer-reviewed" as const,
     title: "Peer reviewed",
     deadline: deadlines.peerReviewed,
-    note: "Peer reviewed submissions receive three double-blind reviews by peer experts, as well as a meta review by an experienced member of the NIME community. Titles, abstracts and authors are due a week earlier, on Sunday 24 January 2027.",
+    note: "Every submission receives double-blind peer review by at least three reviewers, and a meta-reviewer leads the discussion, writes a summary review and recommends a decision. Metadata are due one week earlier, on Sunday 24 January 2027.",
   },
   {
     key: "juried" as const,
     title: "Juried",
     deadline: deadlines.juried,
-    note: "Juried content is reviewed by a committee, in a less rigorous process than peer review. Authors submitting to juried tracks may expect light feedback, up to a few paragraphs.",
+    note: "Juried tracks are selected by a jury rather than through peer review. Jurors give brief assessments and the track chairs make the final decision, so authors may expect lighter feedback than a peer reviewed track provides.",
   },
 ];
 
@@ -108,10 +108,9 @@ export default function CallPage() {
               .
             </p>
             <Provisional>
-              The wording describing the two review processes is a first draft from the
-              general chairs and is still under discussion. The dates and the track list
-              are confirmed, and come from the master schedule. The CMT submission link
-              does not exist yet.
+              The CMT submission link does not exist yet and will be added here once the
+              system is online. Each call carries its own dates, which differ between the
+              peer reviewed and the juried tracks.
             </Provisional>
           </div>
 

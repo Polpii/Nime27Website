@@ -140,7 +140,16 @@ export type ImportantDate = {
  */
 export const importantDates: ImportantDate[] = [
   { date: "26 October 2026", label: "Call for contributions published", kind: "info" },
-  { date: "14 December 2026", label: "Submission system opens for the peer reviewed tracks", kind: "info" },
+  {
+    /**
+     * The calls say 4 December, the master schedule says the 14th. Naming
+     * the month only keeps both true, and nobody meets a dead URL on a day
+     * we promised.
+     */
+    date: "December 2026",
+    label: "Submission system opens for the peer reviewed tracks",
+    kind: "info",
+  },
   {
     date: "Sunday 24 January 2027",
     label: "Peer reviewed — titles, abstracts and authors due",
@@ -152,13 +161,23 @@ export const importantDates: ImportantDate[] = [
     kind: "deadline",
   },
   { date: "Monday 8 — Sunday 28 February 2027", label: "Review period", kind: "info" },
-  { date: "Friday 26 March 2027", label: "Peer reviewed decisions released", kind: "info" },
-  { date: "22 March 2027", label: "Submission system opens for the juried tracks", kind: "info" },
+  { date: "Friday 19 March 2027", label: "Peer reviewed decisions and reviews released", kind: "info" },
+  { date: "March 2027", label: "Submission system opens for the juried tracks", kind: "info" },
   { date: "Sunday 4 April 2027", label: "Juried — submissions due", kind: "deadline" },
   { date: "Friday 30 April 2027", label: "Juried decisions released", kind: "info" },
   {
+    /**
+     * Two camera-ready dates, not one. The calls set each track's deadline
+     * from its own decision date, so the peer reviewed tracks, decided in
+     * March, close before the juried ones, decided at the end of April.
+     */
+    date: "Friday 30 April 2027",
+    label: "Peer reviewed \u2014 camera-ready and presenter registration due",
+    kind: "deadline",
+  },
+  {
     date: "Sunday 9 May 2027",
-    label: "Final materials, camera-ready and presenter registration due",
+    label: "Juried \u2014 final materials and presenter registration due",
     kind: "deadline",
   },
   { date: "Monday 21 June 2027", label: "Fête de la musique", kind: "event" },
@@ -211,7 +230,7 @@ export const tracks: Track[] = [
     href: "/call/alt-nime",
     group: "juried",
     blurb:
-      "Work that challenges conventional formats, such as a zine, a participatory ritual or an experimental lecture.",
+      "Work that fosters critical dialogue about the field and its practices, or challenges established academic formats, conventions, and ways of presenting or sharing knowledge.",
   },
   {
     title: "Artifacts & Ideas",
@@ -225,7 +244,7 @@ export const tracks: Track[] = [
     href: "/call/workshops",
     group: "juried",
     blurb:
-      "Shared activities, such as exploring collaborative live coding, discussing accessible music-making, or get-togethers of subcommunities within NIME.",
+      "Shared activities, such as exploring collaborative live coding, discussing accessible music-making, or bringing NIME subcommunities together.",
   },
   {
     title: "Doctoral Consortium",
@@ -268,7 +287,7 @@ export const conferenceWeek: ConferenceDay[] = [
 
 /** The theme text, as the organisers wrote it in the Papers and Music calls. */
 export const themeText = [
-  "In a time when machines and algorithms increasingly participate in creative practice, NIME 2027 asks what happens when expression no longer belongs neatly to a single body, instrument, or system. Musical interaction emerges through relations: among performers, instruments, computational systems, environments, audiences, and traces of other bodies and events across time.",
-  "We invite contributors to explore these sensorial symbioses, relationships that may be mutualistic, commensal, parasitic, intimate, asymmetric, productive, or unstable. How do bodies, instruments, machines, and environments continually shape one another? How do interfaces mediate relationships between people, alter what can be sensed and expressed, or allow gestures, affects, memories, and signals to persist beyond the bodies that produced them?",
-  "NIME 2027 asks how we make music with machines, and how musical relations transform the humans, technologies, and communities that enter into that process. As NIME returns to Paris, it does so in a city long shaped by artistic experimentation and newly alive with cultural and technological transformation.",
+  "NIME 2027\u2019s theme, Sensorial Symbiosis, explores how musical expression emerges through relationships among performers, instruments, computational systems, environments, and audiences.",
+  "How do bodies, instruments, machines, and environments shape one another? What forms of musical expression emerge when sensing, agency, and authorship move between people, materials, and machines? How can interfaces extend, substitute for, or reshape perception, or allow us to encounter traces across time?",
+  "Each submission track approaches these questions through its own forms of contribution, presentation, review, and exchange.",
 ];
