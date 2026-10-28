@@ -35,7 +35,7 @@ export const committee: CommitteeGroup[] = [
     email: "papers@nime2027.org",
     members: [
       { name: "Akito Van Troyer", affiliation: "Berklee College of Music" },
-      { name: "Enrique 'Kike' Tomás", affiliation: "Tangible Music Lab, University of Arts Linz" },
+      { name: "Enrique Tomás", affiliation: "Tangible Music Lab, University of Arts Linz" },
     ],
   },
   {
