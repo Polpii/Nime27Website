@@ -35,6 +35,7 @@ export const committee: CommitteeGroup[] = [
     email: "papers@nime2027.org",
     members: [
       { name: "Akito Van Troyer", affiliation: "Berklee College of Music" },
+      { name: "Lauren Hayes", affiliation: "Arizona State University" },
       { name: "Enrique Tomás", affiliation: "Tangible Music Lab, University of Arts Linz" },
     ],
   },
@@ -53,8 +54,8 @@ export const committee: CommitteeGroup[] = [
     members: [
       { name: "David Ramsay", affiliation: "DePaul University" },
       { name: "Mirna Zordan", affiliation: "SUSTech" },
+      { name: "Marc Downie", affiliation: "University of Chicago" },
     ],
-    vacancies: 1,
   },
   {
     title: "alt.nime",
@@ -66,6 +67,11 @@ export const committee: CommitteeGroup[] = [
       { name: "Théo Jourdan", affiliation: "IRCAM" },
       { name: "Emilien Ghomi" },
     ],
+  },
+  {
+    title: "Concert",
+    members: [{ name: "Bartélémy Belleudy", affiliation: "Krema Collective" }],
+    vacancies: 1,
   },
   {
     title: "Artifacts & Ideas",
@@ -123,7 +129,6 @@ export const vacantRoles = [
   "Registration",
   "CMT",
   "Student Volunteers",
-  "Concert (local)",
   "Local and venue chairs",
   "Kids programme",
 ];
