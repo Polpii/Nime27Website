@@ -47,11 +47,6 @@ export default function KeyDatesPage() {
             </div>
           ))}
         </div>
-
-        <p className="mt-10 max-w-2xl text-[15px] leading-relaxed text-brume">
-          Each call carries its own dates as well. Where a call and this page differ, the
-          call is the one to follow.
-        </p>
       </Container>
     </>
   );

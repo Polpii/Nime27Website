@@ -328,7 +328,7 @@ export const pages: Record<string, PageContent> = {
       "## Deadlines",
       "The two deadlines and everything that hangs off them are on the [call overview](/call) and in [key dates](/programme).",
       "## Contact",
-      "If something is unclear and this page does not answer it yet, write to [general-chairs@nime2027.org](mailto:general-chairs@nime2027.org).",
+      "[general-chairs@nime2027.org](mailto:general-chairs@nime2027.org)",
     ],
   },
 
@@ -350,7 +350,7 @@ export const pages: Record<string, PageContent> = {
       "- Step-free routes and accessible toilets",
       "- The nearest stations and how long the walk is",
       "## Submitting an installation or a demo",
-      "If you are planning a work that needs particular space, power, light, sound or network conditions, describe those requirements in your submission rather than waiting for the map. The chairs match works to spaces, not the other way round. See the [Art / Installations](/call/installations) and [Artifacts & Ideas](/call/artifacts) calls.",
+      "If you are planning a work that needs particular space, power, light, sound or network conditions, describe those requirements in your submission. See the [Art / Installations](/call/installations) and [Artifacts & Ideas](/call/artifacts) calls.",
       "## Getting to the campus",
       "Campus du Parc sits in the Paris La Défense business district, on the edge of the parc André Malraux. The venue describes it as close to two regional rail lines:",
       "- **RER E** at **Nanterre La Folie**, the line's western terminus",
