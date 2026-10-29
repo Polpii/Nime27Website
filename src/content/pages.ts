@@ -159,7 +159,7 @@ export const pages: Record<string, PageContent> = {
       "The juried tracks review between **Monday 5 April and Monday 26 April 2027**, though this varies a little from track to track.",
       "Expect a handful of submissions and a structured form covering the contribution, the method, the clarity and the relevance to NIME.",
       "## Contact",
-      "[papers@nime2027.org](mailto:papers@nime2027.org)",
+      "[general-chairs@nime2027.org](mailto:general-chairs@nime2027.org)",
     ],
   },
 
