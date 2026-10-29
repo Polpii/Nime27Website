@@ -17,7 +17,7 @@ function Wordmark({ onNavigate }: { onNavigate?: () => void }) {
         NIME
       </span>
       <span className="font-display text-xl leading-none italic text-neon-or">2027</span>
-      <span className="hidden text-[9px] font-semibold uppercase tracking-[0.2em] text-neon-teal sm:inline">
+      <span className="hidden text-[10px] font-semibold uppercase tracking-[0.2em] text-neon-teal sm:inline">
         Paris
       </span>
     </Link>

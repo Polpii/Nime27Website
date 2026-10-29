@@ -247,7 +247,7 @@ export const pages: Record<string, PageContent> = {
     title: "Accessibility FAQ",
     eyebrow: "Visit",
     intro:
-      "What is settled, what is not, and how to tell us what you need.",
+      "What we can tell you now, and how to tell us what you need.",
     body: [
       "NIME seeks to bring together an outstanding worldwide community, open to all people regardless of age, nationality, ethnicity, gender identity, sexual orientation or disability status. Accessibility is part of that commitment rather than an add-on to it.",
       "NIME 2027 has an accessibility chair, so there is someone whose job this is. You can raise an access requirement now, long before registration opens, and it will reach them.",
@@ -346,7 +346,7 @@ export const pages: Record<string, PageContent> = {
       "- Paper sessions and keynote rooms",
       "- Concert and performance spaces",
       "- Installation and demo areas, with their power and network points",
-      "- Registration, catering and the quiet room",
+      "- Registration and catering",
       "- Step-free routes and accessible toilets",
       "- The nearest stations and how long the walk is",
       "## Submitting an installation or a demo",
