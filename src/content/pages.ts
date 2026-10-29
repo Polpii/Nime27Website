@@ -316,7 +316,7 @@ export const pages: Record<string, PageContent> = {
     intro:
       "How to prepare and upload a submission, in one place, for every track.",
     body: [
-      "It will cover the parts that are the same whichever track you submit to: making an account on the submission system, the templates, how to anonymise a submission, how to upload supplementary media, and how to change a submission before the deadline.",
+      "This page will be published before the submission system opens on 4 December 2026. It covers the parts that are the same whichever track you submit to: making an account on the submission system, the templates, how to anonymise a submission, how to upload supplementary media, and how to change a submission before the deadline.",
       "Until then, the requirements specific to each track are in its own call:",
       "- [Papers](/call/papers)",
       "- [Music / Performance](/call/music)",
@@ -339,6 +339,7 @@ export const pages: Record<string, PageContent> = {
     intro:
       "Where everything happens on site: rooms, concert spaces, installations and demos.",
     body: [
+      "The site plan is not drawn yet. It will be published here once the room allocation is settled, and because it matters most to people submitting installations and demos, it will be up before the juried deadline on Sunday 4 April 2027.",
       "## The venue",
       "NIME 2027 is hosted by **Devinci Higher Education** at **Campus du Parc**, 29 Allée le Corbusier, 92000 Nanterre, just west of Paris.",
       "## What the map will show",
