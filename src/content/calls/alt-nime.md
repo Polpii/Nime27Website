@@ -63,7 +63,7 @@ Accepted contributions will be presented during a conference session and/or spac
 
 # Publication and Archiving
 
-Accepted submissions will be published on the conference website and on [NIME.org](http://nime.org/) as part of the alt.nime Proceedings of the International Conference on New Interfaces for Musical Expression.
+Accepted submissions will be published on the conference website and on [NIME.org](https://nime.org/) as part of the alt.nime Proceedings of the International Conference on New Interfaces for Musical Expression.
 
 # Ethics, AI Use, Accessibility, Sustainability, and Inclusion 
 

@@ -31,6 +31,19 @@ const cases = [
   ["see [key dates](/programme) there", 7, "/programme"],
   ["mail [us](mailto:a@b.org) now", 7, "mailto:a@b.org"],
   ["read [nime](https://nime.org/papers/) now", 7, "https://nime.org/papers/"],
+  // A bare address becomes a mailto link, because three of the chairs' calls
+  // write theirs as plain text while the other four mark it up.
+  ["write to music@nime2027.org now", 8, "music@nime2027.org"],
+  ["write to alt.nime@nime2027.org now", 8, "alt.nime@nime2027.org"],
+  // An address already inside a link must stay the link's business: the link
+  // group starts further left, so it wins and group 8 never fires.
+  ["mail [us](mailto:a@b.org) now", 8, undefined],
+  [
+    "[installations@nime2027.org](mailto:installations@nime2027.org)",
+    6,
+    "installations@nime2027.org",
+  ],
+  ["[installations@nime2027.org](mailto:installations@nime2027.org)", 8, undefined],
 ];
 
 let failed = 0;

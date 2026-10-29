@@ -5,16 +5,22 @@ import { Container, PageHero, Provisional } from "@/components/ui";
 
 /**
  * Renders the inline marks inside a single line of body text: **bold**,
- * *italic*, `code` and [label](href). The order of the alternatives matters,
- * because ** has to be tried before a single *.
+ * *italic*, `code`, [label](href), and a bare e-mail address, which becomes a
+ * mailto link. The order of the alternatives matters, because ** has to be
+ * tried before a single *.
  */
 function inline(text: string, keyPrefix: string): ReactNode[] {
   const nodes: ReactNode[] = [];
   // Built fresh on every call because it is stateful and this function
   // recurses: bold and italic run their own contents back through it, so a
   // shared lastIndex would have the inner pass corrupt the outer one.
+  //
+  // The bare-address group is deliberately last. Alternation is ordered only
+  // among matches starting at the same index, and exec always takes the
+  // leftmost one, so an address already written as [label](mailto:...) is
+  // swallowed whole by the link group before this one ever sees it.
   const pattern =
-    /`([^`]+)`|\*\*(.+?)\*\*|__(.+?)__|\*([^*\n]+)\*|(?<![A-Za-z0-9_])_([^_\n]+)_(?![A-Za-z0-9_])|\[([^\]]+)\]\(([^)]+)\)/g;
+    /`([^`]+)`|\*\*(.+?)\*\*|__(.+?)__|\*([^*\n]+)\*|(?<![A-Za-z0-9_])_([^_\n]+)_(?![A-Za-z0-9_])|\[([^\]]+)\]\(([^)]+)\)|([A-Za-z0-9._%+-]+@[A-Za-z0-9-]+(?:\.[A-Za-z0-9-]+)*\.[A-Za-z]{2,})/g;
   let last = 0;
   let match: RegExpExecArray | null;
   let i = 0;
@@ -42,6 +48,20 @@ function inline(text: string, keyPrefix: string): ReactNode[] {
         <em key={key} className="italic text-craie/90">
           {inline(match[4] ?? match[5], `${key}-i`)}
         </em>,
+      );
+    } else if (match[8] !== undefined) {
+      // Three of the chairs' calls write their track address as plain text
+      // while the other four mark it up as a link. Linking it here rather
+      // than in their files keeps their wording untouched and survives the
+      // next draft they hand us.
+      nodes.push(
+        <a
+          key={key}
+          href={`mailto:${match[8]}`}
+          className="text-neon-teal underline underline-offset-4 hover:text-neon-or"
+        >
+          {match[8]}
+        </a>,
       );
     } else {
       const label = match[6];
