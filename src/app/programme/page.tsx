@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { conference, conferenceWeek } from "@/content/site";
 import { Container, PageHero } from "@/components/ui";
 
@@ -13,7 +14,7 @@ export default function ProgrammePage() {
       <PageHero
         eyebrow="Conference"
         title="Programme"
-        intro={`${conference.dates} in ${conference.city}. The detailed session programme is published after the decisions go out. Every submission deadline is on key dates.`}
+        intro={`${conference.dates} in ${conference.city}. The detailed session programme is published after the decisions go out.`}
       />
 
       <Container className="py-16 lg:py-24">
@@ -46,8 +47,17 @@ export default function ProgrammePage() {
               </div>
             ))}
           </div>
+          <p className="mt-10 max-w-2xl text-[16px] leading-relaxed text-brume">
+            Every submission deadline is on{" "}
+            <Link
+              href="/call/key-dates"
+              className="text-neon-teal underline underline-offset-4 hover:text-neon-or"
+            >
+              key dates
+            </Link>
+            .
+          </p>
         </section>
-
       </Container>
     </>
   );
