@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { conference } from "@/content/site";
+import { conference, themeText } from "@/content/site";
 import { ParisSkyline } from "@/components/paris";
 
 export default function Home() {
@@ -44,6 +44,10 @@ export default function Home() {
         <p className="mt-7 text-[12px] uppercase tracking-[0.26em] text-brume">
           Theme
           <span className="ml-3 text-neon-teal">{conference.theme}</span>
+        </p>
+
+        <p className="mt-5 max-w-xl text-[15px] leading-[1.8] text-brume sm:text-base">
+          {themeText[0]}
         </p>
 
         <p className="mt-14 max-w-xl text-[15px] leading-[1.8] text-brume sm:text-base">

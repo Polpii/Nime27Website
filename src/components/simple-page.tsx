@@ -10,6 +10,9 @@ import { Container, PageHero, Provisional } from "@/components/ui";
  */
 function inline(text: string, keyPrefix: string): ReactNode[] {
   const nodes: ReactNode[] = [];
+  // Built fresh on every call because it is stateful and this function
+  // recurses: bold and italic run their own contents back through it, so a
+  // shared lastIndex would have the inner pass corrupt the outer one.
   const pattern =
     /`([^`]+)`|\*\*(.+?)\*\*|__(.+?)__|\*([^*\n]+)\*|(?<![A-Za-z0-9_])_([^_\n]+)_(?![A-Za-z0-9_])|\[([^\]]+)\]\(([^)]+)\)/g;
   let last = 0;
@@ -27,15 +30,17 @@ function inline(text: string, keyPrefix: string): ReactNode[] {
         </code>,
       );
     } else if (match[2] !== undefined || match[3] !== undefined) {
+      // A bold run can hold a link, as **[label](href)** does throughout the
+      // chairs' calls, so its contents go back through this function.
       nodes.push(
         <strong key={key} className="font-semibold text-craie">
-          {match[2] ?? match[3]}
+          {inline(match[2] ?? match[3], `${key}-b`)}
         </strong>,
       );
     } else if (match[4] !== undefined || match[5] !== undefined) {
       nodes.push(
         <em key={key} className="italic text-craie/90">
-          {match[4] ?? match[5]}
+          {inline(match[4] ?? match[5], `${key}-i`)}
         </em>,
       );
     } else {
@@ -114,7 +119,7 @@ function render(body: string[]): ReactNode[] {
         {items.map((item, i) => (
           <li key={i} className="relative text-[17px] leading-[1.7] text-brume">
             <span
-              className="absolute -left-[31px] top-0 text-[13px] font-semibold tabular-nums text-neon-or"
+              className="absolute -left-[31px] top-0 text-[13px] font-semibold tabular-nums text-neon-purple"
               aria-hidden="true"
             >
               {i + 1}
@@ -208,7 +213,7 @@ function render(body: string[]): ReactNode[] {
       out.push(
         <h3
           key={index}
-          className="pt-4 text-[12px] font-semibold uppercase tracking-[0.16em] text-neon-teal"
+          className="pt-4 text-[12px] font-semibold uppercase tracking-[0.16em] text-neon-purple"
         >
           {line.slice(4)}
         </h3>,
@@ -234,11 +239,21 @@ function render(body: string[]): ReactNode[] {
   return out;
 }
 
-export function SimplePage({ page, children }: { page: PageContent; children?: ReactNode }) {
+export function SimplePage({
+  page,
+  cta,
+  children,
+}: {
+  page: PageContent;
+  /** Rendered above the body, for a page whose point is an action. */
+  cta?: ReactNode;
+  children?: ReactNode;
+}) {
   return (
     <>
       <PageHero eyebrow={page.eyebrow} title={page.title} intro={page.intro} />
       <Container className="py-16 lg:py-24">
+        {cta && <div className="mb-12">{cta}</div>}
         <div className="max-w-2xl space-y-6">{render(page.body)}</div>
         {children}
       </Container>

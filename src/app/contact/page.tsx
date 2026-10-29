@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { conference } from "@/content/site";
-import { Container, PageHero, Provisional } from "@/components/ui";
+import { Container, PageHero } from "@/components/ui";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -58,11 +58,6 @@ export default function ContactPage() {
               ))}
             </ul>
             <div className="mt-8">
-              <Provisional>
-                Registration, proceedings, student volunteers and CMT have no chair
-                appointed yet, so they have no address. Write to the general chairs and
-                your message will reach the right person.
-              </Provisional>
             </div>
           </div>
 

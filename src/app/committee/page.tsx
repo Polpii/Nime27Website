@@ -1,12 +1,18 @@
 import type { Metadata } from "next";
 import { committee, vacantRoles } from "@/content/committee";
 import { conference } from "@/content/site";
-import { Container, PageHero, Provisional } from "@/components/ui";
+import { Container, PageHero } from "@/components/ui";
 
 export const metadata: Metadata = {
   title: "Committee",
   description: `The people organising ${conference.name} in ${conference.city}.`,
 };
+
+/** Last word of a name, which is the surname for everyone on this page. */
+function surname(m: { name: string }) {
+  const parts = m.name.trim().split(/\s+/);
+  return parts[parts.length - 1];
+}
 
 export default function CommitteePage() {
   const total = committee.reduce((n, g) => n + g.members.length, 0);
@@ -37,7 +43,9 @@ export default function CommitteePage() {
                 )}
               </div>
               <ul className="mt-5 space-y-4">
-                {group.members.map((m) => (
+                {[...group.members]
+                  .sort((a, b) => surname(b).localeCompare(surname(a), "en"))
+                  .map((m) => (
                   <li key={m.name}>
                     <p className="font-display text-lg leading-tight text-craie">
                       {m.name}
@@ -76,10 +84,6 @@ export default function CommitteePage() {
               </li>
             ))}
           </ul>
-          <Provisional>
-            Only confirmed members are listed. The committee is still being assembled, so
-            this page will grow. Reviewers are credited separately once reviewing closes.
-          </Provisional>
         </div>
       </Container>
     </>

@@ -9,6 +9,10 @@ const nextConfig: NextConfig = {
       // so the path has to land where the text promises.
       { source: "/submissions", destination: "/call/submission-instructions", permanent: true },
       { source: "/submissions/:path*", destination: "/call/:path*", permanent: true },
+      // Camera-Ready was removed at the chairs' request: its content was a
+      // checklist nobody had agreed to, and the real instructions reach
+      // authors with their acceptance notice.
+      { source: "/call/camera-ready", destination: "/call", permanent: true },
       // Renamed when the real track names came through.
       { source: "/call/student-consortium", destination: "/call/doctoral-consortium", permanent: true },
       { source: "/call/student-volunteers", destination: "/call", permanent: true },

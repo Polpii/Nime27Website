@@ -83,6 +83,8 @@ export const nav: NavItem[] = [
     label: "Call",
     href: "/call",
     children: [
+      { label: "Overview", href: "/call" },
+      { label: "Key dates", href: "/call/key-dates" },
       { label: "Papers", href: "/call/papers" },
       { label: "Music / Performance", href: "/call/music" },
       { label: "Art / Installations", href: "/call/installations" },
@@ -92,7 +94,6 @@ export const nav: NavItem[] = [
       { label: "Doctoral Consortium", href: "/call/doctoral-consortium" },
       { label: "Submission instructions", href: "/call/submission-instructions" },
       { label: "Review for NIME", href: "/call/reviewing" },
-      { label: "Camera-Ready", href: "/call/camera-ready" },
     ],
   },
   { label: "Registration", href: "/registration" },
@@ -110,6 +111,7 @@ export const nav: NavItem[] = [
     label: "Visit",
     href: "/visit",
     children: [
+      { label: "Overview", href: "/visit" },
       { label: "Conference map", href: "/visit/map" },
       { label: "Get around", href: "/visit/get-around" },
       { label: "Accessibility FAQ", href: "/visit/accessibility" },

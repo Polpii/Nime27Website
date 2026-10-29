@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { conference, deadlines, themeText, tracks } from "@/content/site";
-import { Card, Container, PageHero, Provisional } from "@/components/ui";
+import { Card, Container, PageHero } from "@/components/ui";
 
 const inlineLink = "text-neon-teal underline underline-offset-4 hover:text-neon-or";
 
@@ -89,52 +89,13 @@ export default function CallPage() {
           </p>
         </section>
 
-        <div className="mt-20 grid gap-12 lg:grid-cols-[1.3fr_1fr]">
-          <div className="space-y-6">
-            <h2 className="font-display text-3xl text-craie">Before you submit</h2>
-            <p className="text-[17px] leading-[1.75] text-brume">
-              Peer reviewed submissions must be completely anonymised, including authors,
-              references, and specific project names that can clearly identify the
-              author(s). Work cannot already be under review elsewhere, or be submitted
-              for a second review elsewhere while under review for NIME.
-            </p>
-            <p className="text-[17px] leading-[1.75] text-brume">
-              Submissions are handled through CMT. The submission system opens in December
-              2026 for the peer reviewed tracks, and in March 2027 for the juried ones. The
-              steps that are the same whichever track you choose are on{" "}
-              <Link href="/call/submission-instructions" className={inlineLink}>
-                submission instructions
-              </Link>
-              .
-            </p>
-            <Provisional>
-              The CMT submission link does not exist yet and will be added here once the
-              system is online. Each call carries its own dates, which differ between the
-              peer reviewed and the juried tracks.
-            </Provisional>
-          </div>
-
-          <aside className="h-fit border border-white/10 bg-white/[0.03] p-7">
-            <h2 className="text-[11px] font-semibold uppercase tracking-[0.18em] text-neon-teal">
-              Both deadlines
-            </h2>
-            <dl className="mt-6 space-y-5">
-              {groups.map((g) => (
-                <div key={g.key} className="border-b border-white/10 pb-4 last:border-0 last:pb-0">
-                  <dt className="text-[10px] font-semibold uppercase tracking-[0.16em] text-brume">
-                    {g.title}
-                  </dt>
-                  <dd className="mt-1 font-display text-lg text-craie">
-                    {g.deadline}
-                  </dd>
-                </div>
-              ))}
-            </dl>
-            <p className="mt-6 text-[11px] uppercase tracking-[0.16em] text-brume">
-              All deadlines 23:59 AoE
-            </p>
-          </aside>
-        </div>
+        <p className="mt-10 max-w-2xl text-[16px] leading-relaxed text-brume">
+          The steps that are the same whichever track you choose are on{" "}
+          <Link href="/call/submission-instructions" className={inlineLink}>
+            submission instructions
+          </Link>
+          . Every deadline is on <Link href="/call/key-dates" className={inlineLink}>key dates</Link>.
+        </p>
 
         {/* Reviewing used to be reachable only from the navigation dropdown,
             which is the one place a prospective author is not looking. */}

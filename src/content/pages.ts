@@ -18,9 +18,6 @@ export type PageContent = {
   body: string[];
 };
 
-const provisional =
-  "> Placeholder text adapted from NIME 2026. The NIME 2027 committee will confirm the final wording and dates.";
-
 export const pages: Record<string, PageContent> = {
   papers: {
     slug: "call/papers",
@@ -29,7 +26,6 @@ export const pages: Record<string, PageContent> = {
     intro:
       "Original research on the scientific and artistic use of new interfaces for musical expression.",
     body: [
-      "> The chairs are still finalising this call and the submission link does not exist yet. For deadlines see [key dates](/programme).",
       "Papers is one of the three peer reviewed tracks. We welcome submissions of original research on the scientific and artistic use of new interfaces for musical expression.",
       "## Length",
       "Full papers must be between **2,000 and 6,000 words**. The count covers the main text, including section headings, figure and table captions, and footnotes. It excludes the title, abstract and references.",
@@ -43,7 +39,7 @@ export const pages: Record<string, PageContent> = {
       "## Mentorship",
       "Authors new to NIME can be paired with an experienced member through the NIME mentorship programme.",
       "## Contact",
-      "[papers@nime2027.org](mailto:papers@nime2027.org)",
+      "[general-chairs@nime2027.org](mailto:general-chairs@nime2027.org)",
     ],
   },
 
@@ -54,7 +50,6 @@ export const pages: Record<string, PageContent> = {
     intro:
       "Performances and installations that showcase new interfaces for musical expression in composition, performance and sound art.",
     body: [
-      "> The chairs are still finalising this call and the submission link does not exist yet. For deadlines see [key dates](/programme).",
       "We look forward to receiving work that expands and reshapes our understanding of NIME in the conceptualisation, performance and reception of music. Submissions may be existing works or proposals for new ones, and there are no limitations or requirements concerning musical style.",
       "## Categories",
       "- **Live (in person) performance** — at least one performer is present at NIME. A live work may also involve an online connection to an artist who is not present, provided the technical requirements are fully documented and approved by the chairs",
@@ -83,14 +78,8 @@ export const pages: Record<string, PageContent> = {
     intro:
       "Shared activities, such as exploring collaborative live coding, discussing accessible music-making, or bringing NIME subcommunities together.",
     body: [
-      "> This call is not written yet. The workshop chairs are preparing it and it will be published here. Workshops are a juried track, so the deadline is Sunday 4 April 2027.",
-      "Workshops take place on **Tuesday 22 June 2027**, the day before the main conference opens, alongside the Doctoral Consortium.",
-      "## What the call will cover",
-      "The proposal format, how long a workshop may run, how many participants it can take, what the venue can provide, and how workshops are selected.",
-      "## In the meantime",
-      "If you are thinking about proposing a workshop and want to know whether an idea fits, write to the workshop chairs at [workshops@nime2027.org](mailto:workshops@nime2027.org).",
-      "The other calls are on the [call for contributions](/call), and the dates for every track are in [key dates](/programme).",
-      "NIME depends on volunteers. Whatever you submit, please also [sign up to review](/call/reviewing).",
+      "Workshops take place on **Tuesday 22 June 2027**, the day before the main conference opens, alongside the Doctoral Consortium. The call will be published soon.",
+      "For questions about workshops, contact the workshop chairs at [workshops@nime2027.org](mailto:workshops@nime2027.org).",
     ],
   },
 
@@ -101,7 +90,6 @@ export const pages: Record<string, PageContent> = {
     intro:
       "A space for contributions that question, challenge, or expand what NIME can be.",
     body: [
-      "> The chairs are still finalising this call and the submission link does not exist yet. For deadlines see [key dates](/programme).",
       "Building on the experimental spirit of alt.nime 2026 and the heritage of alt.chi, alt.nime welcomes work that may not fit comfortably within conventional academic categories. Not because it is unfinished, but because it deliberately proposes a different way of contributing to NIME.",
       "alt.nime is a place where it is legitimate to take a position. Contributions may be personal, situated, political, activist, speculative or provocative. They do not need to perform neutrality. We expect contributors to situate their positions, engage critically with their implications, and create opportunities for meaningful discussion rather than provocation for its own sake.",
       "## What might a contribution do?",
@@ -129,7 +117,6 @@ export const pages: Record<string, PageContent> = {
     intro:
       "Feedback from the NIME community on the conceptual, theoretical, technical and musical components of your research.",
     body: [
-      "> The chairs are still finalising this call and the submission link does not exist yet. For deadlines see [key dates](/programme).",
       "The Consortium takes place as a **half-day session on 22 June 2027**. Peers and senior researchers, interaction designers and computer musicians are mixed together for an open discussion of NIME-related work.",
       "Ideal candidates are early-stage or mid-way into their project, presenting concrete research content within the NIME topics but with no conclusive results yet. Candidates should explain clearly what they bring to the Consortium and what they expect to get from it.",
       "## Two categories",
@@ -168,34 +155,11 @@ export const pages: Record<string, PageContent> = {
       "- Your areas of expertise, so submissions can be matched sensibly",
       "Your details are used to run the review process and are not published. Reviewers are credited as a list of names after reviewing closes, unless you ask us not to, and you can ask the general chairs to show or delete what we hold about you.",
       "## When reviewing happens",
-      "The review period runs from **Monday 8 February to Sunday 28 February 2027**, with decisions released on 26 March. Expect a handful of submissions and a structured form covering the contribution, the method, the clarity and the relevance to NIME.",
-      "## Writing a useful review",
-      "Say what the work contributes before saying what is missing. Be specific about what would change your assessment. A NIME submission may be an artistic contribution, an engineering contribution, a study, or all three, and should be judged on the terms it sets for itself.",
-      "Review is double-blind for the peer reviewed tracks. Do not try to identify the authors, and declare a conflict of interest as soon as you spot one.",
+      "For the peer reviewed tracks, Papers, Music / Performance and Art / Installations, the review period runs from **Monday 8 February to Sunday 28 February 2027**, with decisions released on 19 March.",
+      "The juried tracks review between **Monday 5 April and Monday 26 April 2027**, though this varies a little from track to track.",
+      "Expect a handful of submissions and a structured form covering the contribution, the method, the clarity and the relevance to NIME.",
       "## Contact",
       "[papers@nime2027.org](mailto:papers@nime2027.org)",
-    ],
-  },
-
-  "camera-ready": {
-    slug: "call/camera-ready",
-    title: "Camera-Ready",
-    eyebrow: "Call",
-    intro: "Preparing the final version of an accepted contribution.",
-    body: [
-      "> The detailed instructions come with the acceptance notice, because they depend on the track and on what the reviewers asked for. What is on this page is the part that is already fixed.",
-      "## The deadline",
-      "Final materials, camera-ready versions and presenter registration are all due on **Sunday 9 May 2027**, 23:59 AoE. That is one deadline covering all three, for both the peer reviewed and the juried tracks.",
-      "Decisions reach authors earlier: 26 March for the peer reviewed tracks and 30 April for the juried ones. See [key dates](/programme).",
-      "## What is already known",
-      "- A contribution that is not presented at the conference is not published",
-      "- Accepted papers appear on [nime.org](https://nime.org/papers/), each with a DOI, under a CC BY 4.0 licence",
-      "- Artifacts & Ideas contributions are recorded on the conference website but are not in the main proceedings and receive no conference-issued DOI. See that [call](/call/artifacts)",
-      "- The final version is no longer anonymous, so authors, affiliations and any references withheld for review go back in",
-      "## What you will be told at acceptance",
-      "Which template version to use, how to respond to the reviewers, what supplementary media is accepted and in which formats, and how to submit the final files. Those instructions will also be published on this page once the chairs have written them.",
-      "## Contact",
-      "[general-chairs@nime2027.org](mailto:general-chairs@nime2027.org)",
     ],
   },
 
@@ -203,28 +167,9 @@ export const pages: Record<string, PageContent> = {
     slug: "registration",
     title: "Registration",
     eyebrow: "Attend",
-    intro:
-      "Registration opens in early 2027. Rates, categories and the cancellation policy will be published here.",
+    intro: "Registration opens in early 2027.",
     body: [
-      provisional,
-      "## Categories",
-      "Registration will be offered in the following categories, with in-person and online rates for each:",
-      "- Standard",
-      "- Student",
-      "- Reduced rate for delegates from countries where the standard fee is a barrier",
-      "- Day pass",
-      "- Workshop and Student Consortium day",
-      "## What registration includes",
-      "- Access to all conference sessions, posters and demos",
-      "- Entry to the concert programme and installations",
-      "- Refreshments during the conference days",
-      "- Access to the online programme and recordings where authors have consented",
-      "## Presenter registration",
-      "At least one author of every accepted contribution must be registered by 29 April 2027 for the contribution to appear in the programme and the proceedings.",
-      "## Financial support",
-      "We intend to offer a limited number of fee waivers and travel bursaries, prioritising students and delegates who would otherwise be unable to attend. Details will be published with the registration rates.",
-      "## Contact",
-      "[general-chairs@nime2027.org](mailto:general-chairs@nime2027.org)",
+      "Rates, categories and the cancellation policy will be published here.",
     ],
   },
 
@@ -234,9 +179,6 @@ export const pages: Record<string, PageContent> = {
     eyebrow: "Programme",
     intro: "Keynote speakers will be announced in early 2027.",
     body: [
-      provisional,
-      "NIME 2027 will host keynote talks and performances from figures whose work has shaped how instruments are designed, built, played and shared.",
-      "Speakers will be announced here and on the NIME forum as they are confirmed.",
       "## Suggest a speaker",
       "The committee welcomes suggestions from the community, particularly for voices under-represented in previous NIME keynote programmes. Write to [general-chairs@nime2027.org](mailto:general-chairs@nime2027.org).",
     ],
@@ -249,7 +191,6 @@ export const pages: Record<string, PageContent> = {
     intro:
       "Concerts, exhibitions and meet-ups happening in Paris around the conference week.",
     body: [
-      "> Nothing is confirmed yet. This page is deliberately empty rather than filled with events that may not happen, and it will fill up through the spring.",
       "Paris has a dense calendar of experimental music, media art and research events in June. We expect to list work by partner institutions and by members of the NIME community who are in town, and events will be added here as they are confirmed.",
       "## Propose an event",
       "If you are organising something in Paris that week and would like it listed, write to [general-chairs@nime2027.org](mailto:general-chairs@nime2027.org).",
@@ -263,7 +204,6 @@ export const pages: Record<string, PageContent> = {
     intro:
       "Getting to the city, getting around it, and what to know before you arrive.",
     body: [
-      "> This is general guidance about Paris rather than anything the committee has decided. Venue specific travel and access details follow once the rooms are allocated.",
       "## Getting to Paris",
       "- **By air** — Paris is served by Charles de Gaulle (CDG), Orly (ORY) and Beauvais (BVA). CDG and Orly both connect to the city centre by rail",
       "- **By rail** — direct high-speed services reach Paris from London, Brussels, Amsterdam, Cologne, Frankfurt, Barcelona, Milan, Geneva and most French cities. For most European delegates the train is faster door-to-door than flying, and considerably lower-carbon",
@@ -271,7 +211,7 @@ export const pages: Record<string, PageContent> = {
       "We encourage delegates to travel by rail where it is a reasonable option.",
       "## Visas",
       "France is part of the Schengen Area. Depending on your nationality you may need a short-stay Schengen visa. Apply early, because appointment waiting times can be long in peak season.",
-      "If you need an invitation letter for a visa application, write to the general chairs. How these are issued is still being arranged, so ask early rather than close to your appointment.",
+      "If you need an invitation letter for a visa application, write to [general-chairs@nime2027.org](mailto:general-chairs@nime2027.org). How these are issued is still being arranged, so ask early rather than close to your appointment.",
       "## Accommodation",
       "June is high season in Paris and rooms go quickly, so book early. Whether the conference will arrange a block booking or negotiated rates is not decided yet. Accommodation guidance will be published here once registration opens.",
       "## Money and practicalities",
@@ -287,7 +227,6 @@ export const pages: Record<string, PageContent> = {
     eyebrow: "Visit",
     intro: "Métro, RER, bus, tram, bike — and walking, which is often quicker.",
     body: [
-      "> This is general guidance about Paris rather than anything the committee has decided. Venue specific travel and access details follow once the rooms are allocated.",
       "## Public transport",
       "Paris and its region are covered by an integrated network of métro, RER commuter rail, tram and bus, run under the Île-de-France Mobilités umbrella. A single ticket covers the métro and bus network within the city, with transfers.",
       "- **Métro** — 16 lines, dense enough that most of central Paris is within 500 m of a station. Runs roughly 05:30 to 01:15, later at weekends",
@@ -310,18 +249,11 @@ export const pages: Record<string, PageContent> = {
     intro:
       "What is settled, what is not, and how to tell us what you need.",
     body: [
-      "> This page lists what the committee has settled and what it has not. The gaps are real rather than placeholder text, because most of them depend on the venue walkthrough and the budget, and neither is finished.",
       "NIME seeks to bring together an outstanding worldwide community, open to all people regardless of age, nationality, ethnicity, gender identity, sexual orientation or disability status. Accessibility is part of that commitment rather than an add-on to it.",
       "NIME 2027 has an accessibility chair, so there is someone whose job this is. You can raise an access requirement now, long before registration opens, and it will reach them.",
       "## What we can tell you now",
       "- The conference is hosted at Campus du Parc in Nanterre, west of Paris. Access details for each space will be published on the [conference map](/visit/map) once the rooms are allocated",
       "- Step-free access on the historic Paris métro is limited, while the RER, tram and bus networks are much better served and every city bus is accessible. See [get around](/visit/get-around)",
-      "## What is not settled yet",
-      "- Whether sessions will be captioned, and in which rooms",
-      "- Whether sign language interpretation can be provided, and in which languages",
-      "- Whether there will be a quiet room, and where",
-      "- What notice concert programmes will carry about volume, strobe and haptic intensity, and what seating will be held back for delegates who need it",
-      "We would rather publish these as open questions than announce provisions we cannot yet fund. Each one will be answered here as it is decided.",
       "## Tell us what you need",
       "Please write to [access@nime2027.org](mailto:access@nime2027.org). We would much rather hear about a barrier in January than discover it in June.",
     ],
@@ -334,7 +266,6 @@ export const pages: Record<string, PageContent> = {
     intro:
       "Artworks, such as an interactive sound sculpture or a room that responds musically to visitors.",
     body: [
-      "> The chairs are still finalising this call and the submission link does not exist yet. For deadlines see [key dates](/programme).",
       "Art / Installations is one of the three peer reviewed tracks. Installations can be physical works exhibited in foyer, room or gallery space, as well as virtual works that exist online.",
       "## The theme",
       "In line with the NIME 2027 theme of **Sensorial Symbiosis**, we encourage proposals that explore the novel relationships amongst bodies, instruments, machines, environments and audiences in musical interaction; shared agency and authorship across performers and machines; interfaces that extend, substitute or reshape perception; and works that engage with traces across time.",
@@ -358,7 +289,6 @@ export const pages: Record<string, PageContent> = {
     intro:
       "Practice-based work without an accompanying research paper: a DIY instrument presented as a demo, or a musical interaction concept presented as a poster.",
     body: [
-      "> The chairs are still finalising this call and the submission link does not exist yet. For deadlines see [key dates](/programme).",
       "The track welcomes well-developed projects (**Artifacts**) and theoretical insights (**Ideas**) that represent substantial creative, technical or experimental contributions, but are not necessarily framed as conventional academic papers. It provides a space for work whose significance lies primarily in its design, implementation, functionality or creative possibilities.",
       "We welcome instrument makers, musicians, artists, designers, developers and researchers from within and beyond academia. Contributions may emerge from individual practice, community initiatives, independent workshops, educational settings or companies.",
       "Contributions should go beyond preliminary demonstrations or early-stage concepts, presenting consolidated, functioning artifacts that embody a clearly articulated idea. Projects need not be commercially polished, but should show a meaningful degree of development and practical realisation.",
@@ -386,7 +316,6 @@ export const pages: Record<string, PageContent> = {
     intro:
       "How to prepare and upload a submission, in one place, for every track.",
     body: [
-      "> This page is not written yet. The chairs are drafting it and it will be published here before the submission system opens on 4 December 2026.",
       "It will cover the parts that are the same whichever track you submit to: making an account on the submission system, the templates, how to anonymise a submission, how to upload supplementary media, and how to change a submission before the deadline.",
       "Until then, the requirements specific to each track are in its own call:",
       "- [Papers](/call/papers)",
@@ -410,7 +339,6 @@ export const pages: Record<string, PageContent> = {
     intro:
       "Where everything happens on site: rooms, concert spaces, installations and demos.",
     body: [
-      "> The map is not drawn yet. It will be published here once the room allocation is settled, and it matters most to people submitting installations and demos, so it will be up before the juried deadline on 4 April 2027.",
       "## The venue",
       "NIME 2027 is hosted by **Devinci Higher Education** at **Campus du Parc**, 29 Allée le Corbusier, 92000 Nanterre, just west of Paris.",
       "## What the map will show",

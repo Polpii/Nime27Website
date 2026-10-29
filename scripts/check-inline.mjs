@@ -59,3 +59,14 @@ if (failed) {
   process.exit(1);
 }
 console.log(`inline markup: ${cases.length + 1} checks passed`);
+
+// A bold run holding a link, which every call uses for the ethics statement.
+{
+  const src2 = fs.readFileSync("src/components/simple-page.tsx", "utf8");
+  const recurses = /inline\(match\[2\] \?\? match\[3\]/.test(src2);
+  if (!recurses) {
+    console.error("FAIL  bold no longer parses its own contents, so **[a](b)** loses the link");
+    process.exit(1);
+  }
+  console.log("inline markup: bold and italic parse their contents");
+}
