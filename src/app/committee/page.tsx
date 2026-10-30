@@ -8,10 +8,17 @@ export const metadata: Metadata = {
   description: `The people organising ${conference.name} in ${conference.city}.`,
 };
 
-/** Last word of a name, which is the surname for everyone on this page. */
-function surname(m: { name: string }) {
-  const parts = m.name.trim().split(/\s+/);
-  return parts[parts.length - 1];
+/**
+ * First word of a name, which is the given name for everyone on this page.
+ *
+ * The lists are sorted on this, descending. Any consistent order would do:
+ * the point the general chairs made is that an inconsistent one reads as a
+ * ranking by seniority or by who did the most work. Reverse was asked for so
+ * that the end of the alphabet is not always last, and given name rather than
+ * surname is the later of the two things they asked for.
+ */
+function sortKey(m: { name: string }) {
+  return m.name.trim().split(/\s+/)[0];
 }
 
 export default function CommitteePage() {
@@ -44,7 +51,7 @@ export default function CommitteePage() {
               </div>
               <ul className="mt-5 space-y-4">
                 {[...group.members]
-                  .sort((a, b) => surname(b).localeCompare(surname(a), "en"))
+                  .sort((a, b) => sortKey(b).localeCompare(sortKey(a), "en"))
                   .map((m) => (
                   <li key={m.name}>
                     <p className="font-display text-lg leading-tight text-craie">
