@@ -61,7 +61,12 @@ export default function Home() {
           {themeText[0]}
         </p>
 
-        <p className="mt-14 max-w-xl text-[15px] leading-[1.8] text-brume/75 sm:text-base">
+        {/*
+         * Dimmed so it stops competing with the theme above, but only to 85%.
+         * At 75% this paragraph measured 4.24:1 on the page background, under
+         * the 4.5:1 that WCAG AA asks of text this size. 85% holds 5.24:1.
+         */}
+        <p className="mt-14 max-w-xl text-[15px] leading-[1.8] text-brume/85 sm:text-base">
           NIME gathers researchers and musicians from all over the world to share their
           knowledge and late-breaking work on new musical interface design. The conference
           began as a workshop at the Conference on Human Factors in Computing Systems
