@@ -27,17 +27,19 @@ For examples of the diversity of contributions, see[ alt.nime 2026](https://nime
 
 # Submission Requirements
 
-alt.nime contributions are format agnostic. Submissions can be exclusively textual or take other forms and media. Submissions use structured fields and supporting-material uploads in CMT. Contributors do not prepare or upload a formatted submission PDF for review. Reviewers assess the information and media entered in the submission system. If a work is accepted, NIME will use the submitted data to generate consistently formatted PDF and web records for author review and publication.
+alt.nime contributions are format agnostic. Submissions can be exclusively textual, or take other forms and media. However all alt.nime submissions must include a PDF document using the alt.nime template, and must include the fields:
 
 - **Title, Author Information, Abstract, Ethical Statement, and References.**
 - **alt.nime Statement:** Authors must explain why this contribution is relevant to alt.nime and aligns with the expectations for this track, as described earlier in this call. 
 - **Presentation Specification:** Authors must describe the format, specification, materials required and describe their intention for how they want to execute or present their proposition during the conference. The final implementation and form will be decided in dialogue with the jury reviewing the work and the alt.nime chairs.
 
-For text-only submissions, the combined submission text may be up to 6000 words (excluding references and the ethical statement).
+For text-only submissions, the template can be extended beyond the mandatory fields, with a maximum word limit of 6000 words (excluding references and ethical statement).
 
 Supplemental material and/or non-textual submissions may be up to eight A4 pages (or the equivalent, e.g. sixteen A5 or four A2), or in the case of audio-visual submissions, a maximum duration of around 15 minutes.
 
 alt.nime review is non-anonymous. Author information entered in CMT is visible to the jury and chairs because the review process includes direct dialogue among authors, jurors, and chairs.
+
+See [submission instructions](/call/submission-instructions) for more information.
 
 # Review and Selection
 
