@@ -76,8 +76,14 @@ export const committee: CommitteeGroup[] = [
   {
     title: "Artifacts & Ideas",
     email: "artifacts@nime2027.org",
-    members: [{ name: "Nicolò Merendino" }, { name: "Kazuhiro Jo" }],
-    vacancies: 1,
+    members: [
+      { name: "Nicolò Merendino" },
+      { name: "Kazuhiro Jo" },
+      // Not in the sheet, which still shows this third seat as vacant under
+      // another name. Paul asked for her by name in the chairs' channel, and
+      // a general chair asking is the one thing that overrides the sheet.
+      { name: "Astrid Bin" },
+    ],
   },
   {
     title: "Workshops",

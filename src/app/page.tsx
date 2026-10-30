@@ -41,16 +41,27 @@ export default function Home() {
           {conference.location}
         </p>
 
-        <p className="mt-7 text-[12px] uppercase tracking-[0.26em] text-brume">
+        {/*
+         * The theme used to be a 12px label with the name inline, and its
+         * paragraph was set exactly like the general blurb below it, so Paul
+         * read the whole thing as a caption and asked twice for the theme to
+         * be on the home page. It is given its own display-size line here,
+         * one step under the dates, and the general blurb is dimmed so it
+         * stops competing.
+         */}
+        <p className="mt-10 text-[11px] font-semibold uppercase tracking-[0.3em] text-brume">
           Theme
-          <span className="ml-3 text-neon-teal">{conference.theme}</span>
         </p>
 
-        <p className="mt-5 max-w-xl text-[15px] leading-[1.8] text-brume sm:text-base">
+        <p className="mt-3 font-display text-[1.4rem] leading-tight text-neon-teal glow-teal min-[360px]:text-[1.7rem] sm:text-3xl lg:text-4xl">
+          {conference.theme}
+        </p>
+
+        <p className="mt-6 max-w-2xl text-[16px] leading-[1.75] text-craie sm:text-[17px]">
           {themeText[0]}
         </p>
 
-        <p className="mt-14 max-w-xl text-[15px] leading-[1.8] text-brume sm:text-base">
+        <p className="mt-14 max-w-xl text-[15px] leading-[1.8] text-brume/75 sm:text-base">
           NIME gathers researchers and musicians from all over the world to share their
           knowledge and late-breaking work on new musical interface design. The conference
           began as a workshop at the Conference on Human Factors in Computing Systems
