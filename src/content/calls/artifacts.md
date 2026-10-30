@@ -98,8 +98,6 @@ A&I contributions will be presented in formats that encourage contributors to ac
 
 To this end, accepted contributions will be provided with a poster stand and a table to showcase prototypes or other materials. Particular requirements can be arranged upon discussion with the organization of the conference 
 
-Artifacts will normally be presented as demonstrations, and Ideas as posters. The track chairs may agree alternative arrangements with contributors where these better suit the contribution and the practical possibilities of the conference. Presentation formats may be shared with other tracks; Artifacts & Ideas contributions will be clearly identified in the programme. 
-
 # Publication and Archiving
 
 Accepted submissions will be preserved on the conference website, providing a record of acceptance. Artifacts & Ideas contributions will not be included in the main conference proceedings and will not receive a conference-issued DOI. 
