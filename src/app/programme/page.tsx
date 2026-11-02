@@ -19,7 +19,7 @@ export default function ProgrammePage() {
 
       <Container className="py-16 lg:py-24">
         <section>
-          <h2 className="font-display text-3xl text-craie">The week</h2>
+          <h2 className="font-display text-3xl text-neon-purple">The week</h2>
           <p className="mt-4 max-w-2xl text-[17px] leading-[1.75] text-brume">
             The published range covers the pre-conference activities. If you are booking
             travel, note that things start on the Monday, not on the Wednesday.

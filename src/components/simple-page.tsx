@@ -230,17 +230,24 @@ function render(body: string[]): ReactNode[] {
     if (line === "---") {
       out.push(<hr key={index} className="border-white/10" />);
     } else if (line.startsWith("### ")) {
+      // Sofy asked for a colour per kind of heading, to get the logo's
+      // purple and pink off the logo and into the body of the site. The
+      // sub-label takes the pink; see the h2 below for the purple.
       out.push(
         <h3
           key={index}
-          className="pt-4 text-[12px] font-semibold uppercase tracking-[0.16em] text-neon-purple"
+          className="pt-4 text-[12px] font-semibold uppercase tracking-[0.16em] text-neon-rose"
         >
           {line.slice(4)}
         </h3>,
       );
     } else if (line.startsWith("## ")) {
+      // The section heading, and the reason this change is visible at all:
+      // there are 69 of these across the site against 6 of the h3 above, so
+      // this is the one element frequent enough to carry a colour through
+      // the body rather than decorate two pages.
       out.push(
-        <h2 key={index} className="pt-6 font-display text-2xl text-craie sm:text-[1.7rem]">
+        <h2 key={index} className="pt-6 font-display text-2xl text-neon-purple sm:text-[1.7rem]">
           {line.slice(3)}
         </h2>,
       );

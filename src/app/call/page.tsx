@@ -48,7 +48,7 @@ export default function CallPage() {
           <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-neon-teal">
             Theme
           </p>
-          <h2 className="mt-3 font-display text-3xl text-craie sm:text-4xl">
+          <h2 className="mt-3 font-display text-3xl text-neon-purple sm:text-4xl">
             {conference.theme}
           </h2>
           <div className="mt-6 max-w-2xl space-y-5">
@@ -68,7 +68,7 @@ export default function CallPage() {
           {groups.map((group) => (
             <section key={group.key}>
               <div className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-2 border-b border-white/10 pb-5">
-                <h2 className="font-display text-3xl text-craie">{group.title}</h2>
+                <h2 className="font-display text-3xl text-neon-purple">{group.title}</h2>
                 <p className="text-[12px] font-semibold uppercase tracking-[0.16em] text-neon-or">
                   Due {group.deadline}
                   <span className="ml-2 text-brume">23:59 AoE</span>
@@ -103,7 +103,7 @@ export default function CallPage() {
         {/* Reviewing used to be reachable only from the navigation dropdown,
             which is the one place a prospective author is not looking. */}
         <section className="mt-20 border-t border-white/10 pt-14">
-          <h2 className="font-display text-3xl text-craie">Review for NIME 2027</h2>
+          <h2 className="font-display text-3xl text-neon-purple">Review for NIME 2027</h2>
           <p className="mt-6 max-w-2xl text-[17px] leading-[1.75] text-brume">
             Every peer reviewed submission gets three reviews from peer experts and a meta
             review from an experienced member of the community. That only works if enough

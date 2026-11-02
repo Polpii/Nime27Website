@@ -38,7 +38,7 @@ export default function ContactPage() {
       <Container className="py-16 lg:py-24">
         <div className="grid gap-14 lg:grid-cols-[1.1fr_1fr]">
           <div>
-            <h2 className="font-display text-2xl text-craie">Who to write to</h2>
+            <h2 className="font-display text-2xl text-neon-purple">Who to write to</h2>
             <ul className="mt-8 border-t border-white/10">
               {addresses.map((a) => (
                 <li
@@ -63,7 +63,7 @@ export default function ContactPage() {
 
           <aside className="space-y-10">
             <div>
-              <h2 className="font-display text-2xl text-craie">Stay informed</h2>
+              <h2 className="font-display text-2xl text-neon-purple">Stay informed</h2>
               <p className="mt-4 text-[17px] leading-[1.75] text-brume">
                 Announcements are posted on the NIME forum and circulated on the NIME
                 mailing list.
