@@ -70,8 +70,12 @@ export const committee: CommitteeGroup[] = [
   },
   {
     title: "Concert",
-    members: [{ name: "Bartélémy Belleudy", affiliation: "Krema Collective" }],
-    vacancies: 1,
+    members: [
+      { name: "Bartélémy Belleudy", affiliation: "Krema Collective" },
+      // Named by Xiao in the chairs' channel, which fills the seat the sheet
+      // still shows as open.
+      { name: "Virgile Boulanger", affiliation: "Krema Collective" },
+    ],
   },
   {
     title: "Artifacts & Ideas",
@@ -97,6 +101,10 @@ export const committee: CommitteeGroup[] = [
     members: [
       { name: "Martin Kaltenbrunner", affiliation: "Tangible Music Lab, University of Arts Linz" },
       { name: "Sarah Nabi", affiliation: "IRCAM" },
+      // The sheet never recorded whether she accepted, so she was held back
+      // until a general chair asked for her. Xiao did, in the chairs' channel.
+      // No affiliation given there, and the sheet's field is empty.
+      { name: "Sile O'Modhrain" },
     ],
   },
   {
