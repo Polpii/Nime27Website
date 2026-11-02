@@ -261,10 +261,18 @@ function render(body: string[]): ReactNode[] {
 
 export function SimplePage({
   page,
+  banner,
   cta,
   children,
 }: {
   page: PageContent;
+  /**
+   * An illustration for the track, shown full width between the hero and the
+   * body. It runs wider than the 2xl text column on purpose: these drawings
+   * are panoramic, and squeezing one into the measure of the prose would make
+   * its detail unreadable.
+   */
+  banner?: ReactNode;
   /** Rendered above the body, for a page whose point is an action. */
   cta?: ReactNode;
   children?: ReactNode;
@@ -272,6 +280,11 @@ export function SimplePage({
   return (
     <>
       <PageHero eyebrow={page.eyebrow} title={page.title} intro={page.intro} />
+      {banner && (
+        <Container className="pt-10 lg:pt-14">
+          <div className="border-y border-white/10 py-8 lg:py-10">{banner}</div>
+        </Container>
+      )}
       <Container className="py-16 lg:py-24">
         {cta && <div className="mb-12">{cta}</div>}
         <div className="max-w-2xl space-y-6">{render(page.body)}</div>
