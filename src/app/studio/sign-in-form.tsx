@@ -22,7 +22,6 @@ export function SignInForm() {
           autoComplete="name"
           required
           className={field}
-          placeholder="Xiao"
         />
         <p className="mt-2 text-[13px] text-brume">
           So we can see who changed what. It is not a login.
