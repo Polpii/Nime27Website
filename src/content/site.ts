@@ -40,8 +40,11 @@ export const conference = {
    * older name and is marked "TO UPDATE" in the source document.
    */
   theme: "Sensorial Symbiosis",
-  /** The call is published the week commencing 26 October 2026. */
-  callOpens: "October 2026",
+  /**
+   * Was "October 2026", which the week commencing 26 October was meant to
+   * deliver. It did not, so the promise moved rather than quietly expired.
+   */
+  callOpens: "early November 2026",
   /** TBC — this address does not exist yet. */
   email: "general-chairs@nime2027.org",
   /** Shown to readers. */
@@ -141,7 +144,10 @@ export type ImportantDate = {
  * dates, the schedule wins. All submission deadlines are 23:59 AoE.
  */
 export const importantDates: ImportantDate[] = [
-  { date: "26 October 2026", label: "Call for contributions published", kind: "info" },
+  // The schedule set this at 26 October and that week passed without it, so
+  // the row follows conference.callOpens rather than keeping a date the site
+  // has already missed.
+  { date: "Early November 2026", label: "Call for contributions published", kind: "info" },
   {
     /**
      * The calls say 4 December, the master schedule said the 14th. The
