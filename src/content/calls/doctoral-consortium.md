@@ -4,7 +4,7 @@ Feedback from the NIME community on the conceptual, theoretical, technical and m
 
 The Consortium takes place as a **half-day session on 22 June 2027**. Peers and senior researchers, interaction designers and computer musicians are mixed together for an open discussion of NIME-related work.
 
-Ideal candidates are early-stage or mid-way into their project, presenting concrete research content within the NIME topics but with no conclusive results yet. Candidates should explain clearly what they bring to the Consortium and what they expect to get from it.
+Ideal candidates are early-stage or mid-way into their project, presenting concrete research content within the NIME topics but with no conclusive results yet. Candidates should explain clearly what they bring to the Consortium and what they expect to get from it. Candidates must have permission from their supervisors to submit their project.
 
 ## Two categories
 
@@ -13,7 +13,7 @@ Ideal candidates are early-stage or mid-way into their project, presenting concr
 
 ## What to submit
 
-A document of at most **5,000 words**, excluding the bibliography, containing:
+A document of at most **2,500 words**, excluding the bibliography, containing:
 
 - Title and keywords
 - Research question(s)
