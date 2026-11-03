@@ -23,7 +23,7 @@ export const conference = {
   country: "France",
   location: "Paris, France",
   /** When the call for papers and participation is published. */
-  callOpens: "October 2026",
+  callOpens: "early November 2026",
   /** Shown to readers. */
   domain: "nime2027.org",
   /**
