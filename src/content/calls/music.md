@@ -55,7 +55,7 @@ Music submissions use structured fields and supporting-media uploads in CMT. Con
 Create the submission by 24 January 2027 with its title, program notes, author and performer list, presentation category, and topic tags. Complete the remaining fields and supporting materials by 31 January 2027. The submission must include:
 
 - **Program Notes** (maximum 200 words): the audience-facing text intended for the concert programme.
-- **Project Description:** the background, context, and concept of the work; the instruments, systems, and technologies involved; and why the work matters to the NIME community. It need not be an academic text.
+- **Project Description:** the background, context, and concept of the work; the instruments, systems, and technologies involved; and why the work matters to the NIME community. 
 - **Technical Notes:** the duration; performers and their roles; space, staging, furniture, lighting, and projection needs; sound amplification and channel count (stereo, multichannel, or spatial); network requirements; setup and strike time; and what the contributors will bring versus what they expect NIME to provide. Include a stage plot and images or diagrams wherever they help reviewers understand how the work will be staged. State a preferred presentation format or venue, if applicable, and explain why.
 - **Media and Supporting Links:** required video documentation and any additional audio, video, score, code, repository, or online material that helps reviewers understand the work.
 - **Acknowledgements** (optional): omit these from the anonymised review submission and restore them after acceptance.
