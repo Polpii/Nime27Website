@@ -49,13 +49,14 @@ We welcome contributions including, but not limited to:
 - Fabrication techniques, material experiments, and methods of instrument construction or adaptation.  
 - Documentation, demonstration, and sharing of practical knowledge and skillsets.  
 - Embodied knowledge and performance practices that are difficult to communicate through writing alone.  
-- Tools and practices developed by independent makers, musical communities, and practitioners outside academia.  
+- Tools and practices developed by independent makers, musical communities, and practitioners outside academia.
+- Critical perspectives and theoretical insights  
       
 While this is not a platform for commercial promotion, experimental prototypes and products from makers and companies are welcome where they offer a substantive creative or technical contribution to share knowledge with the NIME community.
 
 # Submission Requirements
 
-The submission format requires supporting media, specifically a short video (max. 5 minutes) and a poster draft, which may include images, diagrams, and other visual elements that help communicate the project, accompanied by a concise written description (max. 2,000 words). The materials should communicate the work in terms appropriate to its nature; a formal research question or conventional academic argument is not required.
+The submission format requires supporting media, specifically a short video (max. 5 minutes) and a poster draft, which may include text, images, diagrams, and other visual elements that help communicate the project, accompanied by a concise written description (max. 2,000 words). The materials should communicate the work in terms appropriate to its nature; a formal research question or conventional academic argument is not required.
 
 Contributors shall include the following information in their submission:
 
@@ -66,9 +67,9 @@ Contributors shall include the following information in their submission:
 - Presentation specification: The proposed way of presenting the work, including space, equipment, power, sound, setup, access, and safety requirements.  
 - References and related resources, where relevant: Sources, precedents, and supporting material that help situate the contribution.  
       
-Initial submissions should follow a light-anonymisation policy: author names should not appear in the submission, but authors may refer to their prior work, and submissions will not be penalized if the authors’ identities can be inferred. Author names should be added to the final camera-ready (academia term that indicates the final version of an already accepted contribution) version. 
+Initial submissions should follow a light-anonymization policy: author names should not appear in the submission, but authors may refer to their prior work, and submissions will not be penalized if the authors’ identities can be inferred. Author names should be added to the final camera-ready (academia term that indicates the final version of an already accepted contribution) version. 
 
-Repository links and supporting build documentation are strongly encouraged but optional. Schematics, source code, construction notes, and other resources can help the jury assess the work and enable others to learn from or build upon it. Contributors who cannot provide an open repository are welcome to submit.
+For submissions of artifacts, repository links and supporting build documentation are strongly encouraged but optional. Schematics, source code, construction notes, and other resources can help the jury assess the work and enable others to learn from or build upon it. Contributors who cannot provide an open repository are welcome to submit.
 
 # Review and Selection
 
@@ -80,11 +81,12 @@ NIME depends on volunteers. To serve on the jury, [sign up to review](/call/revi
 
 The selection criteria are:
 
-- Creative or technical contribution: The interest and significance of the idea or approach embodied in the work.  
+- Contribution: The interest and significance of the idea or approach embodied in the work. Contributions can be creative, technical, theoretical, critical, or interpretive. 
 - Development: For Artifacts, the degree of practical realization, experimentation, and functionality. For Ideas, the depth and clarity of the concept and its grounding in relevant practice or existing work.  
 - Relevance to NIME: The possibilities the contribution offers for musical interaction and expression.  
 - Knowledge sharing: The value of the experience, techniques, or practical understanding shared with the community.  
-- Clarity and feasibility: The quality of the documentation and the feasibility of the proposed conference presentation.  
+- Clarity: The quality of the documentation 
+- Feasibility (physical demos only): How realistically the proposed demonstration can be accommodated within the presentation format
         
 Submissions will be considered in relation to their aims and the nature of their practice. Contributors should make the significance of their work clear through documentation appropriate to that work.
 
