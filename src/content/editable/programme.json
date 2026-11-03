@@ -1,0 +1,30 @@
+{
+  "weekNote": "The published range covers the pre-conference activities. If you are booking travel, note that things start on the Monday, not on the Wednesday.",
+  "days": [
+    {
+      "weekday": "Monday",
+      "date": "21 June",
+      "items": "Fête de la musique"
+    },
+    {
+      "weekday": "Tuesday",
+      "date": "22 June",
+      "items": "Workshops\nDoctoral Consortium\nReception\nConcert"
+    },
+    {
+      "weekday": "Wednesday",
+      "date": "23 June",
+      "items": "Papers\nDemos\nInstallations\nConcerts"
+    },
+    {
+      "weekday": "Thursday",
+      "date": "24 June",
+      "items": "Papers\nDemos\nInstallations\nConcerts"
+    },
+    {
+      "weekday": "Friday",
+      "date": "25 June",
+      "items": "Papers\nDemos\nInstallations\nConcerts"
+    }
+  ]
+}

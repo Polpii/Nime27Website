@@ -1,0 +1,42 @@
+{
+  "intro": "Questions about a track go to that track's chairs. They will get you a faster answer than the general address.",
+  "addresses": [
+    {
+      "role": "General enquiries",
+      "email": "general-chairs@nime2027.org"
+    },
+    {
+      "role": "Papers",
+      "email": "papers@nime2027.org"
+    },
+    {
+      "role": "Music / Performance",
+      "email": "music@nime2027.org"
+    },
+    {
+      "role": "Art / Installations",
+      "email": "installations@nime2027.org"
+    },
+    {
+      "role": "alt.nime",
+      "email": "alt.nime@nime2027.org"
+    },
+    {
+      "role": "Artifacts & Ideas",
+      "email": "artifacts@nime2027.org"
+    },
+    {
+      "role": "Workshops",
+      "email": "workshops@nime2027.org"
+    },
+    {
+      "role": "Doctoral Consortium",
+      "email": "student-consortium@nime2027.org"
+    },
+    {
+      "role": "Accessibility",
+      "email": "access@nime2027.org"
+    }
+  ],
+  "stayNote": "Announcements are posted on the NIME forum and circulated on the NIME mailing list."
+}

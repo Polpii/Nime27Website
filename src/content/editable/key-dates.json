@@ -1,0 +1,75 @@
+{
+  "intro": "Every date for every track, from the call opening to the conference itself. All submission deadlines are 23:59 Anywhere on Earth.",
+  "rows": [
+    {
+      "date": "Early November 2026",
+      "label": "Call for contributions published",
+      "kind": "info"
+    },
+    {
+      "date": "4 December 2026",
+      "label": "Submission system opens for the peer reviewed tracks",
+      "kind": "info"
+    },
+    {
+      "date": "Sunday 24 January 2027",
+      "label": "Peer reviewed — titles, abstracts and authors due",
+      "kind": "deadline"
+    },
+    {
+      "date": "Sunday 31 January 2027",
+      "label": "Peer reviewed — full submissions due",
+      "kind": "deadline"
+    },
+    {
+      "date": "Monday 8 — Sunday 28 February 2027",
+      "label": "Review period",
+      "kind": "info"
+    },
+    {
+      "date": "Friday 19 March 2027",
+      "label": "Peer reviewed decisions and reviews released",
+      "kind": "info"
+    },
+    {
+      "date": "March 2027",
+      "label": "Submission system opens for the juried tracks",
+      "kind": "info"
+    },
+    {
+      "date": "Sunday 4 April 2027",
+      "label": "Juried — submissions due",
+      "kind": "deadline"
+    },
+    {
+      "date": "Friday 30 April 2027",
+      "label": "Juried decisions released",
+      "kind": "info"
+    },
+    {
+      "date": "Friday 30 April 2027",
+      "label": "Peer reviewed — camera-ready and presenter registration due",
+      "kind": "deadline"
+    },
+    {
+      "date": "Sunday 9 May 2027",
+      "label": "Juried — final materials and presenter registration due",
+      "kind": "deadline"
+    },
+    {
+      "date": "Monday 21 June 2027",
+      "label": "Fête de la musique",
+      "kind": "event"
+    },
+    {
+      "date": "Tuesday 22 June 2027",
+      "label": "Workshops, Doctoral Consortium, reception and opening concert",
+      "kind": "event"
+    },
+    {
+      "date": "Wednesday 23 — Friday 25 June 2027",
+      "label": "Main conference",
+      "kind": "event"
+    }
+  ]
+}

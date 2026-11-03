@@ -2,6 +2,7 @@
 
 import { useActionState } from "react";
 import type { Field } from "@/content/editable";
+import { RowsEditor, type Row } from "./rows-editor";
 import { saveFields, type SaveState } from "../actions";
 
 const box =
@@ -12,19 +13,26 @@ export function FieldsEditor({
   sha,
   fields,
   values,
+  tables,
   previewHref,
 }: {
   pageKey: string;
   sha: string;
   fields: Field[];
-  /** A list field arrives already joined into blank-line separated text. */
+  /** A list field arrives already joined into text. */
   values: Record<string, string>;
+  /** A table field arrives as its rows. */
+  tables: Record<string, Row[]>;
   previewHref: string;
 }) {
   const [state, action, pending] = useActionState<SaveState, FormData>(saveFields, {});
 
   return (
-    <form action={action} className="mt-10 max-w-2xl">
+    <form
+      action={action}
+      // A table needs more room than a paragraph does.
+      className={fields.some((f) => f.kind === "rows") ? "mt-10" : "mt-10 max-w-2xl"}
+    >
       <input type="hidden" name="key" value={pageKey} />
       <input type="hidden" name="sha" value={sha} />
 
@@ -38,7 +46,14 @@ export function FieldsEditor({
               {field.label}
             </label>
 
-            {field.kind === "line" ? (
+            {field.kind === "rows" ? (
+              <RowsEditor
+                name={`f.${field.key}`}
+                columns={field.columns ?? []}
+                rowNoun={field.rowNoun ?? "row"}
+                initial={tables[field.key] ?? []}
+              />
+            ) : field.kind === "line" ? (
               <input
                 id={field.key}
                 name={`f.${field.key}`}
@@ -52,7 +67,7 @@ export function FieldsEditor({
                 name={`f.${field.key}`}
                 defaultValue={values[field.key]}
                 spellCheck
-                rows={field.kind === "list" ? 10 : 5}
+                rows={field.kind === "list" || field.kind === "lines" ? 10 : 5}
                 className={`${box} resize-y`}
               />
             )}

@@ -9,7 +9,13 @@ import { SignInForm } from "./sign-in-form";
 const groups: { heading: string; keys: string[] }[] = [
   // The pages whose text is a set of named pieces rather than a document.
   // They lead the list because they are the ones the chairs asked for last.
-  { heading: "The front of the site", keys: ["home-page", "call-overview", "conference-theme"] },
+  {
+    heading: "The front of the site",
+    keys: ["home-page", "call-overview", "conference-theme"],
+  },
+  // The pages that are tables rather than prose: a date, a name, an address
+  // per row.
+  { heading: "Lists and tables", keys: ["key-dates", "programme", "committee", "contact"] },
   {
     heading: "Calls",
     keys: [
@@ -121,8 +127,9 @@ export default async function StudioHome() {
       </div>
 
       <p className="mt-16 max-w-2xl border-t border-white/10 pt-8 text-[14px] leading-relaxed text-brume">
-        The committee list and the key dates are not here yet, because they are tables
-        rather than text. Ask Paul-Peter if you need to change one.
+        Every page of the site is here. The track names, the conference dates and the
+        navigation are not, because they are the same in a dozen places at once. Ask
+        Paul-Peter for those.
       </p>
     </main>
   );

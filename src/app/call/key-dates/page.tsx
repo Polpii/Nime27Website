@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { conference, importantDates } from "@/content/site";
+import { keyDates } from "@/content/editable";
 import { Container, PageHero } from "@/components/ui";
 
 export const metadata: Metadata = {
@@ -25,7 +26,7 @@ export default function KeyDatesPage() {
       <PageHero
         eyebrow="Call"
         title="Key dates"
-        intro="Every date for every track, from the call opening to the conference itself. All submission deadlines are 23:59 Anywhere on Earth."
+        intro={keyDates.intro}
       />
 
       <Container className="py-16 lg:py-24">

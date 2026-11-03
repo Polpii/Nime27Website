@@ -8,6 +8,8 @@
  */
 
 import homeJson from "./editable/home.json";
+import keyDatesJson from "./editable/key-dates.json";
+import programmeJson from "./editable/programme.json";
 import themeJson from "./editable/theme.json";
 
 export const conference = {
@@ -146,60 +148,11 @@ export type ImportantDate = {
  * master schedule. Where the individual call documents disagree with these
  * dates, the schedule wins. All submission deadlines are 23:59 AoE.
  */
-export const importantDates: ImportantDate[] = [
-  // The schedule set this at 26 October and that week passed without it, so
-  // the row follows conference.callOpens rather than keeping a date the site
-  // has already missed.
-  { date: "Early November 2026", label: "Call for contributions published", kind: "info" },
-  {
-    /**
-     * The calls say 4 December, the master schedule said the 14th. The
-     * chairs' own call documents are the later word, so they win. If CMT
-     * is not open that morning the chairs will hear about it, which is the
-     * trade they chose.
-     */
-    date: "4 December 2026",
-    label: "Submission system opens for the peer reviewed tracks",
-    kind: "info",
-  },
-  {
-    date: "Sunday 24 January 2027",
-    label: "Peer reviewed — titles, abstracts and authors due",
-    kind: "deadline",
-  },
-  {
-    date: "Sunday 31 January 2027",
-    label: "Peer reviewed — full submissions due",
-    kind: "deadline",
-  },
-  { date: "Monday 8 — Sunday 28 February 2027", label: "Review period", kind: "info" },
-  { date: "Friday 19 March 2027", label: "Peer reviewed decisions and reviews released", kind: "info" },
-  { date: "March 2027", label: "Submission system opens for the juried tracks", kind: "info" },
-  { date: "Sunday 4 April 2027", label: "Juried — submissions due", kind: "deadline" },
-  { date: "Friday 30 April 2027", label: "Juried decisions released", kind: "info" },
-  {
-    /**
-     * Two camera-ready dates, not one. The calls set each track's deadline
-     * from its own decision date, so the peer reviewed tracks, decided in
-     * March, close before the juried ones, decided at the end of April.
-     */
-    date: "Friday 30 April 2027",
-    label: "Peer reviewed \u2014 camera-ready and presenter registration due",
-    kind: "deadline",
-  },
-  {
-    date: "Sunday 9 May 2027",
-    label: "Juried \u2014 final materials and presenter registration due",
-    kind: "deadline",
-  },
-  { date: "Monday 21 June 2027", label: "Fête de la musique", kind: "event" },
-  {
-    date: "Tuesday 22 June 2027",
-    label: "Workshops, Doctoral Consortium, reception and opening concert",
-    kind: "event",
-  },
-  { date: "Wednesday 23 — Friday 25 June 2027", label: "Main conference", kind: "event" },
-];
+export const importantDates: ImportantDate[] = keyDatesJson.rows.map((row) => ({
+  date: row.date,
+  label: row.label,
+  kind: row.kind as ImportantDate["kind"],
+}));
 
 export type Track = {
   title: string;
@@ -278,29 +231,16 @@ export type ConferenceDay = { date: string; weekday: string; items: string[] };
  * source spreadsheet dates these columns June 2026; that is a typo in their
  * file, the conference is 2027.
  */
-export const conferenceWeek: ConferenceDay[] = [
-  { date: "21 June", weekday: "Monday", items: ["Fête de la musique"] },
-  {
-    date: "22 June",
-    weekday: "Tuesday",
-    items: ["Workshops", "Doctoral Consortium", "Reception", "Concert"],
-  },
-  {
-    date: "23 June",
-    weekday: "Wednesday",
-    items: ["Papers", "Demos", "Installations", "Concerts"],
-  },
-  {
-    date: "24 June",
-    weekday: "Thursday",
-    items: ["Papers", "Demos", "Installations", "Concerts"],
-  },
-  {
-    date: "25 June",
-    weekday: "Friday",
-    items: ["Papers", "Demos", "Installations", "Concerts"],
-  },
-];
+export const conferenceWeek: ConferenceDay[] = programmeJson.days.map((day) => ({
+  weekday: day.weekday,
+  date: day.date,
+  // Stored one activity per line, because a table cell holding a list is
+  // still a cell and the chairs edit it as a small box.
+  items: day.items
+    .split("\n")
+    .map((i) => i.trim())
+    .filter((i) => i !== ""),
+}));
 
 /** The theme text, as the organisers wrote it in the Papers and Music calls. */
 export const themeText: readonly string[] = themeJson.paragraphs;

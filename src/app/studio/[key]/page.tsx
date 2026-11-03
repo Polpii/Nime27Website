@@ -100,10 +100,27 @@ export default async function StudioPage({ params }: { params: Promise<{ key: st
     }
 
     const values: Record<string, string> = {};
+    const tables: Record<string, Record<string, string>[]> = {};
+
     for (const field of fieldsPage.fields) {
       const value = stored[field.key];
+
+      if (field.kind === "rows") {
+        // Only the columns the schema knows reach the form, so a stray key in
+        // the stored file is shown to nobody and written back by nobody.
+        tables[field.key] = (Array.isArray(value) ? value : []).map((row) => {
+          const clean: Record<string, string> = {};
+          for (const column of field.columns ?? []) {
+            const cell = (row as Record<string, unknown>)?.[column.key];
+            clean[column.key] = typeof cell === "string" ? cell : "";
+          }
+          return clean;
+        });
+        continue;
+      }
+
       values[field.key] = Array.isArray(value)
-        ? value.join("\n\n")
+        ? value.join(field.kind === "lines" ? "\n" : "\n\n")
         : typeof value === "string"
           ? value
           : "";
@@ -119,6 +136,7 @@ export default async function StudioPage({ params }: { params: Promise<{ key: st
           sha={result.file.sha}
           fields={fieldsPage.fields}
           values={values}
+          tables={tables}
           previewHref={`/${fieldsPage.slug}`}
         />
       </Shell>

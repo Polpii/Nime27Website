@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { conference } from "@/content/site";
+import { contact } from "@/content/editable";
 import { Container, PageHero } from "@/components/ui";
 
 export const metadata: Metadata = {
@@ -7,24 +8,6 @@ export const metadata: Metadata = {
   description: `How to reach the ${conference.name} organising committee.`,
 };
 
-/**
- * Only addresses that actually exist on the domain. Every track address
- * forwards to that track's confirmed chairs. Roles with no chair appointed
- * yet (registration, proceedings, student volunteers, CMT) deliberately have
- * no address: one that bounces is worse than none, so that mail goes to the
- * general chairs instead.
- */
-const addresses = [
-  { role: "General enquiries", email: "general-chairs@nime2027.org" },
-  { role: "Papers", email: "papers@nime2027.org" },
-  { role: "Music / Performance", email: "music@nime2027.org" },
-  { role: "Art / Installations", email: "installations@nime2027.org" },
-  { role: "alt.nime", email: "alt.nime@nime2027.org" },
-  { role: "Artifacts & Ideas", email: "artifacts@nime2027.org" },
-  { role: "Workshops", email: "workshops@nime2027.org" },
-  { role: "Doctoral Consortium", email: "student-consortium@nime2027.org" },
-  { role: "Accessibility", email: "access@nime2027.org" },
-];
 
 export default function ContactPage() {
   return (
@@ -32,7 +15,7 @@ export default function ContactPage() {
       <PageHero
         eyebrow="Get in touch"
         title="Contact"
-        intro="Questions about a track go to that track's chairs. They will get you a faster answer than the general address."
+        intro={contact.intro}
       />
 
       <Container className="py-16 lg:py-24">
@@ -40,7 +23,7 @@ export default function ContactPage() {
           <div>
             <h2 className="font-display text-2xl text-neon-purple">Who to write to</h2>
             <ul className="mt-8 border-t border-white/10">
-              {addresses.map((a) => (
+              {contact.addresses.map((a) => (
                 <li
                   key={a.email}
                   className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1 border-b border-white/10 py-4"
@@ -65,8 +48,7 @@ export default function ContactPage() {
             <div>
               <h2 className="font-display text-2xl text-neon-purple">Stay informed</h2>
               <p className="mt-4 text-[17px] leading-[1.75] text-brume">
-                Announcements are posted on the NIME forum and circulated on the NIME
-                mailing list.
+                {contact.stayNote}
               </p>
               <ul className="mt-6 space-y-2.5">
                 <li>

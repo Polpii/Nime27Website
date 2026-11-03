@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { conference, conferenceWeek } from "@/content/site";
+import { programme } from "@/content/editable";
 import { Container, PageHero } from "@/components/ui";
 
 export const metadata: Metadata = {
@@ -21,8 +22,7 @@ export default function ProgrammePage() {
         <section>
           <h2 className="font-display text-3xl text-neon-purple">The week</h2>
           <p className="mt-4 max-w-2xl text-[17px] leading-[1.75] text-brume">
-            The published range covers the pre-conference activities. If you are booking
-            travel, note that things start on the Monday, not on the Wednesday.
+            {programme.weekNote}
           </p>
 
           <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">

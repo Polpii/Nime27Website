@@ -112,16 +112,58 @@ export async function saveFields(
   const sha = String(form.get("sha") ?? "");
   if (sha === "") return { error: "Something went wrong loading this page. Reload and try again." };
 
-  const content: Record<string, string | string[]> = {};
+  const content: Record<string, unknown> = {};
   const empty: string[] = [];
 
   for (const field of page.fields) {
+    if (field.kind === "rows") {
+      const columns = field.columns ?? [];
+      const rows: Record<string, string>[] = [];
+      // Walk the positions the form used. A row whose cells are all blank is
+      // dropped, which is how a chair deletes one.
+      for (let i = 0; ; i++) {
+        const prefix = `f.${field.key}.${i}.`;
+        if (!columns.some((c) => form.has(prefix + c.key))) break;
+
+        const row: Record<string, string> = {};
+        let anything = false;
+        for (const column of columns) {
+          const cell = String(form.get(prefix + column.key) ?? "").replace(/\r\n?/g, "\n");
+          const value =
+            column.kind === "lines"
+              ? cell
+                  .split("\n")
+                  .map((l) => l.trim())
+                  .filter((l) => l !== "")
+                  .join("\n")
+              : cell.replace(/\s+/g, " ").trim();
+          // A choice that is not one of the offered ones falls back to the
+          // first, so a tampered form cannot write something the site has no
+          // way to render.
+          row[column.key] =
+            column.kind === "choice" && !(column.options ?? []).includes(value)
+              ? (column.options ?? [""])[0]
+              : value;
+          if (row[column.key] !== "") anything = true;
+        }
+        if (anything) rows.push(row);
+      }
+      content[field.key] = rows;
+      continue;
+    }
+
     const raw = String(form.get(`f.${field.key}`) ?? "").replace(/\r\n?/g, "\n");
-    if (field.kind === "list") {
-      const items = raw
-        .split(/\n\s*\n/)
-        .map((p) => p.replace(/\s*\n\s*/g, " ").trim())
-        .filter((p) => p !== "");
+    if (field.kind === "list" || field.kind === "lines") {
+      const items =
+        field.kind === "lines"
+          ? raw
+              .split("\n")
+              .map((l) => l.trim())
+              .filter((l) => l !== "")
+          : raw
+              .split(/\n\s*\n/)
+              .map((p) => p.replace(/\s*\n\s*/g, " ").trim())
+              .filter((p) => p !== "");
       if (items.length === 0) empty.push(field.label);
       content[field.key] = items;
     } else {
