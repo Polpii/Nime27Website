@@ -79,7 +79,7 @@ We invite original research on any aspect of new interfaces for musical expressi
     
 # Submission Requirements
 
-Full papers must be between 2,000 and 6,000 words in length. The count covers the main text, including section headings, figure and table captions, and footnotes. It excludes the title, abstract, references, acknowledgments, and the ethical and AI use statements. The length and scope of submissions should be commensurate with the nature of their contribution. Contributions whose primary value lies in sharing an artifact, practical knowledge, or an idea through demonstration or discussion, rather than presenting a research contribution in paper form, may be better suited to the Artifacts & Ideas track. 
+Full papers must be between 2,000 and 6,000 words in length. The count covers the main text, including section headings, figure and table captions, and footnotes. It excludes the title, abstract, references, acknowledgments, and the ethical statement. The length and scope of submissions should be commensurate with the nature of their contribution. Contributions whose primary value lies in sharing an artifact, practical knowledge, or an idea through demonstration or discussion, rather than presenting a research contribution in paper form, may be better suited to the Artifacts & Ideas track. 
 
 Papers must be written in English. Follow the general [submission instructions](/call/submission-instructions) in preparing your submission.
 
@@ -102,11 +102,10 @@ Remote participation is available for oral and poster presentations. Remote oral
 
 Accepted papers will be archived in the main [NIME proceedings](https://nime.org/papers/), each with a DOI.
 
-# Ethics, AI Use, Accessibility, Sustainability, and Inclusion 
+# Ethics, Accessibility, Sustainability, and Inclusion 
 
 All submitted works to NIME 2027 should follow the  **[NIME Principles & Code of Practice on Ethical Research](https://nime.org/ethics/)**
 
-**Artificial intelligence:** All authors should declare any use of artificial intelligence in their submitted work or submission materials. To keep declarations simple and consistent across NIME 2027, please use the [AI Attribution tool](https://aiattribution.github.io/), recently published at CHI and described in this [paper](https://dl.acm.org/doi/full/10.1145/3706598.3713522).
 # Contact
 
 For questions about paper submissions, please contact the paper chairs at papers@nime2027.org. For general queries about NIME 2027, please contact the general chairs at general-chairs@nime2027.org.

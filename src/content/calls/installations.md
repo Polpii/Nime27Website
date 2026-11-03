@@ -33,7 +33,7 @@ Create the submission by 24 January 2027 with its title, abstract, author list, 
 - **Project Description:** the background, context, and concept of the work; how visitors encounter, participate in, or listen to it; the interfaces, systems, materials, and technologies involved; and why the work matters to the NIME community.
 - **Technical Notes:** the spatial and acoustic needs of the work; equipment and infrastructure; power, sound, network, lighting, projection, and furniture requirements; installation and deinstallation time; ongoing staffing or maintenance needs; and what the contributors will bring versus what they expect NIME to provide. Explain whether the work runs continuously, in cycles, or through scheduled activations. Describe audience access and experience, including accessibility and safety considerations. Include images, diagrams, and a floor plan or installation layout wherever they help reviewers understand the work and its proposed presentation.
 - **Media and Supporting Links:** required video documentation and any additional audio, video, score, code, repository, or online material that helps reviewers understand the work.
-- **Ethical Standards:** the statement described under Ethics, AI Use, Accessibility, Sustainability, and Inclusion.
+- **Ethical Standards:** the statement described under Ethics, Accessibility, Sustainability, and Inclusion.
 - **References and Related Resources** where relevant.
 
 Video documentation is required. It should show or otherwise communicate the proposed work through documentation of an existing installation, a prototype, a demonstration, or, for a new work, a mock-up that makes the interaction, spatial arrangement, and intended visitor experience clear. Reviewers must be able to judge the proposal from the structured submission and video together.
@@ -92,11 +92,9 @@ Accepted submissions will be published on the conference website and on NIME.org
 
 After acceptance, NIME will export the structured CMT data and generate consistently formatted PDF and web records. Authors will receive a password-protected preview and should make any corrections through the CMT fields by the final-materials deadline. Author names, affiliations, acknowledgements, and final programme information must be restored before publication.
 
-# Ethics, AI Use, Accessibility, Sustainability, and Inclusion 
+# Ethics, Accessibility, Sustainability, and Inclusion 
 
 All submitted works to NIME 2027 should follow the  **[NIME Principles & Code of Practice on Ethical Research](https://nime.org/ethics/)**
-
-**Artificial intelligence:** All authors should declare any use of artificial intelligence in their submitted work or submission materials. To keep declarations simple and consistent across NIME 2027, please use the [AI Attribution tool](https://aiattribution.github.io/), recently published at CHI and described in this [paper](https://dl.acm.org/doi/full/10.1145/3706598.3713522).
 
 # Contact
 

@@ -59,7 +59,7 @@ Create the submission by 24 January 2027 with its title, program notes, author a
 - **Technical Notes:** the duration; performers and their roles; space, staging, furniture, lighting, and projection needs; sound amplification and channel count (stereo, multichannel, or spatial); network requirements; setup and strike time; and what the contributors will bring versus what they expect NIME to provide. Include a stage plot and images or diagrams wherever they help reviewers understand how the work will be staged. State a preferred presentation format or venue, if applicable, and explain why.
 - **Media and Supporting Links:** required video documentation and any additional audio, video, score, code, repository, or online material that helps reviewers understand the work.
 - **Acknowledgements** (optional): omit these from the anonymised review submission and restore them after acceptance.
-- **Ethical Standards:** the statement described under Ethics, AI Use, Accessibility, Sustainability, and Inclusion.
+- **Ethical Standards:** the statement described under Ethics, Accessibility, Sustainability, and Inclusion.
 - **References and Related Resources** where relevant.
 
 Video documentation is required. It should document or otherwise communicate the proposed work through a recording of a previous performance, rehearsal, demonstration of the instrument or system, or, for a new work, a mock-up that makes the intended performance and staging clear. Reviewers must be able to judge the proposal from the structured submission and video together.
@@ -113,13 +113,11 @@ Accepted and presented works will be archived as part of the NIME 2027 Music Pro
 
 After acceptance, NIME will export the structured CMT data and generate consistently formatted PDF and web records. Authors will receive a password-protected preview and should make any corrections through the CMT fields by the final-materials deadline. Author names, affiliations, acknowledgements, and final programme information must be restored before publication. The final documentation video will also be retained as part of the work's public record and as a technical backup for presentation.
 
-# Ethics, AI Use, Accessibility, Sustainability, and Inclusion 
+# Ethics, Accessibility, Sustainability, and Inclusion 
 
 All submissions to NIME 2027 must follow the [NIME Principles & Code of Practice on Ethical Research](https://nime.org/ethics/).
 
 The Ethical Standards field should address what is relevant to the work, including consent from performers, collaborators, and people whose bodies, voices, likenesses, or data appear in the work or its documentation; ethics approval; data protection; compensation; performer and audience safety; conflicts of interest; environmental impact; and limitations to accessibility or inclusion. Technical notes must identify hazards or strong sensory elements such as lasers, strobe or flashing light, fog, extreme sound levels, and haptic, electrical, or mechanical risks so that suitable safety measures and audience advisories can be arranged.
-
-**Artificial intelligence:** All authors should declare any use of artificial intelligence in their submitted work or submission materials. To keep declarations simple and consistent across NIME 2027, please use the [AI Attribution tool](https://aiattribution.github.io/), recently published at CHI and described in this [paper](https://dl.acm.org/doi/full/10.1145/3706598.3713522).
 
 Use alternative text for images, choose colours that remain legible in greyscale and for colour-blind readers, and caption video documentation. Explain how audience members who are Deaf, blind, or have limited mobility could experience the work and identify any support needed to make that possible.
 

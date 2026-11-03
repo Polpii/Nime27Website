@@ -67,11 +67,9 @@ Accepted contributions will be presented during a conference session and/or spac
 
 Accepted submissions will be published on the conference website and on [NIME.org](https://nime.org/) as part of the alt.nime Proceedings of the International Conference on New Interfaces for Musical Expression.
 
-# Ethics, AI Use, Accessibility, Sustainability, and Inclusion 
+# Ethics, Accessibility, Sustainability, and Inclusion 
 
 All submitted works to NIME 2027 should follow the  **[NIME Principles & Code of Practice on Ethical Research](https://nime.org/ethics/)**
-
-**Artificial intelligence:** All authors should declare any use of artificial intelligence in their submitted work or submission materials. To keep declarations simple and consistent across NIME 2027, please use the [AI Attribution tool](https://aiattribution.github.io/), recently published at CHI and described in this [paper](https://dl.acm.org/doi/full/10.1145/3706598.3713522).
 
 # Contact
 

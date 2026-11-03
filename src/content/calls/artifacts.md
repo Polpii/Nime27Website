@@ -104,11 +104,9 @@ To this end, accepted contributions will be provided with a poster stand and a t
 
 Accepted submissions will be preserved on the conference website, providing a record of acceptance. Artifacts & Ideas contributions will not be included in the main conference proceedings and will not receive a conference-issued DOI. 
 
-# Ethics, AI Use, Accessibility, Sustainability, and Inclusion 
+# Ethics, Accessibility, Sustainability, and Inclusion 
 
 All submitted works to NIME 2027 should follow the  **[NIME Principles & Code of Practice on Ethical Research](https://nime.org/ethics/)**
-
-**Artificial intelligence:** All authors should declare any use of artificial intelligence in their submitted work or submission materials. To keep declarations simple and consistent across NIME 2027, please use the [AI Attribution tool](https://aiattribution.github.io/), recently published at CHI and described in this [paper](https://dl.acm.org/doi/full/10.1145/3706598.3713522).
 
 # Contact
 
