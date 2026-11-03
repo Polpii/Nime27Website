@@ -17,7 +17,7 @@ Only papers registered by the title-and-abstract deadline can be completed by th
 
 # Scope and Contributions
 
-We welcome submissions of original research on scientific and artistic use of new interfaces for musical expression. A non-exhaustive list of NIME-related topics is found below. 
+We welcome submissions of original research on scholarly and artistic use of new interfaces for musical expression. A non-exhaustive list of NIME-related topics is found below. 
 
 ### Topics
 
