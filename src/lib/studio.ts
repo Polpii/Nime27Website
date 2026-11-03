@@ -37,7 +37,9 @@ const REPO = process.env.STUDIO_REPO ?? "Polpii/Nime27Website";
  * Going live stays a deliberate act by whoever merges.
  */
 const BRANCH = process.env.STUDIO_BRANCH ?? "preview/full-site";
-const DIR = "src/content/calls";
+/** Where each kind of editable file lives, relative to the repository root. */
+export const CALLS_DIR = "src/content/calls";
+export const FIELDS_DIR = "src/content/editable";
 
 /** Both secrets must be set for the studio to do anything at all. */
 export function studioConfigured(): boolean {
@@ -147,8 +149,8 @@ export type ReadResult =
  * or GitHub is down should read a sentence telling them so, not meet the
  * framework's error page.
  */
-export async function readPage(key: string): Promise<ReadResult> {
-  const url = `https://api.github.com/repos/${REPO}/contents/${DIR}/${encodeURIComponent(key)}.md?ref=${encodeURIComponent(BRANCH)}`;
+export async function readPage(path: string): Promise<ReadResult> {
+  const url = `https://api.github.com/repos/${REPO}/contents/${path}?ref=${encodeURIComponent(BRANCH)}`;
 
   let res: Response;
   try {
@@ -185,12 +187,13 @@ export type SaveResult =
   | { ok: false; reason: "conflict" | "failed"; detail?: string };
 
 export async function writePage(
-  key: string,
+  path: string,
   text: string,
   editor: string,
   sha: string,
+  what: string,
 ): Promise<SaveResult> {
-  const url = `https://api.github.com/repos/${REPO}/contents/${DIR}/${encodeURIComponent(key)}.md`;
+  const url = `https://api.github.com/repos/${REPO}/contents/${path}`;
 
   let res: Response;
   try {
@@ -199,7 +202,7 @@ export async function writePage(
       headers: { ...ghHeaders(), "Content-Type": "application/json" },
       cache: "no-store",
       body: JSON.stringify({
-        message: `${key}: text edited by ${editor}\n\nEdited in the studio.`,
+        message: `${what}: text edited by ${editor}\n\nEdited in the studio.`,
         content: Buffer.from(text, "utf8").toString("base64"),
         sha,
         branch: BRANCH,

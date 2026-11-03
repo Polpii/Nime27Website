@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { conference, themeText } from "@/content/site";
+import { home } from "@/content/editable";
 import { ParisSkyline } from "@/components/paris";
 
 export default function Home() {
@@ -10,7 +11,7 @@ export default function Home() {
     <main className="relative flex min-h-dvh flex-col overflow-hidden bg-nuit">
       <div className="relative z-20 flex flex-1 flex-col items-center px-5 pb-28 pt-12 text-center sm:pt-16">
         <p className="text-[11px] font-semibold uppercase tracking-[0.34em] text-neon-teal glow-teal">
-          Save the date
+          {home.saveTheDate}
         </p>
 
         <Image
@@ -50,7 +51,7 @@ export default function Home() {
          * stops competing.
          */}
         <p className="mt-10 text-[11px] font-semibold uppercase tracking-[0.3em] text-brume">
-          Theme
+          {home.themeLabel}
         </p>
 
         <p className="mt-3 font-display text-[1.4rem] leading-tight text-neon-teal glow-teal min-[360px]:text-[1.7rem] sm:text-3xl lg:text-4xl">
@@ -67,15 +68,12 @@ export default function Home() {
          * the 4.5:1 that WCAG AA asks of text this size. 85% holds 5.24:1.
          */}
         <p className="mt-14 max-w-xl text-[15px] leading-[1.8] text-brume/85 sm:text-base">
-          NIME gathers researchers and musicians from all over the world to share their
-          knowledge and late-breaking work on new musical interface design. The conference
-          began as a workshop at the Conference on Human Factors in Computing Systems
-          (CHI) in 2001, and has been held annually around the world ever since.
+          {home.about}
         </p>
 
         <p className="mt-10 max-w-md text-[13px] leading-relaxed text-brume">
-          The call for papers and participation will be published in{" "}
-          <span className="font-semibold text-neon-teal">{conference.callOpens}</span>.
+          {home.callNoticeLead}{" "}
+          <span className="font-semibold text-neon-teal">{home.callOpens}</span>.
         </p>
       </div>
 

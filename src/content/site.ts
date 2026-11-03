@@ -7,6 +7,9 @@
  * reader can mistake it for a decision. See TBC.txt for the remaining gaps.
  */
 
+import homeJson from "./editable/home.json";
+import themeJson from "./editable/theme.json";
+
 export const conference = {
   name: "NIME 2027",
   fullName: "New Interfaces for Musical Expression",
@@ -39,12 +42,12 @@ export const conference = {
    * Artifacts & Ideas calls. The Student Consortium draft still carries an
    * older name and is marked "TO UPDATE" in the source document.
    */
-  theme: "Sensorial Symbiosis",
+  theme: themeJson.name,
   /**
    * Was "October 2026", which the week commencing 26 October was meant to
    * deliver. It did not, so the promise moved rather than quietly expired.
    */
-  callOpens: "early November 2026",
+  callOpens: homeJson.callOpens,
   /** TBC — this address does not exist yet. */
   email: "general-chairs@nime2027.org",
   /** Shown to readers. */
@@ -300,8 +303,4 @@ export const conferenceWeek: ConferenceDay[] = [
 ];
 
 /** The theme text, as the organisers wrote it in the Papers and Music calls. */
-export const themeText = [
-  "NIME 2027\u2019s theme, Sensorial Symbiosis, explores how musical expression emerges through relationships among performers, instruments, computational systems, environments, and audiences.",
-  "How do bodies, instruments, machines, and environments shape one another? What forms of musical expression emerge when sensing, agency, and authorship move between people, materials, and machines? How can interfaces extend, substitute for, or reshape perception, or allow us to encounter traces across time?",
-  "Each submission track approaches these questions through its own forms of contribution, presentation, review, and exchange.",
-];
+export const themeText: readonly string[] = themeJson.paragraphs;

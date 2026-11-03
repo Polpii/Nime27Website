@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { fieldsPages } from "@/content/editable";
 import { pages } from "@/content/pages";
 import { currentEditor, studioBranch, studioConfigured } from "@/lib/studio";
 import { signOut } from "./actions";
@@ -6,6 +7,9 @@ import { SignInForm } from "./sign-in-form";
 
 /** The pages, grouped the way the chairs think about them rather than by key. */
 const groups: { heading: string; keys: string[] }[] = [
+  // The pages whose text is a set of named pieces rather than a document.
+  // They lead the list because they are the ones the chairs asked for last.
+  { heading: "The front of the site", keys: ["home-page", "call-overview", "conference-theme"] },
   {
     heading: "Calls",
     keys: [
@@ -50,7 +54,9 @@ export default async function StudioHome() {
   }
 
   const known = new Set(groups.flatMap((g) => g.keys));
-  const rest = Object.keys(pages).filter((key) => !known.has(key));
+  const rest = [...Object.keys(fieldsPages), ...Object.keys(pages)].filter(
+    (key) => !known.has(key),
+  );
   const all = rest.length > 0 ? [...groups, { heading: "Other", keys: rest }] : groups;
 
   return (
@@ -89,18 +95,22 @@ export default async function StudioHome() {
             </h2>
             <ul className="mt-5 grid gap-x-10 gap-y-4 sm:grid-cols-2">
               {group.keys
-                .filter((key) => pages[key])
-                .map((key) => (
-                  <li key={key}>
+                .map((key) => {
+                  const entry = fieldsPages[key] ?? pages[key];
+                  return entry ? { key, title: entry.title, slug: entry.slug } : null;
+                })
+                .filter((entry) => entry !== null)
+                .map((entry) => (
+                  <li key={entry.key}>
                     <Link
-                      href={`/studio/${key}`}
+                      href={`/studio/${entry.key}`}
                       className="group flex items-baseline justify-between gap-4 border-b border-white/[0.07] pb-3"
                     >
                       <span className="font-display text-lg text-craie group-hover:text-neon-teal">
-                        {pages[key].title}
+                        {entry.title}
                       </span>
                       <span className="shrink-0 text-[12px] text-brume">
-                        /{pages[key].slug}
+                        /{entry.slug}
                       </span>
                     </Link>
                   </li>
@@ -111,8 +121,8 @@ export default async function StudioHome() {
       </div>
 
       <p className="mt-16 max-w-2xl border-t border-white/10 pt-8 text-[14px] leading-relaxed text-brume">
-        The home page, the calls overview and the committee list are not here yet. Ask
-        Paul-Peter for those and they can be added.
+        The committee list and the key dates are not here yet, because they are tables
+        rather than text. Ask Paul-Peter if you need to change one.
       </p>
     </main>
   );

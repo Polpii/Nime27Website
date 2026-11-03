@@ -9,7 +9,7 @@ import { Container, PageHero, Provisional } from "@/components/ui";
  * mailto link. The order of the alternatives matters, because ** has to be
  * tried before a single *.
  */
-function inline(text: string, keyPrefix: string): ReactNode[] {
+export function inline(text: string, keyPrefix: string): ReactNode[] {
   const nodes: ReactNode[] = [];
   // Built fresh on every call because it is stateful and this function
   // recurses: bold and italic run their own contents back through it, so a
