@@ -1,126 +1,99 @@
 # Call for Artifacts & Ideas
 
-Work without an accompanying research paper, such as a DIY instrument presented as a demonstration or a musical-interaction concept presented as a poster.
+Share developed musical instruments, creative tools, practical knowledge, and ideas through demonstrations and posters, without requiring a conventional research paper.
 
 # Important Dates
 
+All dates are 23:59 AoE (Anywhere on Earth).
 
-All deadlines are 23:59 AoE (Anywhere on Earth).
-
-- March 2027: Submission CMT site opens  
-    
-- 4 April 2027: Artifacts & Ideas submissions due  
-    
-- 30 April 2027: Acceptance decisions released  
-    
-- 9 May 2027: Final materials and presenter registration due  
-    
-- 21–25 June 2027: NIME 2027, Paris. Artifacts demonstrations and Ideas posters run 23–25 June  
-      
-
-# Introducing Artifacts & Ideas
-
-The NIME community includes researchers, musicians, artists, instrument makers, designers, and developers working within and beyond academia. Their contributions take many forms, and a research paper is not always the most appropriate way to share them.
-
-The Artifacts & Ideas track provides a dedicated route for sharing instruments, systems, practical knowledge, and developed ideas through demonstrations and posters, without requiring an accompanying research paper. 
-
-This track offers a complementary route for contributors who choose to share their knowledge through live demonstration and dialogue rather than traditional written submission
+- Week beginning 22 March 2027: Submission CMT site opens
+- 4 April 2027: Submissions due
+- 30 April 2027: Acceptance decisions released
+- 9 May 2027: Final materials and presenter registration deadline
+- 23–25 June 2027: Artifacts & Ideas presentations at NIME 2027, Paris
 
 # Scope and Contributions
 
-The Artifacts & Ideas track invites practice-based contributions that explore new approaches to the design, development, and use of New Interfaces for Musical Expression (NIME).
+The Artifacts & Ideas (A&I) track welcomes practice-based contributions from musicians, artists, instrument makers, designers, developers, and researchers within and beyond academia.
 
-The track welcomes well-developed projects (Artifacts) and theoretical insights (Ideas) that represent substantial creative, technical, or experimental contributions, but are not necessarily framed as conventional academic papers. It provides a space for work whose significance lies primarily in its design, implementation, functionality, or creative possibilities. Contributors are invited to share the ideas embodied in their work, the knowledge gained through making and using it, and the possibilities it opens for musical interaction and expression.
+The track provides an alternative to traditional research papers, emphasizing the sharing of creative, technical, practical, embodied, and theoretical knowledge through demonstrations and discussion.
 
-We welcome instrument makers, musicians, artists, designers, developers, and researchers from within and beyond academia. Contributions may emerge from individual practice, community initiatives, independent workshops, educational settings, or companies.
+Contributions may range from developed instruments, systems, and experimental practices (Artifacts) to conceptual approaches and theoretical insights grounded in relevant practice or existing work (Ideas). They should demonstrate meaningful development, experimentation, or critical reflection, but do not require a finalized product, a functioning prototype, or a conventional academic argument.
 
-Artifacts should demonstrate a meaningful degree of development, experimentation, and practical realization. They need not be commercially polished or finalized. Ideas should present a clearly developed concept or insight, situated in relevant practice or existing work; a functioning artifact is not required. Contributions centered on techniques or embodied knowledge should make that knowledge accessible through appropriate documentation and demonstration. 
-
-Contributions will not be primarily evaluated with regard to novelty. Works that have previously been presented at smaller conferences, festivals, or other events are welcome, provided that they offer meaningful contributions; however, prior publication should be disclosed at the time of submission.
-
+Contributions need not demonstrate absolute novelty. Previously presented work is welcome when it offers meaningful knowledge to the NIME community, provided prior presentations or publications are disclosed.
 
 ## Topics
 
-We welcome contributions including, but not limited to:
+We welcome contributions related to NIME 2027's theme, Sensorial Symbiosis, as well as broader topics including:
 
-- Experimental musical instruments, controllers, and interfaces.  
-- Hardware and software systems for musical interaction and expression.  
-- Creative tools and approaches to musical performance and music-making.  
-- Fabrication techniques, material experiments, and methods of instrument construction or adaptation.  
-- Documentation, demonstration, and sharing of practical knowledge and skillsets.  
-- Embodied knowledge and performance practices that are difficult to communicate through writing alone.  
-- Tools and practices developed by independent makers, musical communities, and practitioners outside academia.
-- Critical perspectives and theoretical insights  
-      
-While this is not a platform for commercial promotion, experimental prototypes and products from makers and companies are welcome where they offer a substantive creative or technical contribution to share knowledge with the NIME community.
+- Experimental instruments, controllers, and musical interfaces
+- Hardware, software, and creative tools for musical expression
+- New approaches to musical performance and interaction
+- Fabrication, materials, construction, adaptation, and repair
+- Documentation and sharing of practical and embodied knowledge
+- Design approaches, conceptual insights, and experimental practices
+- Tools and practices developed by independent makers and musical communities
+
+Experimental products and prototypes from companies are welcome when they offer substantive creative or technical contributions rather than commercial promotion.
 
 # Submission Requirements
 
-The submission format requires supporting media, specifically a short video (max. 5 minutes) and a poster draft, which may include text, images, diagrams, and other visual elements that help communicate the project, accompanied by a concise written description (max. 2,000 words). The materials should communicate the work in terms appropriate to its nature; a formal research question or conventional academic argument is not required.
+Submissions must include a short video (maximum 5 minutes), a poster draft containing images, diagrams, or other relevant visual material, and a concise written description (maximum 2,000 words).
 
-Contributors shall include the following information in their submission:
+Submissions should communicate the work, its development, significance, and contribution to musical expression. A formal research question or conventional academic argument is not required.
 
-- Title and abstract: A brief introduction to the contribution.  
-- Description of the work: What the artifact, system, or practice does, how it is used, and the idea or approach it embodies.  
-- Development and contribution: Its current state of realization, the experimentation or practical experience behind it, and what it offers to musical interaction and expression.  
-- Documentation: Images, diagrams, audio, video, or other material that helps the jury understand the work. Where relevant, show the artifact functioning or the practice in use.  
-- Presentation specification: The proposed way of presenting the work, including space, equipment, power, sound, setup, access, and safety requirements.  
-- References and related resources, where relevant: Sources, precedents, and supporting material that help situate the contribution.  
-      
-Initial submissions should follow a light-anonymization policy: author names should not appear in the submission, but authors may refer to their prior work, and submissions will not be penalized if the authors’ identities can be inferred. Author names should be added to the final camera-ready (academia term that indicates the final version of an already accepted contribution) version. 
+Contributors must provide a title and abstract, relevant documentation, presentation and technical requirements, an ethical statement, and references where appropriate.
 
-For submissions of artifacts, repository links and supporting build documentation are strongly encouraged but optional. Schematics, source code, construction notes, and other resources can help the jury assess the work and enable others to learn from or build upon it. Contributors who cannot provide an open repository are welcome to submit.
+Repository links, source code, schematics, and construction documentation are strongly encouraged but optional.
+
+Initial submissions follow a light-anonymization policy: omit author names, but references to prior work are permitted even when identities may be inferred. Author names should be included in final materials.
+
+Submit through the dedicated CMT submission form.
 
 # Review and Selection
 
-Artifacts & Ideas uses a juried selection process.
+Artifacts & Ideas follows a juried selection process. Jurors provide brief assessments, and track chairs make final decisions based on these assessments and programme considerations. Jurors must declare conflicts of interest and abstain from affected assessments.
 
-Jurors will provide brief assessments of submissions, and the track chairs will make final decisions based on jury recommendations, their own assessment, and the overall program. No paper-style meta-review is planned.
+NIME depends on volunteers. To serve on the jury, [sign up to review](/call/reviewing) and name Artifacts & Ideas among the tracks you are willing to take on.
 
-NIME depends on volunteers. To serve on the jury, [sign up to review](/call/reviewing) and name Artifacts & Ideas among the tracks you are willing to take on. 
+Submissions are evaluated according to:
 
-The selection criteria are:
+- Creative or technical contribution: Significance of the work or underlying approach
+- Development: Degree of practical realization, experimentation, or conceptual depth, assessed according to the nature and aims of the contribution
+- Relevance: Contribution to musical interaction and expression
+- Knowledge sharing: Value of the experience, techniques, or insights shared
+- Clarity and feasibility: Quality of documentation and practicality of presentation
 
-- Contribution: The interest and significance of the idea or approach embodied in the work. Contributions can be creative, technical, theoretical, critical, or interpretive. 
-- Development: For Artifacts, the degree of practical realization, experimentation, and functionality. For Ideas, the depth and clarity of the concept and its grounding in relevant practice or existing work.  
-- Relevance to NIME: The possibilities the contribution offers for musical interaction and expression.  
-- Knowledge sharing: The value of the experience, techniques, or practical understanding shared with the community.  
-- Clarity: The quality of the documentation 
-- Feasibility (physical demos only): How realistically the proposed demonstration can be accommodated within the presentation format
-        
-Submissions will be considered in relation to their aims and the nature of their practice. Contributors should make the significance of their work clear through documentation appropriate to that work.
+Contributions are assessed according to their own aims and practices rather than conventional academic research criteria.
 
 # Presentation and Participation
 
-Conference Presentation Format
+Accepted contributions will be presented during the main conference (23–25 June 2027) as demonstrations or posters, with formats determined by the track chairs in coordination with contributors.
 
-The conference programme will provide dedicated opportunities for presenting Artifacts and Ideas (A&I) contributions during the main conference, taking place in Paris from 21 to 25 June 2027, with the main conference from 23 to 25 June.
+Demonstrations allow attendees to experience and interact with artifacts, while posters communicate conceptual insights, design approaches, and practices through discussion.
 
-A&I contributions will be presented in formats that encourage contributors to actively showcase their work, interact with attendees, and engage in discussions. Presentations may take the form of demos, where contributors showcase their artifacts in practice (e.g., a dedicated stand where an instrument can be displayed, demonstrated, and played), or posters, where contributors use a printed poster to communicate theoretical insights, design approaches, or conceptual contributions and facilitate discussion.
+A table and poster stand will be provided. Additional technical or spatial requirements should be specified during submission.
 
-To this end, accepted contributions will be provided with a poster stand and a table to showcase prototypes or other materials. Particular requirements can be arranged upon discussion with the organization of the conference 
+At least one contributor per accepted submission must register. Remote participation may be arranged with the track chairs when compatible with the contribution.
 
 # Publication and Archiving
 
-Accepted submissions will be preserved on the conference website, providing a record of acceptance. Artifacts & Ideas contributions will not be included in the main conference proceedings and will not receive a conference-issued DOI. 
+Accepted contributions will be documented on the NIME 2027 website but will not appear in the main conference proceedings or receive a conference-issued DOI.
 
-# Ethics, Accessibility, Sustainability, and Inclusion 
+# Relationship to Other Tracks
 
-All submitted works to NIME 2027 should follow the  **[NIME Principles & Code of Practice on Ethical Research](https://nime.org/ethics/)**
+A&I focuses on developed artifacts, creative practice, and knowledge sharing. Substantial academic research may be better suited to the Papers track; critical interventions to alt.nime; and primarily artistic presentations to the Music, Performances, or Installations tracks.
+
+The same project may be submitted to multiple NIME tracks provided each submission addresses a distinct aspect and makes an independent contribution. Related submissions must be disclosed.
+
+Papers previously rejected from the Papers track may be resubmitted to A&I only when explicitly encouraged by the paper meta-review. All resubmissions must be declared. Undisclosed concurrent submissions or resubmissions will be desk-rejected.
+
+# Ethics, Accessibility, Sustainability, and Inclusion
+
+All submissions should follow the [NIME Principles & Code of Practice on Ethical Research](https://nime.org/ethics/) and include an ethical statement addressing relevant issues such as consent, privacy, safety, accessibility, and environmental impact.
+
+Documentation should be accessible, including descriptive image text, legible diagrams, and captioned videos. The track welcomes contributors of all backgrounds, including independent practitioners and first-time NIME participants.
 
 # Contact
 
-For questions about submissions, contact the Artifacts & Ideas chairs at [artifacts@nime2027.org](mailto:artifacts@nime2027.org). For general queries about NIME 2027, contact the General Chairs at [general-chairs@nime2027.org](mailto:general-chairs@nime2027.org).
-
-# Additional Considerations with Regard to Other Conference Tracks
-
-
-Track scope: Artifacts & Ideas focuses on developed artifacts, creative practice, and the sharing of practical, embodied, tacit, and theoretical knowledge. Contributions may take the form of creative work, demonstrations, or conceptual insights that emerge through or inform practice. Contributions framed as substantial original academic research may be appropriate for the Papers track. 
-
-Contributions that question or challenge NIME’s assumptions, practices, or institutions and invite critical discussion may be appropriate for alt.nime, while submissions primarily focused on the artistic presentation of a work, such as live musical performances or interactive installations, are better suited to the Music, Performances, and Installations tracks.
-
-Concurrent submissions and resubmission of rejected papers:  
-
-Submissions based on the same project may be accepted across the Artifacts & Ideas track and other NIME tracks, provided that each submission addresses a clearly distinct aspect of the work and offers an independent contribution. For example, the same project may be presented through a study of its interaction design in the main paper track, a performance in the Music track, and a discussion of the artifact itself, its design, and technical implementation in the Artifacts & Ideas track. Contributors should clearly distinguish the scope and contribution of each submission and explicitly disclose any related submissions. Failure to declare concurrent submissions or resubmissions will lead to desk rejection. Work previously submitted and rejected to the Papers track should be resubmitted to Artifacts & Ideas only when explicitly encouraged by the paper meta-review. All resubmissions must be disclosed.
-
-Registration and participation: Final materials and presenter registration are due by 9 May 2027. Final document checks and presenter confirmations will take place on 10–14 May. At least one contributor for each accepted work must register to the conference. Remote participation is allowed upon agreement with track chairs and compatibility with the contribution offered.
+For questions about Artifacts & Ideas submissions, contact the track chairs at [artifacts@nime2027.org](mailto:artifacts@nime2027.org). For general queries about NIME 2027, contact the General Chairs at [general-chairs@nime2027.org](mailto:general-chairs@nime2027.org).
