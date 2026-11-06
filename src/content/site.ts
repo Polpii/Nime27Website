@@ -50,7 +50,7 @@ export const conference = {
    * deliver. It did not, so the promise moved rather than quietly expired.
    */
   callOpens: homeJson.callOpens,
-  /** TBC — this address does not exist yet. */
+  /** Forwards to the three general chairs (Porkbun email forwarding). */
   email: "general-chairs@nime2027.org",
   /** Shown to readers. */
   domain: "nime2027.org",
