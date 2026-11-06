@@ -2,6 +2,7 @@ import Image from "next/image";
 import { conference, themeText } from "@/content/site";
 import { home } from "@/content/editable";
 import { ParisSkyline } from "@/components/paris";
+import { Button } from "@/components/ui";
 
 export default function Home() {
   return (
@@ -75,6 +76,12 @@ export default function Home() {
           {home.callNoticeLead}{" "}
           <span className="font-semibold text-neon-teal">{home.callOpens}</span>.
         </p>
+
+        {/* The calls are out, so the line above is no longer a promise and
+            the page needs a way in to them. */}
+        <div className="mt-6">
+          <Button href="/call">Read the call</Button>
+        </div>
       </div>
 
       {/* Paris rooftops, kept to a silhouette so they frame the page rather than

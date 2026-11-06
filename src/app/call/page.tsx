@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { conference, deadlines, themeText, tracks } from "@/content/site";
+import { conference, deadlines, pendingCallsDue, themeText, tracks } from "@/content/site";
 import { Card, Container, PageHero } from "@/components/ui";
 import { inline } from "@/components/simple-page";
 import { call } from "@/content/editable";
@@ -83,6 +83,11 @@ export default function CallPage() {
                   .map((t) => (
                     <Card key={t.href} href={t.href} title={t.title}>
                       {t.blurb}
+                      {!t.published && (
+                        <span className="mt-3 block text-[12px] font-semibold uppercase tracking-[0.14em] text-neon-or">
+                          Full call {pendingCallsDue}
+                        </span>
+                      )}
                     </Card>
                   ))}
               </div>

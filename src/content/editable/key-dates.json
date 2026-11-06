@@ -2,8 +2,13 @@
   "intro": "Every date for every track, from the call opening to the conference itself. All submission deadlines are 23:59 Anywhere on Earth.",
   "rows": [
     {
-      "date": "Early November 2026",
-      "label": "Call for contributions published",
+      "date": "6 November 2026",
+      "label": "Calls published for the peer reviewed tracks",
+      "kind": "info"
+    },
+    {
+      "date": "Later in November 2026",
+      "label": "Calls published for the juried tracks",
       "kind": "info"
     },
     {

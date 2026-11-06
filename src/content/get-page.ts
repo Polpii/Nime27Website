@@ -2,6 +2,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { parseMarkdown } from "./markdown";
 import { pages, type PageContent } from "./pages";
+import { deadlines, pendingCallsDue, tracks } from "./site";
 
 /**
  * Where the chairs' own markdown files live. A file named after the page key
@@ -33,6 +34,32 @@ export function getPage(key: string): PageContent {
     title: parsed.title ?? base.title,
     intro: parsed.intro ?? base.intro,
     body: parsed.body,
+  };
+}
+
+/**
+ * A call page, or a short notice in its place while that track's call is not
+ * published. The full text stays in its markdown file, where the chairs can
+ * keep editing it in the studio, so publishing the call is switching
+ * `published` on for the track in site.ts.
+ */
+export function getCallPage(key: string): PageContent {
+  const page = getPage(key);
+  const track = tracks.find((t) => t.href === `/call/${key}`);
+  if (!track || track.published) return page;
+
+  const due = track.group === "juried" ? deadlines.juried : deadlines.peerReviewed;
+  return {
+    ...page,
+    intro: track.blurb,
+    body: [
+      `**The full call will be published ${pendingCallsDue}.**`,
+      "## Deadline",
+      `Submissions are due ${due}, 23:59 AoE. Every date for every track is on [key dates](/call/key-dates).`,
+      "## Contact",
+      `For questions in the meantime, contact the track chairs at [${track.email}](mailto:${track.email}).`,
+      "NIME depends on volunteers. Whatever you submit, please also [sign up to review](/call/reviewing).",
+    ],
   };
 }
 

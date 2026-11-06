@@ -140,8 +140,8 @@ export const fieldsPages: Record<string, FieldsPage> = {
       },
       {
         key: "callOpens",
-        label: "When the call is published",
-        hint: "Shown highlighted at the end of the line above. For example: early November 2026.",
+        label: "Highlighted end of that line",
+        hint: "Shown highlighted at the end of the line above. For example: later in November 2026.",
         kind: "line",
       },
     ],

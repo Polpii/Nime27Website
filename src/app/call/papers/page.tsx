@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { SimplePage } from "@/components/simple-page";
-import { getPage } from "@/content/get-page";
+import { getCallPage } from "@/content/get-page";
 
-const page = getPage("papers");
+const page = getCallPage("papers");
 
 export const metadata: Metadata = {
   title: page.title,

@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { SimplePage } from "@/components/simple-page";
-import { getPage } from "@/content/get-page";
+import { getCallPage } from "@/content/get-page";
 
-const page = getPage("artifacts");
+const page = getCallPage("artifacts");
 
 export const metadata: Metadata = {
   title: page.title,

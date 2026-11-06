@@ -160,7 +160,22 @@ export type Track = {
   /** Which of the two deadlines this track falls under. */
   group: "peer-reviewed" | "juried";
   blurb: string;
+  /**
+   * Whether the full call is out. While it is not, the track's page shows a
+   * short notice instead, and its markdown waits in src/content/calls until
+   * this is switched on.
+   */
+  published: boolean;
+  /** The track chairs' address, shown on that notice. */
+  email: string;
 };
+
+/**
+ * When the calls not yet published are expected. Xiao Xiao asked on
+ * 6 November for the three peer reviewed calls to go live first and for the
+ * site to say the others follow later in the month.
+ */
+export const pendingCallsDue = "later in November 2026";
 
 /**
  * The seven calls, in the organisers' own words. Note the grouping: three
@@ -173,6 +188,8 @@ export const tracks: Track[] = [
     title: "Papers",
     href: "/call/papers",
     group: "peer-reviewed",
+    published: true,
+    email: "papers@nime2027.org",
     blurb:
       "Research, such as a study of musical gestures, a new instrument design or a reflection on performance practice.",
   },
@@ -180,6 +197,8 @@ export const tracks: Track[] = [
     title: "Music / Performance",
     href: "/call/music",
     group: "peer-reviewed",
+    published: true,
+    email: "music@nime2027.org",
     blurb:
       "Concert works, such as a piece for a custom controller or a human–machine duet.",
   },
@@ -187,6 +206,8 @@ export const tracks: Track[] = [
     title: "Art / Installations",
     href: "/call/installations",
     group: "peer-reviewed",
+    published: true,
+    email: "installations@nime2027.org",
     blurb:
       "Artworks, such as an interactive sound sculpture or a room that responds musically to visitors.",
   },
@@ -194,6 +215,8 @@ export const tracks: Track[] = [
     title: "alt.nime",
     href: "/call/alt-nime",
     group: "juried",
+    published: false,
+    email: "alt.nime@nime2027.org",
     blurb:
       "Work that fosters critical dialogue about the field and its practices, or challenges established academic formats, conventions, and ways of presenting or sharing knowledge.",
   },
@@ -201,6 +224,8 @@ export const tracks: Track[] = [
     title: "Artifacts & Ideas",
     href: "/call/artifacts",
     group: "juried",
+    published: false,
+    email: "artifacts@nime2027.org",
     blurb:
       "Work without an accompanying research paper, such as a DIY instrument presented as a demonstration or a musical-interaction concept presented as a poster.",
   },
@@ -208,6 +233,8 @@ export const tracks: Track[] = [
     title: "Workshops",
     href: "/call/workshops",
     group: "juried",
+    published: false,
+    email: "workshops@nime2027.org",
     blurb:
       "Shared activities, such as exploring collaborative live coding, discussing accessible music-making, or bringing NIME subcommunities together.",
   },
@@ -215,6 +242,8 @@ export const tracks: Track[] = [
     title: "Doctoral Consortium",
     href: "/call/doctoral-consortium",
     group: "juried",
+    published: false,
+    email: "student-consortium@nime2027.org",
     /**
      * "Thesis" rather than naming a degree, which is how Paul asked for it:
      * the call takes doctoral and taught-degree students both, and a summary
