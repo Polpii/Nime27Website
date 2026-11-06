@@ -91,7 +91,7 @@ export function SiteFooter() {
         </div>
 
         <div className="mt-16 flex flex-col gap-3 border-t border-white/10 pt-6 text-[11px] text-brume sm:flex-row sm:items-center sm:justify-between">
-          <p>© 2026–2027 {conference.name}. All content on this site is provisional.</p>
+          <p>© 2026–2027 {conference.name}.</p>
           <p className="uppercase tracking-[0.18em]">{conference.domain}</p>
         </div>
       </div>
