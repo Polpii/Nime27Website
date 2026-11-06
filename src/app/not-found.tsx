@@ -8,7 +8,7 @@ export default function NotFound() {
       <EiffelTower className="h-24 w-auto text-toit" />
       <p className="mt-8 font-display text-4xl">404</p>
       <p className="mt-4 max-w-sm text-[15px] leading-relaxed text-brume">
-        There is only one page here for now.
+        This page does not exist, or it has moved.
       </p>
       <Link
         href="/"
