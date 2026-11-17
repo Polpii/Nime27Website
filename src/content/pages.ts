@@ -21,7 +21,7 @@ export type PageContent = {
 export const pages: Record<string, PageContent> = {
   papers: {
     slug: "call/papers",
-    title: "Call for Papers",
+    title: "Call for Papers & Research",
     eyebrow: "Call",
     intro:
       "Original research on the scientific and artistic use of new interfaces for musical expression.",
@@ -45,7 +45,7 @@ export const pages: Record<string, PageContent> = {
 
   music: {
     slug: "call/music",
-    title: "Call for Music / Performance",
+    title: "Call for Music & Performance",
     eyebrow: "Call",
     intro:
       "Performances and installations that showcase new interfaces for musical expression in composition, performance and sound art.",
@@ -156,7 +156,7 @@ export const pages: Record<string, PageContent> = {
       "- Your areas of expertise, so submissions can be matched sensibly",
       "Your details are used to run the review process and are not published. Reviewers are credited as a list of names after reviewing closes, unless you ask us not to, and you can ask the general chairs to show or delete what we hold about you.",
       "## When reviewing happens",
-      "For the peer reviewed tracks, Papers, Music / Performance and Art / Installations, the review period runs from **Monday 8 February to Sunday 28 February 2027**, with decisions released on 19 March.",
+      "For the peer reviewed tracks, Papers, Music & Performance and Art & Installations, the review period runs from **Monday 8 February to Sunday 28 February 2027**, with decisions released on 19 March.",
       "The juried tracks review between **Monday 5 April and Monday 26 April 2027**, though this varies a little from track to track.",
       "Expect a handful of submissions and a structured form covering the contribution, the method, the clarity and the relevance to NIME.",
       "## Contact",
@@ -262,12 +262,12 @@ export const pages: Record<string, PageContent> = {
 
   installations: {
     slug: "call/installations",
-    title: "Call for Art / Installations",
+    title: "Call for Art & Installations",
     eyebrow: "Call",
     intro:
       "Artworks, such as an interactive sound sculpture or a room that responds musically to visitors.",
     body: [
-      "Art / Installations is one of the three peer reviewed tracks. Installations can be physical works exhibited in foyer, room or gallery space, as well as virtual works that exist online.",
+      "Art & Installations is one of the three peer reviewed tracks. Installations can be physical works exhibited in foyer, room or gallery space, as well as virtual works that exist online.",
       "## The theme",
       "In line with the NIME 2027 theme of **Sensorial Symbiosis**, we encourage proposals that explore the novel relationships amongst bodies, instruments, machines, environments and audiences in musical interaction; shared agency and authorship across performers and machines; interfaces that extend, substitute or reshape perception; and works that engage with traces across time.",
       "We particularly welcome submissions from ensembles, compositions that integrate NIMEs with acoustic instruments, and collaborative projects exploring how human and machine sensing shape shared musical experiences.",
@@ -320,8 +320,8 @@ export const pages: Record<string, PageContent> = {
       "This page will be published before the submission system opens on 4 December 2026. It covers the parts that are the same whichever track you submit to: making an account on the submission system, the templates, how to anonymise a submission, how to upload supplementary media, and how to change a submission before the deadline.",
       "Until then, the requirements specific to each track are in its own call:",
       "- [Papers](/call/papers)",
-      "- [Music / Performance](/call/music)",
-      "- [Art / Installations](/call/installations)",
+      "- [Music & Performance](/call/music)",
+      "- [Art & Installations](/call/installations)",
       "- [alt.nime](/call/alt-nime)",
       "- [Artifacts & Ideas](/call/artifacts)",
       "- [Workshops](/call/workshops)",
@@ -351,7 +351,7 @@ export const pages: Record<string, PageContent> = {
       "- Step-free routes and accessible toilets",
       "- The nearest stations and how long the walk is",
       "## Submitting an installation or a demo",
-      "If you are planning a work that needs particular space, power, light, sound or network conditions, describe those requirements in your submission. See the [Art / Installations](/call/installations) and [Artifacts & Ideas](/call/artifacts) calls.",
+      "If you are planning a work that needs particular space, power, light, sound or network conditions, describe those requirements in your submission. See the [Art & Installations](/call/installations) and [Artifacts & Ideas](/call/artifacts) calls.",
       "## Getting to the campus",
       "Campus du Parc sits in the Paris La Défense business district, on the edge of the parc André Malraux. The venue describes it as close to two regional rail lines:",
       "- **RER E** at **Nanterre La Folie**, the line's western terminus",

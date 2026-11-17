@@ -1,4 +1,4 @@
-# Call for Papers
+# Call for Papers & Research
 
 Research, such as a study of musical gestures, a new instrument design, or a reflection on performance practice.
 

@@ -16,7 +16,7 @@ Your details are used to run the review process and are not published. Reviewers
 
 ## When reviewing happens
 
-For the peer reviewed tracks, Papers, Music / Performance and Art / Installations, the review period runs from **Monday 8 February to Sunday 28 February 2027**, with decisions released on 19 March.
+For the peer reviewed tracks, Papers & Research, Music & Performance and Art & Installations, the review period runs from **Monday 8 February to Sunday 28 February 2027**, with decisions released on 19 March.
 
 The juried tracks review between **Monday 5 April and Monday 26 April 2027**, though this varies a little from track to track.
 

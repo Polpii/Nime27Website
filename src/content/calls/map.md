@@ -19,7 +19,7 @@ NIME 2027 is hosted by **Devinci Higher Education** at **Campus du Parc**, 29 Al
 
 ## Submitting an installation or a demo
 
-If you are planning a work that needs particular space, power, light, sound or network conditions, describe those requirements in your submission. See the [Art / Installations](/call/installations) and [Artifacts & Ideas](/call/artifacts) calls.
+If you are planning a work that needs particular space, power, light, sound or network conditions, describe those requirements in your submission. See the [Art & Installations](/call/installations) and [Artifacts & Ideas](/call/artifacts) calls.
 
 ## Getting to the campus
 

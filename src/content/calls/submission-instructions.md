@@ -6,9 +6,9 @@ This page will be published before the submission system opens on 4 December 202
 
 Until then, the requirements specific to each track are in its own call:
 
-- [Papers](/call/papers)
-- [Music / Performance](/call/music)
-- [Art / Installations](/call/installations)
+- [Papers & Research](/call/papers)
+- [Music & Performance](/call/music)
+- [Art & Installations](/call/installations)
 - [alt.nime](/call/alt-nime)
 - [Artifacts & Ideas](/call/artifacts)
 - [Workshops](/call/workshops)

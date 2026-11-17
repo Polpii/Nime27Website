@@ -1,4 +1,4 @@
-# Call for Art / Installations
+# Call for Art & Installations
 
 Artworks, such as an interactive sound sculpture or a room that responds musically to visitors.
 

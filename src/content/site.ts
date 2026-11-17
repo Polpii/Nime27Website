@@ -40,7 +40,7 @@ export const conference = {
    */
   venueAddress: "29 Allée le Corbusier, 92000 Nanterre",
   /**
-   * Confirmed: it appears in the Papers, Music, Art / Installations and
+   * Confirmed: it appears in the Papers, Music, Art & Installations and
    * Artifacts & Ideas calls. The Student Consortium draft still carries an
    * older name and is marked "TO UPDATE" in the source document.
    */
@@ -93,9 +93,9 @@ export const nav: NavItem[] = [
     children: [
       { label: "Overview", href: "/call" },
       { label: "Key dates", href: "/call/key-dates" },
-      { label: "Papers", href: "/call/papers" },
-      { label: "Music / Performance", href: "/call/music" },
-      { label: "Art / Installations", href: "/call/installations" },
+      { label: "Papers & Research", href: "/call/papers" },
+      { label: "Music & Performance", href: "/call/music" },
+      { label: "Art & Installations", href: "/call/installations" },
       { label: "alt.nime", href: "/call/alt-nime" },
       { label: "Artifacts & Ideas", href: "/call/artifacts" },
       { label: "Workshops", href: "/call/workshops" },
@@ -185,7 +185,7 @@ export const pendingCallsDue = "later in November 2026";
  */
 export const tracks: Track[] = [
   {
-    title: "Papers",
+    title: "Papers & Research",
     href: "/call/papers",
     group: "peer-reviewed",
     published: true,
@@ -194,7 +194,7 @@ export const tracks: Track[] = [
       "Research, such as a study of musical gestures, a new instrument design or a reflection on performance practice.",
   },
   {
-    title: "Music / Performance",
+    title: "Music & Performance",
     href: "/call/music",
     group: "peer-reviewed",
     published: true,
@@ -203,7 +203,7 @@ export const tracks: Track[] = [
       "Concert works, such as a piece for a custom controller or a human–machine duet.",
   },
   {
-    title: "Art / Installations",
+    title: "Art & Installations",
     href: "/call/installations",
     group: "peer-reviewed",
     published: true,

@@ -1,4 +1,4 @@
-# Call for Music / Performance
+# Call for Music & Performance
 
 Concert works, such as a piece for a custom controller or a human–machine duet.
 
