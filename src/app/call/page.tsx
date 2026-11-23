@@ -7,25 +7,34 @@ import { call } from "@/content/editable";
 export const metadata: Metadata = {
   title: "Call for Contributions",
   description:
-    "All the ways to contribute to NIME 2027 in Paris, grouped around two deadlines: peer reviewed tracks close 31 January 2027, juried tracks close 4 April 2027.",
+    "All the ways to contribute to NIME 2027 in Paris. Peer reviewed tracks: titles and abstracts due 24 January 2027, final submissions 31 January 2027. Juried tracks close 4 April 2027.",
 };
 
 /**
  * The split between peer reviewed and juried is the thing a reader most needs
  * to get right, because it decides their deadline. It leads the page rather
  * than hiding inside each individual call.
+ *
+ * The peer reviewed group shows both of its dates. With only the 31st here,
+ * Xiao Xiao pointed out, authors would plan for it and miss the 24th, after
+ * which a submission can no longer be started.
  */
 const groups = [
   {
     key: "peer-reviewed" as const,
     title: "Peer reviewed",
-    deadline: deadlines.peerReviewed,
+    deadlines: [
+      { label: "Titles, abstracts and authors due", date: deadlines.peerReviewedAbstracts },
+      { label: "Final submissions due", date: deadlines.peerReviewed },
+    ],
+    warning: `Only submissions registered with their title, abstract and authors by ${deadlines.peerReviewedAbstracts.replace(/ \d{4}$/, "")} can be completed by ${deadlines.peerReviewed.replace(/ \d{4}$/, "")}. There will be no extensions.`,
     note: call.peerReviewedNote,
   },
   {
     key: "juried" as const,
     title: "Juried",
-    deadline: deadlines.juried,
+    deadlines: [{ label: "Due", date: deadlines.juried }],
+    warning: null,
     note: call.juriedNote,
   },
 ];
@@ -67,11 +76,24 @@ export default function CallPage() {
             <section key={group.key}>
               <div className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-2 border-b border-white/10 pb-5">
                 <h2 className="font-display text-3xl text-neon-purple">{group.title}</h2>
-                <p className="text-[12px] font-semibold uppercase tracking-[0.16em] text-neon-or">
-                  Due {group.deadline}
-                  <span className="ml-2 text-brume">23:59 AoE</span>
-                </p>
+                <div className="space-y-1.5">
+                  {group.deadlines.map((d) => (
+                    <p
+                      key={d.label}
+                      className="text-[12px] font-semibold uppercase tracking-[0.16em] text-neon-or"
+                    >
+                      {d.label} {d.date}
+                      <span className="ml-2 text-brume">23:59 AoE</span>
+                    </p>
+                  ))}
+                </div>
               </div>
+
+              {group.warning && (
+                <p className="mt-5 max-w-2xl text-[15px] font-semibold leading-relaxed text-craie">
+                  {group.warning}
+                </p>
+              )}
 
               <p className="mt-5 max-w-2xl text-[15px] leading-relaxed text-brume">
                 {group.note}

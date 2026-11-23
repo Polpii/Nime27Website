@@ -133,6 +133,12 @@ export const nav: NavItem[] = [
  * Taken from the organisers' call overview.
  */
 export const deadlines = {
+  /**
+   * The peer reviewed tracks close in two steps, a week apart, as NIME 2025
+   * and 2026 did. Only a submission registered by the first can be completed
+   * by the second, so the second must never be shown without the first.
+   */
+  peerReviewedAbstracts: "Sunday 24 January 2027",
   peerReviewed: "Sunday 31 January 2027",
   juried: "Sunday 4 April 2027",
 } as const;
