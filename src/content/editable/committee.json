@@ -185,6 +185,12 @@
       "email": "",
       "name": "Paul-Peter Arslan",
       "affiliation": "De Vinci Higher Education"
+    },
+    {
+      "group": "CMT",
+      "email": "",
+      "name": "Florent Berthaut",
+      "affiliation": "Université de Lille"
     }
   ],
   "openPlaces": [
@@ -200,7 +206,6 @@
   "vacantRoles": [
     "Proceedings",
     "Registration",
-    "CMT",
     "Student Volunteers",
     "Local and venue chairs",
     "Kids programme"
